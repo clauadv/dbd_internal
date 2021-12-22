@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="dbd.cpp">
+      <Filter>files</Filter>
+    </ClCompile>
+    <ClCompile Include="sdk\sdk.cpp">
+      <Filter>files\sdk</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="hooks\hooks.h">
+      <Filter>files\hooks</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\sdk.h">
+      <Filter>files\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\utils.h">
+      <Filter>files\utils</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="files">
+      <UniqueIdentifier>{446f73f9-e9c2-4e95-9e2e-d895c6a1dcd2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="files\hooks">
+      <UniqueIdentifier>{69aca184-955d-40d8-a5db-ccdab4da9918}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="files\sdk">
+      <UniqueIdentifier>{de7c0252-b34a-405d-bdce-e2109a62ba39}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="files\utils">
+      <UniqueIdentifier>{e84af603-9ebb-401b-a3ba-f06d4df53653}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
