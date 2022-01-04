@@ -163,7 +163,6 @@ namespace sdk {
 			struct FVector ReturnValue;
 		} params{};
 
-
 		ProcessEvent(get_actor_location, &params);
 
 		return params.ReturnValue;

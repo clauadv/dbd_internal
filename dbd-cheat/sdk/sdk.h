@@ -194,6 +194,9 @@ namespace sdk {
 		}
 
 		FString* PlayerNamePrivate() {
+			// crashing here
+			// todo: fix
+
 			return *reinterpret_cast<FString**>(this + 0x318);
 		}
 	};
