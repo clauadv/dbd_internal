@@ -21,6 +21,7 @@
 
 #include "sdk/other/array.h"
 #include "sdk/other/color.h"
+#include "sdk/other/enum_as_byte.h"
 #include "sdk/other/math.h"
 #include "sdk/other/string.h"
 #include "sdk/other/view_info.h"
@@ -28,6 +29,7 @@
 #include "sdk/unreal/world/world.h"
 #include "sdk/unreal/name_pool/name_pool.h"
 #include "sdk/unreal/object_array/object_array.h"
+#include "sdk/unreal/engine/engine.h"
 #include "sdk/unreal/actor/actor.h"
 #include "sdk/unreal/pawn/pawn.h"
 #include "sdk/unreal/canvas/canvas.h"
@@ -45,3 +47,4 @@
 #include "sdk/unreal/skeletal_mesh_component/skeletal_mesh_component.h"
 #include "sdk/unreal/slasher_player/slasher_player.h"
 #include "sdk/unreal/camper_player/camper_player.h"
+#include "sdk/unreal/generator/generator.h"

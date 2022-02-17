@@ -15,6 +15,9 @@ bool hooks::initialize() {
 	const auto local_player = game_instance->local_players[0];
 	if (!local_player) return false;
 
+	// fov changer
+	local_player->aspect_ratio_axis = sdk::e_aspect_ratio_axis::maintain_y_fov;
+
 	const auto viewport_client = local_player->viewport_client;
 	if (!viewport_client) return false;
 
@@ -52,6 +55,7 @@ void __stdcall hooks::post_render::hook(sdk::u_object* viewport_client, sdk::u_c
 
 	visuals::killer::run(world, my_player, player_controller);
 	visuals::survivor::run(world, my_player, player_controller);
+	visuals::entities::run(world, my_player, player_controller);
 
 	post_render_original(viewport_client, canvas);
 }

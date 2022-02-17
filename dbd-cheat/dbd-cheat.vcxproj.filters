@@ -52,6 +52,12 @@
     <ClCompile Include="sdk\misc\survivor_bones.cpp">
       <Filter>files\sdk\misc</Filter>
     </ClCompile>
+    <ClCompile Include="sdk\unreal\generator\generator.cpp">
+      <Filter>files\sdk\unreal\generator</Filter>
+    </ClCompile>
+    <ClCompile Include="features\visuals\entities.cpp">
+      <Filter>files\features\visuals</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="sdk\sdk.h">
@@ -159,6 +165,15 @@
     <ClInclude Include="sdk\misc\survivor_bones.h">
       <Filter>files\sdk\misc</Filter>
     </ClInclude>
+    <ClInclude Include="sdk\other\enum_as_byte.h">
+      <Filter>files\sdk\other</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\unreal\generator\generator.h">
+      <Filter>files\sdk\unreal\generator</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\unreal\engine\engine.h">
+      <Filter>files\sdk\unreal\engine</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="files">
@@ -253,6 +268,12 @@
     </Filter>
     <Filter Include="files\sdk\misc">
       <UniqueIdentifier>{de156ca6-07fd-4b80-a6c6-c03d6f57058d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="files\sdk\unreal\generator">
+      <UniqueIdentifier>{aa805fcf-6115-4448-8e90-c1149b4550d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="files\sdk\unreal\engine">
+      <UniqueIdentifier>{796c372b-b6eb-44bd-8272-ef52bf7851a2}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

@@ -103,6 +103,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="features\visuals\entities.cpp" />
     <ClCompile Include="features\visuals\survivor.cpp" />
     <ClCompile Include="features\visuals\killer.cpp" />
     <ClCompile Include="hooks\hooks.cpp" />
@@ -112,6 +113,7 @@
     <ClCompile Include="sdk\unreal\actor\actor.cpp" />
     <ClCompile Include="sdk\unreal\camper_player\camper_player.cpp" />
     <ClCompile Include="sdk\unreal\canvas\canvas.cpp" />
+    <ClCompile Include="sdk\unreal\generator\generator.cpp" />
     <ClCompile Include="sdk\unreal\name_pool\name_pool.cpp" />
     <ClCompile Include="sdk\unreal\object_array\object_array.cpp" />
     <ClCompile Include="sdk\unreal\player_controller\player_controller.cpp" />
@@ -130,6 +132,7 @@
     <ClInclude Include="sdk\misc\survivor_bones.h" />
     <ClInclude Include="sdk\other\array.h" />
     <ClInclude Include="sdk\other\color.h" />
+    <ClInclude Include="sdk\other\enum_as_byte.h" />
     <ClInclude Include="sdk\other\math.h" />
     <ClInclude Include="sdk\other\string.h" />
     <ClInclude Include="sdk\other\view_info.h" />
@@ -139,9 +142,11 @@
     <ClInclude Include="sdk\unreal\canvas\canvas.h" />
     <ClInclude Include="sdk\unreal\class\class.h" />
     <ClInclude Include="sdk\unreal\controller\controller.h" />
+    <ClInclude Include="sdk\unreal\engine\engine.h" />
     <ClInclude Include="sdk\unreal\field\field.h" />
     <ClInclude Include="sdk\unreal\game_instance\game_instance.h" />
     <ClInclude Include="sdk\unreal\game_state_base\game_state_base.h" />
+    <ClInclude Include="sdk\unreal\generator\generator.h" />
     <ClInclude Include="sdk\unreal\level\level.h" />
     <ClInclude Include="sdk\unreal\name_pool\name_pool.h" />
     <ClInclude Include="sdk\unreal\object_array\object_array.h" />
