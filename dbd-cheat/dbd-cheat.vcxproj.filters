@@ -1,36 +1,258 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="dbd.cpp">
-      <Filter>files</Filter>
-    </ClCompile>
     <ClCompile Include="sdk\sdk.cpp">
       <Filter>files\sdk</Filter>
     </ClCompile>
+    <ClCompile Include="hooks\hooks.cpp">
+      <Filter>files\hooks</Filter>
+    </ClCompile>
+    <ClCompile Include="render\render.cpp">
+      <Filter>files\render</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\utils.cpp">
+      <Filter>files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="features\visuals\killer.cpp">
+      <Filter>files\features\visuals</Filter>
+    </ClCompile>
+    <ClCompile Include="features\visuals\survivor.cpp">
+      <Filter>files\features\visuals</Filter>
+    </ClCompile>
+    <ClCompile Include="sdk\unreal\name_pool\name_pool.cpp">
+      <Filter>files\sdk\unreal\name_pool</Filter>
+    </ClCompile>
+    <ClCompile Include="sdk\unreal\object_array\object_array.cpp">
+      <Filter>files\sdk\unreal\object_array</Filter>
+    </ClCompile>
+    <ClCompile Include="sdk\unreal\actor\actor.cpp">
+      <Filter>files\sdk\unreal\actor</Filter>
+    </ClCompile>
+    <ClCompile Include="sdk\unreal\skeletal_mesh_component\skeletal_mesh_component.cpp">
+      <Filter>files\sdk\unreal\skeletal_mesh_component</Filter>
+    </ClCompile>
+    <ClCompile Include="sdk\unreal\canvas\canvas.cpp">
+      <Filter>files\sdk\unreal\canvas</Filter>
+    </ClCompile>
+    <ClCompile Include="dbd.cpp">
+      <Filter>files</Filter>
+    </ClCompile>
+    <ClCompile Include="sdk\unreal\player_controller\player_controller.cpp">
+      <Filter>files\sdk\unreal\player_controller</Filter>
+    </ClCompile>
+    <ClCompile Include="sdk\unreal\slasher_player\slasher_player.cpp">
+      <Filter>files\sdk\unreal\slasher_player</Filter>
+    </ClCompile>
+    <ClCompile Include="sdk\unreal\camper_player\camper_player.cpp">
+      <Filter>files\sdk\unreal\camper_player</Filter>
+    </ClCompile>
+    <ClCompile Include="sdk\misc\killer_bones.cpp">
+      <Filter>files\sdk\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="sdk\misc\survivor_bones.cpp">
+      <Filter>files\sdk\misc</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="hooks\hooks.h">
-      <Filter>files\hooks</Filter>
-    </ClInclude>
     <ClInclude Include="sdk\sdk.h">
       <Filter>files\sdk</Filter>
     </ClInclude>
     <ClInclude Include="utils\utils.h">
       <Filter>files\utils</Filter>
     </ClInclude>
+    <ClInclude Include="render\render.h">
+      <Filter>files\render</Filter>
+    </ClInclude>
+    <ClInclude Include="hooks\hooks.h">
+      <Filter>files\hooks</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\libraries\xor.h">
+      <Filter>files\utils\libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\libraries\lazy_importer.h">
+      <Filter>files\utils\libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="features\features.h">
+      <Filter>files\features</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\other\color.h">
+      <Filter>files\sdk\other</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\other\math.h">
+      <Filter>files\sdk\other</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\other\string.h">
+      <Filter>files\sdk\other</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\other\array.h">
+      <Filter>files\sdk\other</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\unreal\name_pool\name_pool.h">
+      <Filter>files\sdk\unreal\name_pool</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\unreal\object_array\object_array.h">
+      <Filter>files\sdk\unreal\object_array</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\unreal\world\world.h">
+      <Filter>files\sdk\unreal\world</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\unreal\actor\actor.h">
+      <Filter>files\sdk\unreal\actor</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\unreal\controller\controller.h">
+      <Filter>files\sdk\unreal\controller</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\unreal\player_controller\player_controller.h">
+      <Filter>files\sdk\unreal\player_controller</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\unreal\pawn\pawn.h">
+      <Filter>files\sdk\unreal\pawn</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\unreal\level\level.h">
+      <Filter>files\sdk\unreal\level</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\unreal\game_instance\game_instance.h">
+      <Filter>files\sdk\unreal\game_instance</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\unreal\player\player.h">
+      <Filter>files\sdk\unreal\player</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\unreal\player_state\player_state.h">
+      <Filter>files\sdk\unreal\player_state</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\unreal\skeletal_mesh_component\skeletal_mesh_component.h">
+      <Filter>files\sdk\unreal\skeletal_mesh_component</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\unreal\scene_component\scene_component.h">
+      <Filter>files\sdk\unreal\scene_component</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\unreal\game_state_base\game_state_base.h">
+      <Filter>files\sdk\unreal\game_state_base</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\unreal\field\field.h">
+      <Filter>files\sdk\unreal\field</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\unreal\struct\struct.h">
+      <Filter>files\sdk\unreal\struct</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\unreal\class\class.h">
+      <Filter>files\sdk\unreal\class</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\unreal\canvas\canvas.h">
+      <Filter>files\sdk\unreal\canvas</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\other\view_info.h">
+      <Filter>files\sdk\other</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\unreal\slasher_player\slasher_player.h">
+      <Filter>files\sdk\unreal\slasher_player</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\unreal\camper_player\camper_player.h">
+      <Filter>files\sdk\unreal\camper_player</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\misc\killer_bones.h">
+      <Filter>files\sdk\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\misc\survivor_bones.h">
+      <Filter>files\sdk\misc</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="files">
       <UniqueIdentifier>{446f73f9-e9c2-4e95-9e2e-d895c6a1dcd2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="files\features">
+      <UniqueIdentifier>{0f3278be-6b6d-4269-b28b-7b266e5c4274}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="files\features\visuals">
+      <UniqueIdentifier>{a51105d1-4ffa-49e2-a566-6e366e70ab27}</UniqueIdentifier>
+    </Filter>
     <Filter Include="files\hooks">
       <UniqueIdentifier>{69aca184-955d-40d8-a5db-ccdab4da9918}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="files\render">
+      <UniqueIdentifier>{b77193ac-ae7b-44d8-ba07-15b1e5d085c6}</UniqueIdentifier>
     </Filter>
     <Filter Include="files\sdk">
       <UniqueIdentifier>{de7c0252-b34a-405d-bdce-e2109a62ba39}</UniqueIdentifier>
     </Filter>
+    <Filter Include="files\sdk\other">
+      <UniqueIdentifier>{808d0c44-e98e-452e-a2b5-ff48a8dd8e3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="files\sdk\unreal">
+      <UniqueIdentifier>{705ad78c-79bc-4bfa-ab12-a0da01781104}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="files\sdk\unreal\name_pool">
+      <UniqueIdentifier>{c6445273-0d68-4e66-a7ab-3f43054efb6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="files\sdk\unreal\world">
+      <UniqueIdentifier>{80d7e776-5c7b-4599-b152-3fd0e814c6ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="files\sdk\unreal\object_array">
+      <UniqueIdentifier>{588057e6-8616-4368-ad4e-b4a943364f32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="files\sdk\unreal\actor">
+      <UniqueIdentifier>{00466ee6-8032-4dff-a7c1-e5abb97fd88d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="files\sdk\unreal\controller">
+      <UniqueIdentifier>{c4b2d079-af58-47c5-971d-74837adca985}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="files\sdk\unreal\player_controller">
+      <UniqueIdentifier>{73603d4f-34c3-41ec-860f-c4f22736b010}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="files\sdk\unreal\pawn">
+      <UniqueIdentifier>{973cf90b-d920-4d9c-8658-7105ac2e7f7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="files\sdk\unreal\level">
+      <UniqueIdentifier>{16e146d3-311d-4b58-ab6f-85031ac75e98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="files\sdk\unreal\game_instance">
+      <UniqueIdentifier>{93707abf-44fe-45eb-9c0a-a4ff489f50de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="files\sdk\unreal\player">
+      <UniqueIdentifier>{92686a97-d85c-4840-ac80-7bef1a43a0a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="files\sdk\unreal\player_state">
+      <UniqueIdentifier>{fdf6c73a-993d-42e2-a46a-624f40fe19b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="files\sdk\unreal\skeletal_mesh_component">
+      <UniqueIdentifier>{ab13973c-8510-4eaa-90ca-5884f6a82f16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="files\sdk\unreal\scene_component">
+      <UniqueIdentifier>{32db9642-b914-4586-9019-7709c5220068}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="files\sdk\unreal\game_state_base">
+      <UniqueIdentifier>{6b2e0114-c2de-4b55-aaa8-8ec8a1895c6a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="files\sdk\unreal\field">
+      <UniqueIdentifier>{8a335c8b-98bc-47ad-a97a-1253c5494645}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="files\sdk\unreal\struct">
+      <UniqueIdentifier>{e3ad5242-4e8e-4023-ae8f-a32722a5d552}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="files\sdk\unreal\class">
+      <UniqueIdentifier>{a4feeb01-ce28-41ee-86c2-e08baa1c913f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="files\sdk\unreal\canvas">
+      <UniqueIdentifier>{174b81ba-72e5-4c3e-8292-20799d17bf7c}</UniqueIdentifier>
+    </Filter>
     <Filter Include="files\utils">
       <UniqueIdentifier>{e84af603-9ebb-401b-a3ba-f06d4df53653}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="files\utils\libraries">
+      <UniqueIdentifier>{d72d5ca6-c59e-4899-9a2f-bca183e0acc4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="files\sdk\unreal\slasher_player">
+      <UniqueIdentifier>{985c73e2-efc4-405e-a5ba-1812f23b8292}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="files\sdk\unreal\camper_player">
+      <UniqueIdentifier>{6a4307ef-b3a5-425f-84fb-7ebe560deb35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="files\sdk\misc">
+      <UniqueIdentifier>{de156ca6-07fd-4b80-a6c6-c03d6f57058d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
