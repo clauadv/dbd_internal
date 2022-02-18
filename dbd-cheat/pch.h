@@ -48,3 +48,5 @@
 #include "sdk/unreal/slasher_player/slasher_player.h"
 #include "sdk/unreal/camper_player/camper_player.h"
 #include "sdk/unreal/generator/generator.h"
+#include "sdk/unreal/pallet/pallet.h"
+#include "sdk/unreal/chest/chest.h"

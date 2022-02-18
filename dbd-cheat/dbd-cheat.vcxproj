@@ -113,9 +113,11 @@
     <ClCompile Include="sdk\unreal\actor\actor.cpp" />
     <ClCompile Include="sdk\unreal\camper_player\camper_player.cpp" />
     <ClCompile Include="sdk\unreal\canvas\canvas.cpp" />
+    <ClCompile Include="sdk\unreal\chest\chest.cpp" />
     <ClCompile Include="sdk\unreal\generator\generator.cpp" />
     <ClCompile Include="sdk\unreal\name_pool\name_pool.cpp" />
     <ClCompile Include="sdk\unreal\object_array\object_array.cpp" />
+    <ClCompile Include="sdk\unreal\pallet\pallet.cpp" />
     <ClCompile Include="sdk\unreal\player_controller\player_controller.cpp" />
     <ClCompile Include="sdk\unreal\skeletal_mesh_component\skeletal_mesh_component.cpp" />
     <ClCompile Include="sdk\unreal\slasher_player\slasher_player.cpp" />
@@ -140,6 +142,7 @@
     <ClInclude Include="sdk\unreal\actor\actor.h" />
     <ClInclude Include="sdk\unreal\camper_player\camper_player.h" />
     <ClInclude Include="sdk\unreal\canvas\canvas.h" />
+    <ClInclude Include="sdk\unreal\chest\chest.h" />
     <ClInclude Include="sdk\unreal\class\class.h" />
     <ClInclude Include="sdk\unreal\controller\controller.h" />
     <ClInclude Include="sdk\unreal\engine\engine.h" />
@@ -150,6 +153,7 @@
     <ClInclude Include="sdk\unreal\level\level.h" />
     <ClInclude Include="sdk\unreal\name_pool\name_pool.h" />
     <ClInclude Include="sdk\unreal\object_array\object_array.h" />
+    <ClInclude Include="sdk\unreal\pallet\pallet.h" />
     <ClInclude Include="sdk\unreal\pawn\pawn.h" />
     <ClInclude Include="sdk\unreal\player\player.h" />
     <ClInclude Include="sdk\unreal\player_controller\player_controller.h" />

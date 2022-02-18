@@ -26,8 +26,16 @@ namespace visuals::survivor {
 
 namespace visuals::entities {
 	void run(const sdk::u_world* world, sdk::a_pawn* my_player, sdk::a_player_controller* player_controller);
-}
 
-namespace visuals::entities::generator {
-	void name(sdk::a_actor* actor, const std::wstring& distance, sdk::vector location, sdk::a_player_controller* player_controller);
+	namespace generator {
+		void name(sdk::a_actor* actor, const std::wstring& distance, sdk::vector location, sdk::a_player_controller* player_controller);
+	}
+
+	namespace pallet {
+		void name(sdk::a_actor* actor, const std::wstring& distance, sdk::vector location, sdk::a_player_controller* player_controller);
+	}
+
+	namespace chest {
+		void name(sdk::a_actor* actor, const std::wstring& distance, sdk::vector location, sdk::a_player_controller* player_controller);
+	}
 }

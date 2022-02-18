@@ -58,6 +58,12 @@
     <ClCompile Include="features\visuals\entities.cpp">
       <Filter>files\features\visuals</Filter>
     </ClCompile>
+    <ClCompile Include="sdk\unreal\pallet\pallet.cpp">
+      <Filter>files\sdk\unreal\pallet</Filter>
+    </ClCompile>
+    <ClCompile Include="sdk\unreal\chest\chest.cpp">
+      <Filter>files\sdk\unreal\chest</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="sdk\sdk.h">
@@ -174,6 +180,12 @@
     <ClInclude Include="sdk\unreal\engine\engine.h">
       <Filter>files\sdk\unreal\engine</Filter>
     </ClInclude>
+    <ClInclude Include="sdk\unreal\pallet\pallet.h">
+      <Filter>files\sdk\unreal\pallet</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\unreal\chest\chest.h">
+      <Filter>files\sdk\unreal\chest</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="files">
@@ -274,6 +286,12 @@
     </Filter>
     <Filter Include="files\sdk\unreal\engine">
       <UniqueIdentifier>{796c372b-b6eb-44bd-8272-ef52bf7851a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="files\sdk\unreal\pallet">
+      <UniqueIdentifier>{682a5566-2418-47f8-9cbf-f36bf6028cae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="files\sdk\unreal\chest">
+      <UniqueIdentifier>{cbd8923c-41c5-4a5f-8e74-98a2aceec442}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
