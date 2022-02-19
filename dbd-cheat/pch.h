@@ -50,3 +50,5 @@
 #include "sdk/unreal/generator/generator.h"
 #include "sdk/unreal/pallet/pallet.h"
 #include "sdk/unreal/chest/chest.h"
+#include "sdk/unreal/escape_door/escape_door.h"
+#include "sdk/unreal/window/window.h"

@@ -64,6 +64,12 @@
     <ClCompile Include="sdk\unreal\chest\chest.cpp">
       <Filter>files\sdk\unreal\chest</Filter>
     </ClCompile>
+    <ClCompile Include="sdk\unreal\escape_door\escape_door.cpp">
+      <Filter>files\sdk\unreal\escape_door</Filter>
+    </ClCompile>
+    <ClCompile Include="sdk\unreal\window\window.cpp">
+      <Filter>files\sdk\unreal\window</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="sdk\sdk.h">
@@ -186,6 +192,12 @@
     <ClInclude Include="sdk\unreal\chest\chest.h">
       <Filter>files\sdk\unreal\chest</Filter>
     </ClInclude>
+    <ClInclude Include="sdk\unreal\escape_door\escape_door.h">
+      <Filter>files\sdk\unreal\escape_door</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\unreal\window\window.h">
+      <Filter>files\sdk\unreal\window</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="files">
@@ -292,6 +304,12 @@
     </Filter>
     <Filter Include="files\sdk\unreal\chest">
       <UniqueIdentifier>{cbd8923c-41c5-4a5f-8e74-98a2aceec442}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="files\sdk\unreal\escape_door">
+      <UniqueIdentifier>{1e0c8a34-4d52-436d-a5eb-81c614d09ba1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="files\sdk\unreal\window">
+      <UniqueIdentifier>{ad4bae50-30a3-48bd-9936-c9258f2d8088}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

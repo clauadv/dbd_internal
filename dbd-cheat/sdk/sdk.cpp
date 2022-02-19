@@ -40,6 +40,9 @@ namespace sdk {
 		sdk::get_actor_bounds = sdk::object_array->find_object(_("Function Engine.Actor.GetActorBounds"));
 		sdk::get_distance_to = sdk::object_array->find_object(_("Function Engine.Actor.GetDistanceTo"));
 
+		// window
+		sdk::is_window_blocked_for = sdk::object_array->find_object(_("Function DeadByDaylight.Window.IsWindowVaultBlockedFor"));
+
 		hooks::initialize();
 
 		return true;

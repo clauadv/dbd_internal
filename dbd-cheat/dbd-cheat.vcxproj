@@ -14,7 +14,7 @@
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
     <ProjectGuid>{0e81eade-3323-4edd-85a5-d0da270b02ca}</ProjectGuid>
-    <RootNamespace>propnight</RootNamespace>
+    <RootNamespace>dbd</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <ProjectName>dbd-cheat</ProjectName>
   </PropertyGroup>
@@ -114,6 +114,7 @@
     <ClCompile Include="sdk\unreal\camper_player\camper_player.cpp" />
     <ClCompile Include="sdk\unreal\canvas\canvas.cpp" />
     <ClCompile Include="sdk\unreal\chest\chest.cpp" />
+    <ClCompile Include="sdk\unreal\escape_door\escape_door.cpp" />
     <ClCompile Include="sdk\unreal\generator\generator.cpp" />
     <ClCompile Include="sdk\unreal\name_pool\name_pool.cpp" />
     <ClCompile Include="sdk\unreal\object_array\object_array.cpp" />
@@ -121,6 +122,7 @@
     <ClCompile Include="sdk\unreal\player_controller\player_controller.cpp" />
     <ClCompile Include="sdk\unreal\skeletal_mesh_component\skeletal_mesh_component.cpp" />
     <ClCompile Include="sdk\unreal\slasher_player\slasher_player.cpp" />
+    <ClCompile Include="sdk\unreal\window\window.cpp" />
     <ClCompile Include="utils\utils.cpp" />
     <ClCompile Include="dbd.cpp" />
     <ClCompile Include="sdk\sdk.cpp" />
@@ -146,6 +148,7 @@
     <ClInclude Include="sdk\unreal\class\class.h" />
     <ClInclude Include="sdk\unreal\controller\controller.h" />
     <ClInclude Include="sdk\unreal\engine\engine.h" />
+    <ClInclude Include="sdk\unreal\escape_door\escape_door.h" />
     <ClInclude Include="sdk\unreal\field\field.h" />
     <ClInclude Include="sdk\unreal\game_instance\game_instance.h" />
     <ClInclude Include="sdk\unreal\game_state_base\game_state_base.h" />
@@ -162,6 +165,7 @@
     <ClInclude Include="sdk\unreal\skeletal_mesh_component\skeletal_mesh_component.h" />
     <ClInclude Include="sdk\unreal\slasher_player\slasher_player.h" />
     <ClInclude Include="sdk\unreal\struct\struct.h" />
+    <ClInclude Include="sdk\unreal\window\window.h" />
     <ClInclude Include="sdk\unreal\world\world.h" />
     <ClInclude Include="utils\libraries\lazy_importer.h" />
     <ClInclude Include="utils\libraries\xor.h" />

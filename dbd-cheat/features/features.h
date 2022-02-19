@@ -38,4 +38,12 @@ namespace visuals::entities {
 	namespace chest {
 		void name(sdk::a_actor* actor, const std::wstring& distance, sdk::vector location, sdk::a_player_controller* player_controller);
 	}
+
+	namespace escape_door {
+		void name(sdk::a_actor* actor, const std::wstring& distance, sdk::vector location, sdk::a_player_controller* player_controller);
+	}
+
+	namespace window {
+		void name(sdk::a_actor* actor, const std::wstring& distance, sdk::vector location, sdk::a_player_controller* player_controller, sdk::a_camper_player* my_player);
+	}
 }
