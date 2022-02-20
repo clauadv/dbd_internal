@@ -111,17 +111,20 @@
     <ClCompile Include="sdk\misc\killer_bones.cpp" />
     <ClCompile Include="sdk\misc\survivor_bones.cpp" />
     <ClCompile Include="sdk\unreal\actor\actor.cpp" />
+    <ClCompile Include="sdk\unreal\bear_trap\bear_trap.cpp" />
     <ClCompile Include="sdk\unreal\camper_player\camper_player.cpp" />
     <ClCompile Include="sdk\unreal\canvas\canvas.cpp" />
     <ClCompile Include="sdk\unreal\chest\chest.cpp" />
     <ClCompile Include="sdk\unreal\escape_door\escape_door.cpp" />
     <ClCompile Include="sdk\unreal\generator\generator.cpp" />
+    <ClCompile Include="sdk\unreal\hatch\hatch.cpp" />
     <ClCompile Include="sdk\unreal\name_pool\name_pool.cpp" />
     <ClCompile Include="sdk\unreal\object_array\object_array.cpp" />
     <ClCompile Include="sdk\unreal\pallet\pallet.cpp" />
     <ClCompile Include="sdk\unreal\player_controller\player_controller.cpp" />
     <ClCompile Include="sdk\unreal\skeletal_mesh_component\skeletal_mesh_component.cpp" />
     <ClCompile Include="sdk\unreal\slasher_player\slasher_player.cpp" />
+    <ClCompile Include="sdk\unreal\totem\totem.cpp" />
     <ClCompile Include="sdk\unreal\window\window.cpp" />
     <ClCompile Include="utils\utils.cpp" />
     <ClCompile Include="dbd.cpp" />
@@ -142,6 +145,7 @@
     <ClInclude Include="sdk\other\view_info.h" />
     <ClInclude Include="sdk\sdk.h" />
     <ClInclude Include="sdk\unreal\actor\actor.h" />
+    <ClInclude Include="sdk\unreal\bear_trap\bear_trap.h" />
     <ClInclude Include="sdk\unreal\camper_player\camper_player.h" />
     <ClInclude Include="sdk\unreal\canvas\canvas.h" />
     <ClInclude Include="sdk\unreal\chest\chest.h" />
@@ -153,6 +157,7 @@
     <ClInclude Include="sdk\unreal\game_instance\game_instance.h" />
     <ClInclude Include="sdk\unreal\game_state_base\game_state_base.h" />
     <ClInclude Include="sdk\unreal\generator\generator.h" />
+    <ClInclude Include="sdk\unreal\hatch\hatch.h" />
     <ClInclude Include="sdk\unreal\level\level.h" />
     <ClInclude Include="sdk\unreal\name_pool\name_pool.h" />
     <ClInclude Include="sdk\unreal\object_array\object_array.h" />
@@ -165,6 +170,7 @@
     <ClInclude Include="sdk\unreal\skeletal_mesh_component\skeletal_mesh_component.h" />
     <ClInclude Include="sdk\unreal\slasher_player\slasher_player.h" />
     <ClInclude Include="sdk\unreal\struct\struct.h" />
+    <ClInclude Include="sdk\unreal\totem\totem.h" />
     <ClInclude Include="sdk\unreal\window\window.h" />
     <ClInclude Include="sdk\unreal\world\world.h" />
     <ClInclude Include="utils\libraries\lazy_importer.h" />

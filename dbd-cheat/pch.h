@@ -52,3 +52,6 @@
 #include "sdk/unreal/chest/chest.h"
 #include "sdk/unreal/escape_door/escape_door.h"
 #include "sdk/unreal/window/window.h"
+#include "sdk/unreal/totem/totem.h"
+#include "sdk/unreal/hatch/hatch.h"
+#include "sdk/unreal/bear_trap/bear_trap.h"

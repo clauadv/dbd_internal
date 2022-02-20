@@ -46,4 +46,16 @@ namespace visuals::entities {
 	namespace window {
 		void name(sdk::a_actor* actor, const std::wstring& distance, sdk::vector location, sdk::a_player_controller* player_controller, sdk::a_camper_player* my_player);
 	}
+
+	namespace totem {
+		void name(sdk::a_actor* actor, const std::wstring& distance, sdk::vector location, sdk::a_player_controller* player_controller);
+	}
+
+	namespace hatch {
+		void name(sdk::a_actor* actor, const std::wstring& distance, sdk::vector location, sdk::a_player_controller* player_controller);
+	}
+
+	namespace bear_trap {
+		void name(sdk::a_actor* actor, const std::wstring& distance, sdk::vector location, sdk::a_player_controller* player_controller);
+	}
 }

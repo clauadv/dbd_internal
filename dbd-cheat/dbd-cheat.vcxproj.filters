@@ -70,6 +70,15 @@
     <ClCompile Include="sdk\unreal\window\window.cpp">
       <Filter>files\sdk\unreal\window</Filter>
     </ClCompile>
+    <ClCompile Include="sdk\unreal\totem\totem.cpp">
+      <Filter>files\sdk\unreal\totem</Filter>
+    </ClCompile>
+    <ClCompile Include="sdk\unreal\hatch\hatch.cpp">
+      <Filter>files\sdk\unreal\hatch</Filter>
+    </ClCompile>
+    <ClCompile Include="sdk\unreal\bear_trap\bear_trap.cpp">
+      <Filter>files\sdk\unreal\bear_trap</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="sdk\sdk.h">
@@ -135,9 +144,6 @@
     <ClInclude Include="sdk\unreal\player\player.h">
       <Filter>files\sdk\unreal\player</Filter>
     </ClInclude>
-    <ClInclude Include="sdk\unreal\player_state\player_state.h">
-      <Filter>files\sdk\unreal\player_state</Filter>
-    </ClInclude>
     <ClInclude Include="sdk\unreal\skeletal_mesh_component\skeletal_mesh_component.h">
       <Filter>files\sdk\unreal\skeletal_mesh_component</Filter>
     </ClInclude>
@@ -198,6 +204,18 @@
     <ClInclude Include="sdk\unreal\window\window.h">
       <Filter>files\sdk\unreal\window</Filter>
     </ClInclude>
+    <ClInclude Include="sdk\unreal\totem\totem.h">
+      <Filter>files\sdk\unreal\totem</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\unreal\hatch\hatch.h">
+      <Filter>files\sdk\unreal\hatch</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\unreal\bear_trap\bear_trap.h">
+      <Filter>files\sdk\unreal\bear_trap</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\unreal\player_state\player_state.h">
+      <Filter>files\sdk\unreal\player_state</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="files">
@@ -254,9 +272,6 @@
     <Filter Include="files\sdk\unreal\player">
       <UniqueIdentifier>{92686a97-d85c-4840-ac80-7bef1a43a0a8}</UniqueIdentifier>
     </Filter>
-    <Filter Include="files\sdk\unreal\player_state">
-      <UniqueIdentifier>{fdf6c73a-993d-42e2-a46a-624f40fe19b1}</UniqueIdentifier>
-    </Filter>
     <Filter Include="files\sdk\unreal\skeletal_mesh_component">
       <UniqueIdentifier>{ab13973c-8510-4eaa-90ca-5884f6a82f16}</UniqueIdentifier>
     </Filter>
@@ -310,6 +325,18 @@
     </Filter>
     <Filter Include="files\sdk\unreal\window">
       <UniqueIdentifier>{ad4bae50-30a3-48bd-9936-c9258f2d8088}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="files\sdk\unreal\totem">
+      <UniqueIdentifier>{c3173770-a8ad-4abb-ad7a-feac763e9f52}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="files\sdk\unreal\hatch">
+      <UniqueIdentifier>{020bc6d3-849b-4a33-a46a-3d88aacc1588}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="files\sdk\unreal\bear_trap">
+      <UniqueIdentifier>{c97f4800-4dae-49a2-a154-75a430f54c7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="files\sdk\unreal\player_state">
+      <UniqueIdentifier>{2448443e-7812-4f30-a085-e1450505bc6f}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
