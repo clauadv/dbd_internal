@@ -45,6 +45,8 @@ void visuals::killer::name(const sdk::vector_2d& root, sdk::a_pawn* my_player, s
 }
 
 void visuals::killer::skeleton(const sdk::a_slasher_player* slasher, sdk::a_player_controller* player_controller, sdk::u_skeletal_mesh_component* mesh) {
+	if (slasher->is_nurse() || slasher->is_demogorgon() || slasher->is_victor()) return;
+
 	for (const auto& bone : bones::killer::get_bone_array(slasher)) {
 		sdk::vector_2d first_bone{}, second_bone{};
 

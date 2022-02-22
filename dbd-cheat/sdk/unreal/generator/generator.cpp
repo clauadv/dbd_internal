@@ -3,7 +3,7 @@
 bool sdk::a_generator::is_generator() const {
 	const auto name = this->get_name();
 
-	if (name.contains("GeneratorStandard")) {
+	if (name.contains("GeneratorStandard") || name.contains("GeneratorNoPole") || name.contains("GeneratorShort")) {
 		return true;
 	}
 

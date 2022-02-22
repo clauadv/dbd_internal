@@ -84,9 +84,6 @@
     <ClInclude Include="sdk\sdk.h">
       <Filter>files\sdk</Filter>
     </ClInclude>
-    <ClInclude Include="utils\utils.h">
-      <Filter>files\utils</Filter>
-    </ClInclude>
     <ClInclude Include="render\render.h">
       <Filter>files\render</Filter>
     </ClInclude>
@@ -215,6 +212,9 @@
     </ClInclude>
     <ClInclude Include="sdk\unreal\player_state\player_state.h">
       <Filter>files\sdk\unreal\player_state</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\utils.h">
+      <Filter>files\utils</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

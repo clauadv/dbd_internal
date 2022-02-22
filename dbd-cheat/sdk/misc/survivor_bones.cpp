@@ -1,6 +1,6 @@
 #include <pch.h>
 
-std::array<std::vector < std::pair < int, int > >, 26> survivor_bone;
+std::array<std::vector < std::pair < int, int > >, 27> survivor_bone;
 
 void bones::survivor::initialize() {
 	{
@@ -1928,6 +1928,80 @@ void bones::survivor::initialize() {
 			bone.emplace_back(std::make_pair(survivor::jonah::joint_kneert_01, survivor::jonah::joint_footrt_01));
 		}
 	}
+
+	{
+		// david bones
+		auto& bone = survivor_bone[26];
+
+		bone.emplace_back(std::make_pair(survivor::david::joint_head_01, survivor::david::joint_necka_01));
+		bone.emplace_back(std::make_pair(survivor::david::joint_necka_01, survivor::david::joint_pelvis_01));
+
+		// left
+		{
+			// upper body
+			bone.emplace_back(std::make_pair(survivor::david::joint_necka_01, survivor::david::joint_shoulderlt_01));
+			bone.emplace_back(std::make_pair(survivor::david::joint_shoulderlt_01, survivor::david::joint_elbowlt_01));
+			bone.emplace_back(std::make_pair(survivor::david::joint_elbowlt_01, survivor::david::joint_handlt_01));
+
+			bone.emplace_back(std::make_pair(survivor::david::joint_handlt_01, survivor::david::joint_thumbalt_01));
+			bone.emplace_back(std::make_pair(survivor::david::joint_thumbalt_01, survivor::david::joint_thumbblt_01));
+			bone.emplace_back(std::make_pair(survivor::david::joint_thumbblt_01, survivor::david::joint_thumbclt_01));
+
+			bone.emplace_back(std::make_pair(survivor::david::joint_handlt_01, survivor::david::joint_indexalt_01));
+			bone.emplace_back(std::make_pair(survivor::david::joint_indexalt_01, survivor::david::joint_indexblt_01));
+			bone.emplace_back(std::make_pair(survivor::david::joint_indexblt_01, survivor::david::joint_indexclt_01));
+
+			bone.emplace_back(std::make_pair(survivor::david::joint_handlt_01, survivor::david::joint_fingeralt_01));
+			bone.emplace_back(std::make_pair(survivor::david::joint_fingeralt_01, survivor::david::joint_fingerblt_01));
+			bone.emplace_back(std::make_pair(survivor::david::joint_fingerblt_01, survivor::david::joint_fingerclt_01));
+
+			bone.emplace_back(std::make_pair(survivor::david::joint_handlt_01, survivor::david::joint_ringalt_01));
+			bone.emplace_back(std::make_pair(survivor::david::joint_ringalt_01, survivor::david::joint_ringblt_01));
+			bone.emplace_back(std::make_pair(survivor::david::joint_ringblt_01, survivor::david::joint_ringclt_01));
+
+			bone.emplace_back(std::make_pair(survivor::david::joint_handlt_01, survivor::david::joint_pinkyalt_01));
+			bone.emplace_back(std::make_pair(survivor::david::joint_pinkyalt_01, survivor::david::joint_pinkyblt_01));
+			bone.emplace_back(std::make_pair(survivor::david::joint_pinkyblt_01, survivor::david::joint_pinkyclt_01));
+
+			// lower body
+			bone.emplace_back(std::make_pair(survivor::david::joint_pelvis_01, survivor::david::joint_hiplt_01));
+			bone.emplace_back(std::make_pair(survivor::david::joint_hiplt_01, survivor::david::joint_kneelt_01));
+			bone.emplace_back(std::make_pair(survivor::david::joint_kneelt_01, survivor::david::joint_footlt_01));
+		}
+
+		// right
+		{
+			// upper body
+			bone.emplace_back(std::make_pair(survivor::david::joint_necka_01, survivor::david::joint_shoulderrt_01));
+			bone.emplace_back(std::make_pair(survivor::david::joint_shoulderrt_01, survivor::david::joint_elbowrt_01));
+			bone.emplace_back(std::make_pair(survivor::david::joint_elbowrt_01, survivor::david::joint_handrt_01));
+
+			bone.emplace_back(std::make_pair(survivor::david::joint_handrt_01, survivor::david::joint_thumbart_01));
+			bone.emplace_back(std::make_pair(survivor::david::joint_thumbart_01, survivor::david::joint_thumbbrt_01));
+			bone.emplace_back(std::make_pair(survivor::david::joint_thumbbrt_01, survivor::david::joint_thumbcrt_01));
+
+			bone.emplace_back(std::make_pair(survivor::david::joint_handrt_01, survivor::david::joint_indexart_01));
+			bone.emplace_back(std::make_pair(survivor::david::joint_indexart_01, survivor::david::joint_indexbrt_01));
+			bone.emplace_back(std::make_pair(survivor::david::joint_indexbrt_01, survivor::david::joint_indexcrt_01));
+
+			bone.emplace_back(std::make_pair(survivor::david::joint_handrt_01, survivor::david::joint_fingerart_01));
+			bone.emplace_back(std::make_pair(survivor::david::joint_fingerart_01, survivor::david::joint_fingerbrt_01));
+			bone.emplace_back(std::make_pair(survivor::david::joint_fingerbrt_01, survivor::david::joint_fingercrt_01));
+
+			bone.emplace_back(std::make_pair(survivor::david::joint_handrt_01, survivor::david::joint_ringart_01));
+			bone.emplace_back(std::make_pair(survivor::david::joint_ringart_01, survivor::david::joint_ringbrt_01));
+			bone.emplace_back(std::make_pair(survivor::david::joint_ringbrt_01, survivor::david::joint_ringcrt_01));
+
+			bone.emplace_back(std::make_pair(survivor::david::joint_handrt_01, survivor::david::joint_pinkyart_01));
+			bone.emplace_back(std::make_pair(survivor::david::joint_pinkyart_01, survivor::david::joint_pinkybrt_01));
+			bone.emplace_back(std::make_pair(survivor::david::joint_pinkybrt_01, survivor::david::joint_pinkycrt_01));
+
+			// lower body
+			bone.emplace_back(std::make_pair(survivor::david::joint_pelvis_01, survivor::david::joint_hiprt_01));
+			bone.emplace_back(std::make_pair(survivor::david::joint_hiprt_01, survivor::david::joint_kneert_01));
+			bone.emplace_back(std::make_pair(survivor::david::joint_kneert_01, survivor::david::joint_footrt_01));
+		}
+	}
 }
 
 std::vector < std::pair < int, int > >& bones::survivor::get_bone_array(const sdk::a_camper_player* camper) {
@@ -2008,4 +2082,10 @@ std::vector < std::pair < int, int > >& bones::survivor::get_bone_array(const sd
 
 	if (camper->is_jonah())
 		return survivor_bone[25];
+
+	if (camper->is_david())
+		return survivor_bone[26];
+
+	// to add:
+	//  - nancy
 }

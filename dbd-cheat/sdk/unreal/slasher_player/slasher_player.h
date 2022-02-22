@@ -28,5 +28,8 @@ namespace sdk {
 		bool is_pinhead() const;
 		bool is_artist() const;
 		bool is_wraith() const;
+		bool is_nurse() const;
+		bool is_demogorgon() const;
+		bool is_victor() const;
 	};
 }

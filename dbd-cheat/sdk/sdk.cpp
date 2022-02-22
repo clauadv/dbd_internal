@@ -19,6 +19,11 @@ namespace sdk {
 		sdk::get_bone_matrix = utils::pattern_scan(main, _("48 8B C4 48 89 58 ? 48 89 70 ? 55 57 41 54 41 56 41 57 48 8D 68 ? 48 81 EC ? ? ? ? 0F 29 78"));
 		if (!sdk::get_bone_matrix) return false;
 
+		// unlock all cosmetics
+		// epic games -> 0x94e8578
+		// steam -> 0x99b2658
+		*reinterpret_cast<short*>(main + 0x94e8578) = 1;
+
 		sdk::font = sdk::object_array->find_object(_("Font Roboto.Roboto"));
 
 		// canvas

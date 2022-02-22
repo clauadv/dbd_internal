@@ -11,9 +11,11 @@
 #include <mutex>
 #include <utility>
 #include <cstdint>
+#include <future>
 
 #include "utils/libraries/xor.h"
 #include "utils/libraries/lazy_importer.h"
+
 
 #include "sdk/sdk.h"
 #include "sdk/misc/survivor_bones.h"

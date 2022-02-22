@@ -75,7 +75,14 @@ std::pair<sdk::u_string, sdk::color> sdk::a_slasher_player::get_character_name()
 	if (this->is_wraith())
 		return { L"wraith", color };
 
-	// nurse => currently disabled
+	if (this->is_nurse())
+		return { L"nurse", color };
+
+	if (this->is_demogorgon())
+		return { L"demogorgon", color };
+
+	if (this->is_victor())
+		return { L"victor", color };
 
 	return { L"", { 0, 0, 0, 0 } };
 }
@@ -86,7 +93,11 @@ bool sdk::a_slasher_player::is_killer() const {
 		this->is_pig() || this->is_clown() || this->is_spirit() || this->is_legion() ||
 		this->is_plague() || this->is_ghostface() || this->is_oni() || this->is_deathslinger() ||
 		this->is_executioner() || this->is_blight() || this->is_twins() || this->is_trickster() ||
-		this->is_nemesis() || this->is_pinhead() || this->is_artist() || this->is_wraith()) {
+		this->is_nemesis() || this->is_pinhead() || this->is_artist() || this->is_wraith() ||
+		this->is_nurse() || this->is_demogorgon() || this->is_victor()) {
+
+		// to add:
+		//  - onryo
 
 		return true;
 	}
@@ -328,6 +339,36 @@ bool sdk::a_slasher_player::is_wraith() const {
 	const auto name = this->get_name();
 
 	if (name.contains("BP_Slasher_Character_02")) {
+		return true;
+	}
+
+	return false;
+}
+
+bool sdk::a_slasher_player::is_nurse() const {
+	const auto name = this->get_name();
+
+	if (name.contains("BP_Slasher_Character_04")) {
+		return true;
+	}
+
+	return false;
+}
+
+bool sdk::a_slasher_player::is_demogorgon() const {
+	const auto name = this->get_name();
+
+	if (name.contains("BP_Slasher_Character_17")) {
+		return true;
+	}
+
+	return false;
+}
+
+bool sdk::a_slasher_player::is_victor() const {
+	const auto name = this->get_name();
+
+	if (name.contains("twin")) {
 		return true;
 	}
 

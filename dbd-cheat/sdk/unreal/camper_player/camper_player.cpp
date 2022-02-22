@@ -81,7 +81,11 @@ std::pair<sdk::u_string, sdk::color> sdk::a_camper_player::get_character_name() 
 	if (this->is_jonah())
 		return { L"jonah", color };
 
-	// david => need to play the tutorial
+	if (this->is_david())
+		return { L"david", color };
+
+	if (this->is_nancy())
+		return { L"nancy", color };
 
 	return { L"", { 0, 0, 0, 0 } };
 }
@@ -94,7 +98,8 @@ bool sdk::a_camper_player::is_survivor() const {
 		this->is_kate() || this->is_adam() || this->is_jeff() || this->is_jane() ||
 		this->is_ashley() || this->is_yui() || this->is_zarina() || this->is_cheryl() ||
 		this->is_elodie() || this->is_yun() || this->is_jill() || this->is_leon() ||
-		this->is_felix() || this->is_mikaela() || this->is_jonah()) {
+		this->is_felix() || this->is_mikaela() || this->is_jonah() || this->is_david() ||
+		this->is_nancy()) {
 
 		return true;
 	}
@@ -156,16 +161,6 @@ bool sdk::a_camper_player::is_bill() const {
 	const auto name = this->get_name();
 
 	if (name.contains("BP_CamperMale04")) {
-		return true;
-	}
-
-	return false;
-}
-
-bool sdk::a_camper_player::is_david() const {
-	const auto name = this->get_name();
-
-	if (name.contains("BP_CamperMale05")) {
 		return true;
 	}
 
@@ -366,6 +361,26 @@ bool sdk::a_camper_player::is_jonah() const {
 	const auto name = this->get_name();
 
 	if (name.contains("BP_CamperMale14")) {
+		return true;
+	}
+
+	return false;
+}
+
+bool sdk::a_camper_player::is_david() const {
+	const auto name = this->get_name();
+
+	if (name.contains("BP_CamperMale05")) {
+		return true;
+	}
+
+	return false;
+}
+
+bool sdk::a_camper_player::is_nancy() const {
+	const auto name = this->get_name();
+
+	if (name.contains("BP_CamperFemale08")) {
 		return true;
 	}
 

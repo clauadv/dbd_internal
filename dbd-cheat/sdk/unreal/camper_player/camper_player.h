@@ -31,5 +31,6 @@ namespace sdk {
 		bool is_mikaela() const;
 		bool is_jonah() const;
 		bool is_david() const;
+		bool is_nancy() const;
 	};
 }
