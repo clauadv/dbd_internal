@@ -1,6 +1,11 @@
 # dbd-cheat
-internal cheat for dead by daylight with the following features:
+internal cheat for dead by daylight
 
+## requirements
+* kernel driver
+* visual studio 2022 (v143 build tools)
+
+## features
 survivor esp
 - character name
 - distance
@@ -49,9 +54,6 @@ bear trap esp
 - name
 - distance
 
-## note
-* you will still need an eac bypass to use this cheat so please don't message me about that
-
-**gameplay video**
+## gameplay video
 
 [<img src="https://raw.githubusercontent.com/clauadv/dbd-cheat/master/img.jpg">](https://youtu.be/V5A2ca2EcNg)
