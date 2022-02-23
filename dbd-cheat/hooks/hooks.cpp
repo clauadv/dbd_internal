@@ -2,8 +2,6 @@
 #include "hooks.h"
 #include "../features/features.h"
 
-hooks::post_render::fn post_render_original;
-
 bool hooks::initialize() {
 	const auto world = *reinterpret_cast<decltype(sdk::world)*>(sdk::world);
 	if (!world) return false;
@@ -23,11 +21,17 @@ bool hooks::initialize() {
 	void** viewport_client_vtable = viewport_client->vf_table;
 	if (!viewport_client_vtable) return false;
 
-	DWORD protect;
-	VirtualProtect(&viewport_client_vtable[post_render::index], 8, PAGE_EXECUTE_READWRITE, &protect);
-	post_render_original = reinterpret_cast<decltype(post_render_original)>(viewport_client_vtable[post_render::index]);
-	viewport_client_vtable[post_render::index] = &post_render::hook;
-	VirtualProtect(&viewport_client_vtable[post_render::index], 8, protect, nullptr);
+	if (MH_Initialize() != MH_OK) {
+		throw std::runtime_error(_("failed to initialize hooking system."));
+	}
+
+	if (MH_CreateHook(viewport_client_vtable[post_render::index], &post_render::hook, reinterpret_cast<void**>(&post_render::original)) != MH_OK) {
+		throw std::runtime_error(_("failed to initialize post render."));
+	}
+
+	if (MH_EnableHook(nullptr) != MH_OK) {
+		throw std::runtime_error(_("failed to initialize hooks."));
+	}
 
 	return true;
 }
@@ -56,5 +60,5 @@ void __stdcall hooks::post_render::hook(sdk::u_object* viewport_client, sdk::u_c
 	visuals::survivor::run(world, my_player, player_controller);
 	visuals::entities::run(world, my_player, player_controller);
 
-	post_render_original(viewport_client, canvas);
+	post_render::original(viewport_client, canvas);
 }

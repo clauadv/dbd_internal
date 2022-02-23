@@ -13,9 +13,9 @@
 #include <cstdint>
 #include <future>
 
+#include "utils/libraries/min_hook.h"
 #include "utils/libraries/xor.h"
 #include "utils/libraries/lazy_importer.h"
-
 
 #include "sdk/sdk.h"
 #include "sdk/misc/survivor_bones.h"
@@ -26,7 +26,6 @@
 #include "sdk/other/enum_as_byte.h"
 #include "sdk/other/math.h"
 #include "sdk/other/string.h"
-#include "sdk/other/view_info.h"
 
 #include "sdk/unreal/world/world.h"
 #include "sdk/unreal/name_pool/name_pool.h"

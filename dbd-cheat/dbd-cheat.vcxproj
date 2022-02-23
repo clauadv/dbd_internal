@@ -54,7 +54,7 @@
     <TargetName>$(ProjectName)</TargetName>
     <OutDir>$(SolutionDir)bin\</OutDir>
     <IntDir>$(SolutionDir)intermediates\</IntDir>
-    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <LibraryPath>$(SolutionDir)dbd-cheat\utils\libraries;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -100,7 +100,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>min_hook.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -143,7 +143,6 @@
     <ClInclude Include="sdk\other\enum_as_byte.h" />
     <ClInclude Include="sdk\other\math.h" />
     <ClInclude Include="sdk\other\string.h" />
-    <ClInclude Include="sdk\other\view_info.h" />
     <ClInclude Include="sdk\sdk.h" />
     <ClInclude Include="sdk\unreal\actor\actor.h" />
     <ClInclude Include="sdk\unreal\bear_trap\bear_trap.h" />
@@ -175,6 +174,7 @@
     <ClInclude Include="sdk\unreal\window\window.h" />
     <ClInclude Include="sdk\unreal\world\world.h" />
     <ClInclude Include="utils\libraries\lazy_importer.h" />
+    <ClInclude Include="utils\libraries\min_hook.h" />
     <ClInclude Include="utils\libraries\xor.h" />
     <ClInclude Include="utils\utils.h" />
   </ItemGroup>

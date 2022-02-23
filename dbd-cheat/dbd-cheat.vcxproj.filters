@@ -162,9 +162,6 @@
     <ClInclude Include="sdk\unreal\canvas\canvas.h">
       <Filter>files\sdk\unreal\canvas</Filter>
     </ClInclude>
-    <ClInclude Include="sdk\other\view_info.h">
-      <Filter>files\sdk\other</Filter>
-    </ClInclude>
     <ClInclude Include="pch.h">
       <Filter>files</Filter>
     </ClInclude>
@@ -215,6 +212,9 @@
     </ClInclude>
     <ClInclude Include="utils\utils.h">
       <Filter>files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\libraries\min_hook.h">
+      <Filter>files\utils\libraries</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
