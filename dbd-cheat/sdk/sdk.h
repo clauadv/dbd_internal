@@ -5,6 +5,7 @@ namespace sdk {
 	struct u_object_array;
 
 	inline std::uintptr_t get_bone_matrix;
+	inline std::uintptr_t unlock_all;
 
 	inline u_object* font;
 

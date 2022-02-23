@@ -54,6 +54,10 @@ bear trap esp
 - name
 - distance
 
+misc
+- fov changer
+- unlock all cosmetic items
+
 ## gameplay video
 
 [<img src="https://raw.githubusercontent.com/clauadv/dbd-cheat/master/img.jpg">](https://youtu.be/V5A2ca2EcNg)
