@@ -11,7 +11,7 @@ bool DllMain(const HMODULE module, const std::uint32_t call_reason, void* reserv
 
 	std::future<void> thread = std::async(std::launch::async, [&module] {
 		try {
-			utils::console::initialize("dbd-cheat");
+			// utils::console::initialize("dbd-cheat");
 			sdk::initialize();
 		}
 

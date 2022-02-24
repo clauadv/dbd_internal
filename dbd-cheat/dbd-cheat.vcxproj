@@ -54,7 +54,7 @@
     <TargetName>$(ProjectName)</TargetName>
     <OutDir>$(SolutionDir)bin\</OutDir>
     <IntDir>$(SolutionDir)intermediates\</IntDir>
-    <LibraryPath>$(SolutionDir)dbd-cheat\utils\libraries;$(LibraryPath)</LibraryPath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -80,7 +80,7 @@
       <SDLCheck>false</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CRT_SECURE_NO_WARNINGS;DBDCHEAT_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeader>Create</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <TreatWarningAsError>false</TreatWarningAsError>
@@ -94,7 +94,7 @@
       <MultiProcessorCompilation>false</MultiProcessorCompilation>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <Optimization>MaxSpeed</Optimization>
-      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -102,7 +102,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalDependencies>min_hook.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -129,6 +129,11 @@
     <ClCompile Include="sdk\unreal\slasher_player\slasher_player.cpp" />
     <ClCompile Include="sdk\unreal\totem\totem.cpp" />
     <ClCompile Include="sdk\unreal\window\window.cpp" />
+    <ClCompile Include="utils\libraries\min_hook\buffer.c" />
+    <ClCompile Include="utils\libraries\min_hook\hde\hde32.c" />
+    <ClCompile Include="utils\libraries\min_hook\hde\hde64.c" />
+    <ClCompile Include="utils\libraries\min_hook\hook.c" />
+    <ClCompile Include="utils\libraries\min_hook\trampoline.c" />
     <ClCompile Include="utils\utils.cpp" />
     <ClCompile Include="dbd.cpp" />
     <ClCompile Include="sdk\sdk.cpp" />
@@ -177,6 +182,13 @@
     <ClInclude Include="sdk\unreal\world\world.h" />
     <ClInclude Include="utils\libraries\lazy_importer.h" />
     <ClInclude Include="utils\libraries\min_hook.h" />
+    <ClInclude Include="utils\libraries\min_hook\buffer.h" />
+    <ClInclude Include="utils\libraries\min_hook\hde\hde32.h" />
+    <ClInclude Include="utils\libraries\min_hook\hde\hde64.h" />
+    <ClInclude Include="utils\libraries\min_hook\hde\pstdint.h" />
+    <ClInclude Include="utils\libraries\min_hook\hde\table32.h" />
+    <ClInclude Include="utils\libraries\min_hook\hde\table64.h" />
+    <ClInclude Include="utils\libraries\min_hook\trampoline.h" />
     <ClInclude Include="utils\libraries\xor.h" />
     <ClInclude Include="utils\utils.h" />
   </ItemGroup>
