@@ -386,3 +386,11 @@ bool sdk::a_camper_player::is_nancy() const {
 
 	return false;
 }
+
+void sdk::a_camper_player::disable_skillchecks() {
+	const auto flags = sdk::disable_skillchecks->flags;
+	sdk::disable_skillchecks->flags |= 0x00000400;
+
+	sdk::process_event(this, sdk::disable_skillchecks, nullptr);
+	sdk::disable_skillchecks->flags = flags;
+}

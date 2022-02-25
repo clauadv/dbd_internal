@@ -32,5 +32,6 @@ namespace sdk {
 		bool is_jonah() const;
 		bool is_david() const;
 		bool is_nancy() const;
+		void disable_skillchecks();
 	};
 }

@@ -48,6 +48,9 @@ namespace sdk {
 		// window
 		sdk::is_window_blocked_for = sdk::object_array->find_object(_("Function DeadByDaylight.Window.IsWindowVaultBlockedFor"));
 
+		// misc
+		sdk::disable_skillchecks = sdk::object_array->find_object(_("Function DeadByDaylight.DBDPlayer.DeactivateSkillChecks"));
+
 		hooks::initialize();
 
 		return true;
