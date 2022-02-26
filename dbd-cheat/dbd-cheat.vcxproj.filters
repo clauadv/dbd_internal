@@ -386,8 +386,5 @@
     <Filter Include="files\utils\libraries\min_hook\hde">
       <UniqueIdentifier>{fbc1c8b2-2ddd-47f6-8f15-a18e0d18af42}</UniqueIdentifier>
     </Filter>
-    <Filter Include="files\sdk\unreal\player_camera">
-      <UniqueIdentifier>{9644601a-f82c-4aaa-8665-e21165528475}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
 </Project>

@@ -36,6 +36,10 @@ namespace sdk {
 		// player_controller
 		sdk::world_to_screen = sdk::object_array->find_object(_("Function Engine.PlayerController.ProjectWorldLocationToScreen"));
 
+		// player_state
+		sdk::get_dbd_player_state = sdk::object_array->find_object(_("Function DeadByDaylight.DBDPlayer.GetDBDPlayerState"));
+		sdk::get_player_state = sdk::object_array->find_object(_("Function DeadByDaylight.DBDPlayerState.GetPlayerGameState"));
+
 		// skinned_mesh_component
 		sdk::get_bone_name = sdk::object_array->find_object(_("Function Engine.SkinnedMeshComponent.GetBoneName"));
 
