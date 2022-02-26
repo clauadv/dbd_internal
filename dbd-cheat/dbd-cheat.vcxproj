@@ -124,7 +124,9 @@
     <ClCompile Include="sdk\unreal\name_pool\name_pool.cpp" />
     <ClCompile Include="sdk\unreal\object_array\object_array.cpp" />
     <ClCompile Include="sdk\unreal\pallet\pallet.cpp" />
+    <ClCompile Include="sdk\unreal\pawn\pawn.cpp" />
     <ClCompile Include="sdk\unreal\player_controller\player_controller.cpp" />
+    <ClCompile Include="sdk\unreal\player_state\player_state.cpp" />
     <ClCompile Include="sdk\unreal\skeletal_mesh_component\skeletal_mesh_component.cpp" />
     <ClCompile Include="sdk\unreal\slasher_player\slasher_player.cpp" />
     <ClCompile Include="sdk\unreal\totem\totem.cpp" />

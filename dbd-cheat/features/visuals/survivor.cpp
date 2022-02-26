@@ -31,6 +31,10 @@ void visuals::survivor::run(const sdk::u_world* world, sdk::a_pawn* my_player, s
 			const auto state = pawn->player_state;
 			if (!state) continue;
 
+			const auto player_state = camper->get_dbd_player_state()->get_player_state();
+			if (player_state == sdk::e_game_state::dead || player_state == sdk::e_game_state::escaped || player_state == sdk::e_game_state::escaped_injured ||
+				player_state == sdk::e_game_state::disconnected || player_state == sdk::e_game_state::manually_left_match) continue;
+
 			const auto root = mesh->get_bone(0, player_controller);
 			if (root.is_zero()) continue;
 

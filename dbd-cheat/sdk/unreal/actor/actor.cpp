@@ -27,8 +27,8 @@ sdk::rotator sdk::a_actor::get_rotation() {
 void sdk::a_actor::get_bounds(const bool only_colliding_components, sdk::vector* origin, sdk::vector* extent) {
 	struct {
 		bool only_colliding_components;
-		struct sdk::vector origin;
-		struct sdk::vector extent;
+		sdk::vector origin;
+		sdk::vector extent;
 	} params{};
 
 	params.only_colliding_components = only_colliding_components;

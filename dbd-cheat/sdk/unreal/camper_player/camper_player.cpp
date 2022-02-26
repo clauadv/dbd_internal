@@ -394,3 +394,18 @@ void sdk::a_camper_player::disable_skillchecks() {
 	sdk::process_event(this, sdk::disable_skillchecks, nullptr);
 	sdk::disable_skillchecks->flags = flags;
 }
+
+sdk::a_player_state* sdk::a_camper_player::get_dbd_player_state()
+{
+	struct {
+		sdk::a_player_state* return_value;
+	} params{};
+
+	const auto flags = sdk::get_dbd_player_state->flags;
+	sdk::get_dbd_player_state->flags |= 0x00000400;
+
+	sdk::process_event(this, sdk::get_dbd_player_state, &params);
+	sdk::get_dbd_player_state->flags = flags;
+
+	return params.return_value;
+}

@@ -19,6 +19,10 @@ namespace sdk {
 	// player_controller
 	inline u_object* world_to_screen;
 
+	// player_state
+	inline u_object* get_dbd_player_state;
+	inline u_object* get_player_state;
+
 	// skinned_mesh_component
 	inline u_object* get_bone_name;
 

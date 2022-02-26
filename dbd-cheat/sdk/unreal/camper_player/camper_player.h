@@ -33,5 +33,6 @@ namespace sdk {
 		bool is_david() const;
 		bool is_nancy() const;
 		void disable_skillchecks();
+		sdk::a_player_state* get_dbd_player_state();
 	};
 }
