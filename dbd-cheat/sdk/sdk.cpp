@@ -52,6 +52,9 @@ namespace sdk {
 		// window
 		sdk::is_window_blocked_for = sdk::object_array->find_object(_("Function DeadByDaylight.Window.IsWindowVaultBlockedFor"));
 
+		// misc
+		sdk::launch_character = sdk::object_array->find_object(_("Function Engine.Character.LaunchCharacter"));
+
 		hooks::initialize();
 
 		return true;

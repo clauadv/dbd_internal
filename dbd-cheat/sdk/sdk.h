@@ -35,6 +35,9 @@ namespace sdk {
 	// window
 	inline u_object* is_window_blocked_for;
 
+	// misc
+	inline u_object* launch_character;
+
 	bool initialize();
 	void process_event(void* object, void* u_function, void* params);
 }

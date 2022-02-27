@@ -59,3 +59,7 @@ namespace visuals::entities {
 		void name(sdk::a_actor* actor, const std::wstring& distance, sdk::vector location, sdk::a_player_controller* player_controller);
 	}
 }
+
+namespace misc::fly {
+	void run(sdk::a_pawn* my_player);
+}

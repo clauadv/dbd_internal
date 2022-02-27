@@ -110,6 +110,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="features\misc\fly.cpp" />
     <ClCompile Include="features\visuals\entities.cpp" />
     <ClCompile Include="features\visuals\survivor.cpp" />
     <ClCompile Include="features\visuals\killer.cpp" />
@@ -128,6 +129,7 @@
     <ClCompile Include="sdk\unreal\name_pool\name_pool.cpp" />
     <ClCompile Include="sdk\unreal\object_array\object_array.cpp" />
     <ClCompile Include="sdk\unreal\pallet\pallet.cpp" />
+    <ClCompile Include="sdk\unreal\pawn\pawn.cpp" />
     <ClCompile Include="sdk\unreal\player_controller\player_controller.cpp" />
     <ClCompile Include="sdk\unreal\player_state\player_state.cpp" />
     <ClCompile Include="sdk\unreal\skeletal_mesh_component\skeletal_mesh_component.cpp" />
