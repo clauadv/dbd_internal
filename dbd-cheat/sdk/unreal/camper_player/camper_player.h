@@ -34,5 +34,6 @@ namespace sdk {
 		bool is_nancy() const;
 		sdk::a_player_state* get_dbd_player_state();
 		void trap_immunity();
+		bool is_carried();
 	};
 }

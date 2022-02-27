@@ -17,3 +17,17 @@ void sdk::a_pawn::launch_character(const sdk::vector& velocity, const bool xy_ov
 	sdk::process_event(this, sdk::launch_character, &params);
 	sdk::launch_character->flags = flags;
 }
+
+sdk::u_player_interaction* sdk::a_pawn::get_player_interaction() {
+	struct {
+		sdk::u_player_interaction* return_value;
+	} params{};
+
+	const auto flags = sdk::get_player_interaction->flags;
+	sdk::get_player_interaction->flags |= 0x00000400;
+
+	sdk::process_event(this, sdk::get_player_interaction, &params);
+	sdk::get_player_interaction->flags = flags;
+
+	return params.return_value;
+}

@@ -106,6 +106,12 @@
     <ClCompile Include="features\misc\trap_immunity.cpp">
       <Filter>files\features\misc</Filter>
     </ClCompile>
+    <ClCompile Include="sdk\unreal\skillcheck\skillcheck.cpp">
+      <Filter>files\sdk\unreal\skillcheck</Filter>
+    </ClCompile>
+    <ClCompile Include="features\misc\auto_skillcheck.cpp">
+      <Filter>files\features\misc</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="sdk\sdk.h">
@@ -264,6 +270,12 @@
     <ClInclude Include="utils\libraries\min_hook\trampoline.h">
       <Filter>files\utils\libraries\min_hook</Filter>
     </ClInclude>
+    <ClInclude Include="sdk\unreal\skillcheck\skillcheck.h">
+      <Filter>files\sdk\unreal\skillcheck</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\unreal\player_interaction\player_interaction.h">
+      <Filter>files\sdk\unreal\player_interaction</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="files">
@@ -397,6 +409,9 @@
     </Filter>
     <Filter Include="files\features\misc">
       <UniqueIdentifier>{1f02bcc2-0a60-4aee-a710-c6ac88ccbf75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="files\sdk\unreal\player_interaction">
+      <UniqueIdentifier>{7903cf95-ff7f-4c38-84bc-cefa9c13d092}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

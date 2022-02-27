@@ -55,8 +55,14 @@ namespace sdk {
 		// window
 		sdk::is_window_blocked_for = sdk::object_array->find_object(_("Function DeadByDaylight.Window.IsWindowVaultBlockedFor"));
 
+		// skillcheck
+		sdk::get_player_interaction = sdk::object_array->find_object(_("Function DeadByDaylight.DBDPlayer.GetPlayerInteractionHandler"));
+		sdk::skillcheck_input = sdk::object_array->find_object(_("Function DeadByDaylight.SkillCheck.OnSkillCheckInput"));
+		sdk::is_displayed = sdk::object_array->find_object(_("Function DeadByDaylight.SkillCheck.IsDisplayed"));
+
 		// camper_player
 		sdk::trap_immunity = sdk::object_array->find_object(_("Function DeadByDaylight.DBDPlayer.TriggerTrapImmunity"));
+		sdk::is_carried = sdk::object_array->find_object(_("Function DeadByDaylight.CamperPlayer.IsBeingCarried"));
 
 		hooks::initialize();
 

@@ -4,6 +4,7 @@ namespace sdk {
 	struct u_skeletal_mesh_component;
 	struct a_actor;
 	struct a_player_state;
+	struct u_player_interaction;
 
 	struct a_pawn : sdk::a_actor {
 		char pad_0001[0x108]; // 0x148(0x108)
@@ -12,5 +13,6 @@ namespace sdk {
 		sdk::u_skeletal_mesh_component* mesh; // 0x290(0x08)
 
 		void launch_character(const sdk::vector& velocity, bool xy_override = false, bool z_override = false);
+		sdk::u_player_interaction* get_player_interaction();
 	};
 }

@@ -61,9 +61,13 @@ namespace visuals::entities {
 }
 
 namespace misc::fly {
-	void run(sdk::a_pawn* my_player);
+	void run(sdk::a_camper_player* my_camper);
 }
 
 namespace misc::trap_immunity {
+	void run(sdk::a_camper_player* my_camper);
+}
+
+namespace misc::auto_skillcheck {
 	void run(sdk::a_camper_player* my_camper);
 }

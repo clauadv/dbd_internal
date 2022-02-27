@@ -56,3 +56,5 @@
 #include "sdk/unreal/totem/totem.h"
 #include "sdk/unreal/hatch/hatch.h"
 #include "sdk/unreal/bear_trap/bear_trap.h"
+#include "sdk/unreal/skillcheck/skillcheck.h"
+#include "sdk/unreal/player_interaction/player_interaction.h"

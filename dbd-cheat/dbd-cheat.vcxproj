@@ -110,6 +110,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="features\misc\auto_skillcheck.cpp" />
     <ClCompile Include="features\misc\fly.cpp" />
     <ClCompile Include="features\misc\trap_immunity.cpp" />
     <ClCompile Include="features\visuals\entities.cpp" />
@@ -134,6 +135,7 @@
     <ClCompile Include="sdk\unreal\player_controller\player_controller.cpp" />
     <ClCompile Include="sdk\unreal\player_state\player_state.cpp" />
     <ClCompile Include="sdk\unreal\skeletal_mesh_component\skeletal_mesh_component.cpp" />
+    <ClCompile Include="sdk\unreal\skillcheck\skillcheck.cpp" />
     <ClCompile Include="sdk\unreal\slasher_player\slasher_player.cpp" />
     <ClCompile Include="sdk\unreal\totem\totem.cpp" />
     <ClCompile Include="sdk\unreal\window\window.cpp" />
@@ -190,9 +192,11 @@
     <ClInclude Include="sdk\unreal\pawn\pawn.h" />
     <ClInclude Include="sdk\unreal\player\player.h" />
     <ClInclude Include="sdk\unreal\player_controller\player_controller.h" />
+    <ClInclude Include="sdk\unreal\player_interaction\player_interaction.h" />
     <ClInclude Include="sdk\unreal\player_state\player_state.h" />
     <ClInclude Include="sdk\unreal\scene_component\scene_component.h" />
     <ClInclude Include="sdk\unreal\skeletal_mesh_component\skeletal_mesh_component.h" />
+    <ClInclude Include="sdk\unreal\skillcheck\skillcheck.h" />
     <ClInclude Include="sdk\unreal\slasher_player\slasher_player.h" />
     <ClInclude Include="sdk\unreal\struct\struct.h" />
     <ClInclude Include="sdk\unreal\totem\totem.h" />

@@ -38,8 +38,14 @@ namespace sdk {
 	// window
 	inline u_object* is_window_blocked_for;
 
+	// skillcheck
+	inline u_object* get_player_interaction;
+	inline u_object* is_displayed;
+	inline u_object* skillcheck_input;
+
 	// camper_player
 	inline u_object* trap_immunity;
+	inline u_object* is_carried;
 
 	bool initialize();
 	void process_event(void* object, void* u_function, void* params);

@@ -415,3 +415,17 @@ void sdk::a_camper_player::trap_immunity() {
 	sdk::process_event(this, sdk::trap_immunity, &params);
 	sdk::trap_immunity->flags = flags;
 }
+
+bool sdk::a_camper_player::is_carried() {
+	struct {
+		bool return_value;
+	} params{};
+
+	const auto flags = sdk::is_carried->flags;
+	sdk::is_carried->flags |= 0x00000400;
+
+	sdk::process_event(this, sdk::is_carried, &params);
+	sdk::is_carried->flags = flags;
+
+	return params.return_value;
+}

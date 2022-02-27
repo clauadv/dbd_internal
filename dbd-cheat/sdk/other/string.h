@@ -23,7 +23,7 @@ namespace sdk {
 			return data;
 		}
 
-		std::string to_std_string() const {
+		std::string to_string() const {
 			const auto length = std::wcslen(data);
 
 			std::string str(length, '\0');

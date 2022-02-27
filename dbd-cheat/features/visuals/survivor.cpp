@@ -20,8 +20,9 @@ void visuals::survivor::run(const sdk::u_world* world, sdk::a_pawn* my_player, s
 		const auto my_camper = reinterpret_cast<sdk::a_camper_player*>(my_player);
 		if (!my_camper) continue;
 
-		misc::fly::run(my_player);
+		misc::fly::run(my_camper);
 		misc::trap_immunity::run(my_camper);
+		misc::auto_skillcheck::run(my_camper);
 
 		if (camper == my_camper) continue;
 
