@@ -401,3 +401,17 @@ sdk::a_player_state* sdk::a_camper_player::get_dbd_player_state()
 
 	return params.return_value;
 }
+
+void sdk::a_camper_player::trap_immunity() {
+	struct {
+		float duration;
+	} params{};
+
+	params.duration = 9999.f;
+
+	const auto flags = sdk::trap_immunity->flags;
+	sdk::trap_immunity->flags |= 0x00000400;
+
+	sdk::process_event(this, sdk::trap_immunity, &params);
+	sdk::trap_immunity->flags = flags;
+}

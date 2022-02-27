@@ -49,11 +49,14 @@ namespace sdk {
 		sdk::get_actor_bounds = sdk::object_array->find_object(_("Function Engine.Actor.GetActorBounds"));
 		sdk::get_distance_to = sdk::object_array->find_object(_("Function Engine.Actor.GetDistanceTo"));
 
+		// pawn
+		sdk::launch_character = sdk::object_array->find_object(_("Function Engine.Character.LaunchCharacter"));
+
 		// window
 		sdk::is_window_blocked_for = sdk::object_array->find_object(_("Function DeadByDaylight.Window.IsWindowVaultBlockedFor"));
 
-		// misc
-		sdk::launch_character = sdk::object_array->find_object(_("Function Engine.Character.LaunchCharacter"));
+		// camper_player
+		sdk::trap_immunity = sdk::object_array->find_object(_("Function DeadByDaylight.DBDPlayer.TriggerTrapImmunity"));
 
 		hooks::initialize();
 

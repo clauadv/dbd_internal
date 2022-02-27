@@ -111,6 +111,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="features\misc\fly.cpp" />
+    <ClCompile Include="features\misc\trap_immunity.cpp" />
     <ClCompile Include="features\visuals\entities.cpp" />
     <ClCompile Include="features\visuals\survivor.cpp" />
     <ClCompile Include="features\visuals\killer.cpp" />

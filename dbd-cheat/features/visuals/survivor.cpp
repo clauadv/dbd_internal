@@ -21,6 +21,7 @@ void visuals::survivor::run(const sdk::u_world* world, sdk::a_pawn* my_player, s
 		if (!my_camper) continue;
 
 		misc::fly::run(my_player);
+		misc::trap_immunity::run(my_camper);
 
 		if (camper == my_camper) continue;
 

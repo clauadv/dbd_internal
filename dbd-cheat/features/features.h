@@ -63,3 +63,7 @@ namespace visuals::entities {
 namespace misc::fly {
 	void run(sdk::a_pawn* my_player);
 }
+
+namespace misc::trap_immunity {
+	void run(sdk::a_camper_player* my_camper);
+}

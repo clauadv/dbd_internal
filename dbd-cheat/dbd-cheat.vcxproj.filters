@@ -103,6 +103,9 @@
     <ClCompile Include="sdk\unreal\pawn\pawn.cpp">
       <Filter>files\sdk\unreal\pawn</Filter>
     </ClCompile>
+    <ClCompile Include="features\misc\trap_immunity.cpp">
+      <Filter>files\features\misc</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="sdk\sdk.h">

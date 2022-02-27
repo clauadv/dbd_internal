@@ -32,11 +32,14 @@ namespace sdk {
 	inline u_object* get_actor_bounds;
 	inline u_object* get_distance_to;
 
+	// pawn
+	inline u_object* launch_character;
+
 	// window
 	inline u_object* is_window_blocked_for;
 
-	// misc
-	inline u_object* launch_character;
+	// camper_player
+	inline u_object* trap_immunity;
 
 	bool initialize();
 	void process_event(void* object, void* u_function, void* params);
