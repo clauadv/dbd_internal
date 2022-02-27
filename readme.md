@@ -7,12 +7,12 @@ internal cheat for dead by daylight
 
 ## features
 survivor esp
-- character name
+- player/character name
 - distance
 - skeleton
 
 killer esp
-- character name
+- player/character name
 - distance
 - skeleton
 
@@ -56,6 +56,9 @@ bear trap esp
 
 misc
 - fov changer
+- auto skillcheck
+- trap immunity
+- fly
 - unlock all cosmetic items
 
 ## gameplay video
