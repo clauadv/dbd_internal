@@ -6,10 +6,10 @@ void misc::auto_skillcheck::run(sdk::a_camper_player* my_camper) {
 		return;
 	}
 
-	const auto interaction_handler = my_camper->get_player_interaction();
-	if (!interaction_handler) return;
+	const auto player_interaction = my_camper->get_player_interaction();
+	if (!player_interaction) return;
 
-	const auto skillcheck = interaction_handler->skillcheck;
+	const auto skillcheck = player_interaction->skillcheck;
 	if (!skillcheck) return;
 
 	// https://www.unknowncheats.me/forum/3308610-post950.html

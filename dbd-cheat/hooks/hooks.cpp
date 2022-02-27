@@ -39,7 +39,23 @@ bool hooks::initialize() {
 void __stdcall hooks::post_render::hook(sdk::u_object* viewport_client, sdk::u_canvas* canvas) {
 	render::canvas = canvas;
 
-	render::text(50.f, 50.f, _(L"dbd-cheat"), { 255, 255, 255, 255 });
+	render::text(50.f, 50.f, _(L"dbd-cheat"), [=]() {
+		static std::uint32_t cnt = 0;
+		constexpr float freq = .01f;
+
+		const auto color = sdk::color(
+			std::sin(freq * cnt + 0) * 127 + 128,
+			std::sin(freq * cnt + 2) * 127 + 128,
+			std::sin(freq * cnt + 4) * 127 + 128,
+			255
+		);
+
+		if (cnt++ >= static_cast<std::uint32_t>(-1)) {
+			cnt = 0;
+		}
+
+		return color;
+	}());
 
 	const auto world = *reinterpret_cast<sdk::u_world**>(sdk::world);
 	if (!world) return;
