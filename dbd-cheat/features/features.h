@@ -20,7 +20,7 @@ namespace visuals::killer {
 namespace visuals::survivor {
 	inline std::once_flag flag;
 	void run(const sdk::u_world* world, sdk::a_pawn* my_player, sdk::a_player_controller* player_controller);
-	void name(const sdk::vector_2d& root, sdk::a_pawn* my_player, sdk::a_camper_player* camper);
+	void name(const sdk::vector_2d& root, sdk::a_pawn* my_player, sdk::a_camper_player* camper, const sdk::a_player_state* state);
 	void skeleton(const sdk::a_camper_player* camper, sdk::a_player_controller* player_controller, sdk::u_skeletal_mesh_component* mesh);
 }
 

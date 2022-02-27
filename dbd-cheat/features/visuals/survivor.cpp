@@ -10,7 +10,7 @@ void visuals::survivor::run(const sdk::u_world* world, sdk::a_pawn* my_player, s
 		const auto pawn = actor->instigator;
 		if (!pawn) continue;
 
-		std::call_once(flag, []() {
+		std::call_once(flag, [] {
 			bones::survivor::initialize();
 		});
 
@@ -19,8 +19,6 @@ void visuals::survivor::run(const sdk::u_world* world, sdk::a_pawn* my_player, s
 
 		const auto my_camper = reinterpret_cast<sdk::a_camper_player*>(my_player);
 		if (!my_camper) continue;
-
-		my_camper->disable_skillchecks();
 
 		if (camper == my_camper) continue;
 
@@ -31,25 +29,29 @@ void visuals::survivor::run(const sdk::u_world* world, sdk::a_pawn* my_player, s
 			const auto state = pawn->player_state;
 			if (!state) continue;
 
-			const auto player_state = camper->get_dbd_player_state()->get_player_state();
+			const auto dbd_player_state = camper->get_dbd_player_state();
+			if (!dbd_player_state) continue;
+
+			const auto player_state = dbd_player_state->get_player_state();
 			if (player_state == sdk::e_game_state::dead || player_state == sdk::e_game_state::escaped || player_state == sdk::e_game_state::escaped_injured ||
-				player_state == sdk::e_game_state::disconnected || player_state == sdk::e_game_state::manually_left_match) continue;
+				player_state == sdk::e_game_state::sacrificed || player_state == sdk::e_game_state::disconnected || player_state == sdk::e_game_state::manually_left_match) continue;
 
 			const auto root = mesh->get_bone(0, player_controller);
 			if (root.is_zero()) continue;
 
-			name(root, my_player, camper);
-			skeleton(camper, player_controller, mesh);
+			survivor::name(root, my_player, camper, state);
+			survivor::skeleton(camper, player_controller, mesh);
 		}
 	}
 }
 
-void visuals::survivor::name(const sdk::vector_2d& root, sdk::a_pawn* my_player, sdk::a_camper_player* camper) {
+void visuals::survivor::name(const sdk::vector_2d& root, sdk::a_pawn* my_player, sdk::a_camper_player* camper, const sdk::a_player_state* state) {
 	const auto character_name = camper->get_character_name();
 	const auto distance = my_player->get_distance_to_string(camper);
 
 	std::wstring name;
-	name.append(character_name.first.c_str()).append(L" [").append(distance).append(L"]");
+	name.append(state->player_name_private.c_str()).append(L" [").append(distance).append(L"]");
+	std::ranges::transform(name.begin(), name.end(), name.begin(), ::tolower);
 
 	render::text(root.x, root.y + 2.f, name.c_str(), character_name.second);
 }

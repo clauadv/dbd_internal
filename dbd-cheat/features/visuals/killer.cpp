@@ -10,7 +10,7 @@ void visuals::killer::run(const sdk::u_world* world, sdk::a_pawn* my_player, sdk
 		const auto pawn = actor->instigator;
 		if (!pawn) continue;
 
-		std::call_once(flag, []() {
+		std::call_once(flag, [] {
 			bones::killer::initialize();
 		});
 
@@ -28,8 +28,8 @@ void visuals::killer::run(const sdk::u_world* world, sdk::a_pawn* my_player, sdk
 			const auto root = mesh->get_bone(0, player_controller);
 			if (root.is_zero()) continue;
 
-			name(root, my_player, slasher);
-			skeleton(slasher, player_controller, mesh);
+			killer::name(root, my_player, slasher);
+			killer::skeleton(slasher, player_controller, mesh);
 		}
 	}
 }

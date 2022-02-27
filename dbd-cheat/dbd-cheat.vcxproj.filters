@@ -94,9 +94,6 @@
     <ClCompile Include="utils\libraries\min_hook\trampoline.c">
       <Filter>files\utils\libraries\min_hook</Filter>
     </ClCompile>
-    <ClCompile Include="sdk\unreal\pawn\pawn.cpp">
-      <Filter>files\sdk\unreal\pawn</Filter>
-    </ClCompile>
     <ClCompile Include="sdk\unreal\player_state\player_state.cpp">
       <Filter>files\sdk\unreal\player_state</Filter>
     </ClCompile>
@@ -385,6 +382,12 @@
     </Filter>
     <Filter Include="files\utils\libraries\min_hook\hde">
       <UniqueIdentifier>{fbc1c8b2-2ddd-47f6-8f15-a18e0d18af42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="files\features\misc">
+      <UniqueIdentifier>{76990b71-a95d-41eb-9c78-8ef73b760e32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="files\sdk\unreal\skillcheck">
+      <UniqueIdentifier>{330ac1d3-15f7-4105-99b2-c9e1283479d4}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

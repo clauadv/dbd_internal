@@ -95,25 +95,25 @@ void bones::killer::initialize() {
 			bone.emplace_back(std::make_pair(killer::hillbilly::joint_shoulderlt_01, killer::hillbilly::joint_shoulderrolllt_02));
 			bone.emplace_back(std::make_pair(killer::hillbilly::joint_shoulderrolllt_02, killer::hillbilly::joint_elbowlt_01));
 			bone.emplace_back(std::make_pair(killer::hillbilly::joint_elbowlt_01, killer::hillbilly::joint_handroll01lt_02));
-			bone.emplace_back(std::make_pair(killer::hillbilly::joint_handroll01lt_02, killer::hillbilly::joint_hand_lt_02_ik));
+			bone.emplace_back(std::make_pair(killer::hillbilly::joint_handroll01lt_02, killer::hillbilly::joint_handlt_01));
 
-			bone.emplace_back(std::make_pair(killer::hillbilly::joint_hand_lt_02_ik, killer::hillbilly::joint_thumbalt_01));
+			bone.emplace_back(std::make_pair(killer::hillbilly::joint_handlt_01, killer::hillbilly::joint_thumbalt_01));
 			bone.emplace_back(std::make_pair(killer::hillbilly::joint_thumbalt_01, killer::hillbilly::joint_thumbblt_01));
 			bone.emplace_back(std::make_pair(killer::hillbilly::joint_thumbblt_01, killer::hillbilly::joint_thumbclt_01));
 
-			bone.emplace_back(std::make_pair(killer::hillbilly::joint_hand_lt_02_ik, killer::hillbilly::joint_indexalt_01));
+			bone.emplace_back(std::make_pair(killer::hillbilly::joint_handlt_01, killer::hillbilly::joint_indexalt_01));
 			bone.emplace_back(std::make_pair(killer::hillbilly::joint_indexalt_01, killer::hillbilly::joint_indexblt_01));
 			bone.emplace_back(std::make_pair(killer::hillbilly::joint_indexblt_01, killer::hillbilly::joint_indexclt_01));
 
-			bone.emplace_back(std::make_pair(killer::hillbilly::joint_hand_lt_02_ik, killer::hillbilly::joint_fingeralt_01));
+			bone.emplace_back(std::make_pair(killer::hillbilly::joint_handlt_01, killer::hillbilly::joint_fingeralt_01));
 			bone.emplace_back(std::make_pair(killer::hillbilly::joint_fingeralt_01, killer::hillbilly::joint_fingerblt_01));
 			bone.emplace_back(std::make_pair(killer::hillbilly::joint_fingerblt_01, killer::hillbilly::joint_fingerclt_01));
 
-			bone.emplace_back(std::make_pair(killer::hillbilly::joint_hand_lt_02_ik, killer::hillbilly::joint_ringalt_01));
+			bone.emplace_back(std::make_pair(killer::hillbilly::joint_handlt_01, killer::hillbilly::joint_ringalt_01));
 			bone.emplace_back(std::make_pair(killer::hillbilly::joint_ringalt_01, killer::hillbilly::joint_ringblt_01));
 			bone.emplace_back(std::make_pair(killer::hillbilly::joint_ringblt_01, killer::hillbilly::joint_ringclt_01));
 
-			bone.emplace_back(std::make_pair(killer::hillbilly::joint_hand_lt_02_ik, killer::hillbilly::joint_pinkyalt_01));
+			bone.emplace_back(std::make_pair(killer::hillbilly::joint_handlt_01, killer::hillbilly::joint_pinkyalt_01));
 			bone.emplace_back(std::make_pair(killer::hillbilly::joint_pinkyalt_01, killer::hillbilly::joint_pinkyblt_01));
 			bone.emplace_back(std::make_pair(killer::hillbilly::joint_pinkyblt_01, killer::hillbilly::joint_pinkyclt_01));
 
@@ -130,25 +130,25 @@ void bones::killer::initialize() {
 			bone.emplace_back(std::make_pair(killer::hillbilly::joint_shoulderrt_01, killer::hillbilly::joint_shoulderrollrt_02));
 			bone.emplace_back(std::make_pair(killer::hillbilly::joint_shoulderrollrt_02, killer::hillbilly::joint_elbowrt_01));
 			bone.emplace_back(std::make_pair(killer::hillbilly::joint_elbowrt_01, killer::hillbilly::joint_handroll01rt_02));
-			bone.emplace_back(std::make_pair(killer::hillbilly::joint_handroll01rt_02, killer::hillbilly::joint_hand_rt_02_ik));
+			bone.emplace_back(std::make_pair(killer::hillbilly::joint_handroll01rt_02, killer::hillbilly::joint_handrt_01));
 
-			bone.emplace_back(std::make_pair(killer::hillbilly::joint_hand_rt_02_ik, killer::hillbilly::joint_thumbart_01));
+			bone.emplace_back(std::make_pair(killer::hillbilly::joint_handrt_01, killer::hillbilly::joint_thumbart_01));
 			bone.emplace_back(std::make_pair(killer::hillbilly::joint_thumbart_01, killer::hillbilly::joint_thumbbrt_01));
 			bone.emplace_back(std::make_pair(killer::hillbilly::joint_thumbbrt_01, killer::hillbilly::joint_thumbcrt_01));
 
-			bone.emplace_back(std::make_pair(killer::hillbilly::joint_hand_rt_02_ik, killer::hillbilly::joint_indexart_01));
+			bone.emplace_back(std::make_pair(killer::hillbilly::joint_handrt_01, killer::hillbilly::joint_indexart_01));
 			bone.emplace_back(std::make_pair(killer::hillbilly::joint_indexart_01, killer::hillbilly::joint_indexbrt_01));
 			bone.emplace_back(std::make_pair(killer::hillbilly::joint_indexbrt_01, killer::hillbilly::joint_indexcrt_01));
 
-			bone.emplace_back(std::make_pair(killer::hillbilly::joint_hand_rt_02_ik, killer::hillbilly::joint_fingerart_01));
+			bone.emplace_back(std::make_pair(killer::hillbilly::joint_handrt_01, killer::hillbilly::joint_fingerart_01));
 			bone.emplace_back(std::make_pair(killer::hillbilly::joint_fingerart_01, killer::hillbilly::joint_fingerbrt_01));
 			bone.emplace_back(std::make_pair(killer::hillbilly::joint_fingerbrt_01, killer::hillbilly::joint_fingercrt_01));
 
-			bone.emplace_back(std::make_pair(killer::hillbilly::joint_hand_rt_02_ik, killer::hillbilly::joint_ringart_01));
+			bone.emplace_back(std::make_pair(killer::hillbilly::joint_handrt_01, killer::hillbilly::joint_ringart_01));
 			bone.emplace_back(std::make_pair(killer::hillbilly::joint_ringart_01, killer::hillbilly::joint_ringbrt_01));
 			bone.emplace_back(std::make_pair(killer::hillbilly::joint_ringbrt_01, killer::hillbilly::joint_ringcrt_01));
 
-			bone.emplace_back(std::make_pair(killer::hillbilly::joint_hand_rt_02_ik, killer::hillbilly::joint_pinkyart_01));
+			bone.emplace_back(std::make_pair(killer::hillbilly::joint_handrt_01, killer::hillbilly::joint_pinkyart_01));
 			bone.emplace_back(std::make_pair(killer::hillbilly::joint_pinkyart_01, killer::hillbilly::joint_pinkybrt_01));
 			bone.emplace_back(std::make_pair(killer::hillbilly::joint_pinkybrt_01, killer::hillbilly::joint_pinkycrt_01));
 
@@ -401,25 +401,25 @@ void bones::killer::initialize() {
 			bone.emplace_back(std::make_pair(killer::doctor::joint_shoulderlt_01, killer::doctor::joint_shoulderrolllt_02));
 			bone.emplace_back(std::make_pair(killer::doctor::joint_shoulderrolllt_02, killer::doctor::joint_elbowlt_01));
 			bone.emplace_back(std::make_pair(killer::doctor::joint_elbowlt_01, killer::doctor::joint_handroll01lt_02));
-			bone.emplace_back(std::make_pair(killer::doctor::joint_handroll01lt_02, killer::doctor::joint_hand_lt_02_ik));
+			bone.emplace_back(std::make_pair(killer::doctor::joint_handroll01lt_02, killer::doctor::joint_handlt_01));
 
-			bone.emplace_back(std::make_pair(killer::doctor::joint_hand_lt_02_ik, killer::doctor::joint_thumbalt_01));
+			bone.emplace_back(std::make_pair(killer::doctor::joint_handlt_01, killer::doctor::joint_thumbalt_01));
 			bone.emplace_back(std::make_pair(killer::doctor::joint_thumbalt_01, killer::doctor::joint_thumbblt_01));
 			bone.emplace_back(std::make_pair(killer::doctor::joint_thumbblt_01, killer::doctor::joint_thumbclt_01));
 
-			bone.emplace_back(std::make_pair(killer::doctor::joint_hand_lt_02_ik, killer::doctor::joint_indexalt_01));
+			bone.emplace_back(std::make_pair(killer::doctor::joint_handlt_01, killer::doctor::joint_indexalt_01));
 			bone.emplace_back(std::make_pair(killer::doctor::joint_indexalt_01, killer::doctor::joint_indexblt_01));
 			bone.emplace_back(std::make_pair(killer::doctor::joint_indexblt_01, killer::doctor::joint_indexclt_01));
 
-			bone.emplace_back(std::make_pair(killer::doctor::joint_hand_lt_02_ik, killer::doctor::joint_fingeralt_01));
+			bone.emplace_back(std::make_pair(killer::doctor::joint_handlt_01, killer::doctor::joint_fingeralt_01));
 			bone.emplace_back(std::make_pair(killer::doctor::joint_fingeralt_01, killer::doctor::joint_fingerblt_01));
 			bone.emplace_back(std::make_pair(killer::doctor::joint_fingerblt_01, killer::doctor::joint_fingerclt_01));
 
-			bone.emplace_back(std::make_pair(killer::doctor::joint_hand_lt_02_ik, killer::doctor::joint_ringalt_01));
+			bone.emplace_back(std::make_pair(killer::doctor::joint_handlt_01, killer::doctor::joint_ringalt_01));
 			bone.emplace_back(std::make_pair(killer::doctor::joint_ringalt_01, killer::doctor::joint_ringblt_01));
 			bone.emplace_back(std::make_pair(killer::doctor::joint_ringblt_01, killer::doctor::joint_ringclt_01));
 
-			bone.emplace_back(std::make_pair(killer::doctor::joint_hand_lt_02_ik, killer::doctor::joint_pinkyalt_01));
+			bone.emplace_back(std::make_pair(killer::doctor::joint_handlt_01, killer::doctor::joint_pinkyalt_01));
 			bone.emplace_back(std::make_pair(killer::doctor::joint_pinkyalt_01, killer::doctor::joint_pinkyblt_01));
 			bone.emplace_back(std::make_pair(killer::doctor::joint_pinkyblt_01, killer::doctor::joint_pinkyclt_01));
 
@@ -436,25 +436,25 @@ void bones::killer::initialize() {
 			bone.emplace_back(std::make_pair(killer::doctor::joint_shoulderrt_01, killer::doctor::joint_shoulderrollrt_02));
 			bone.emplace_back(std::make_pair(killer::doctor::joint_shoulderrollrt_02, killer::doctor::joint_elbowrt_01));
 			bone.emplace_back(std::make_pair(killer::doctor::joint_elbowrt_01, killer::doctor::joint_handroll01rt_02));
-			bone.emplace_back(std::make_pair(killer::doctor::joint_handroll01rt_02, killer::doctor::joint_hand_rt_02_ik));
+			bone.emplace_back(std::make_pair(killer::doctor::joint_handroll01rt_02, killer::doctor::joint_handrt_01));
 
-			bone.emplace_back(std::make_pair(killer::doctor::joint_hand_rt_02_ik, killer::doctor::joint_thumbart_01));
+			bone.emplace_back(std::make_pair(killer::doctor::joint_handrt_01, killer::doctor::joint_thumbart_01));
 			bone.emplace_back(std::make_pair(killer::doctor::joint_thumbart_01, killer::doctor::joint_thumbbrt_01));
 			bone.emplace_back(std::make_pair(killer::doctor::joint_thumbbrt_01, killer::doctor::joint_thumbcrt_01));
 
-			bone.emplace_back(std::make_pair(killer::doctor::joint_hand_rt_02_ik, killer::doctor::joint_indexart_01));
+			bone.emplace_back(std::make_pair(killer::doctor::joint_handrt_01, killer::doctor::joint_indexart_01));
 			bone.emplace_back(std::make_pair(killer::doctor::joint_indexart_01, killer::doctor::joint_indexbrt_01));
 			bone.emplace_back(std::make_pair(killer::doctor::joint_indexbrt_01, killer::doctor::joint_indexcrt_01));
 
-			bone.emplace_back(std::make_pair(killer::doctor::joint_hand_rt_02_ik, killer::doctor::joint_fingerart_01));
+			bone.emplace_back(std::make_pair(killer::doctor::joint_handrt_01, killer::doctor::joint_fingerart_01));
 			bone.emplace_back(std::make_pair(killer::doctor::joint_fingerart_01, killer::doctor::joint_fingerbrt_01));
 			bone.emplace_back(std::make_pair(killer::doctor::joint_fingerbrt_01, killer::doctor::joint_fingercrt_01));
 
-			bone.emplace_back(std::make_pair(killer::doctor::joint_hand_rt_02_ik, killer::doctor::joint_ringart_01));
+			bone.emplace_back(std::make_pair(killer::doctor::joint_handrt_01, killer::doctor::joint_ringart_01));
 			bone.emplace_back(std::make_pair(killer::doctor::joint_ringart_01, killer::doctor::joint_ringbrt_01));
 			bone.emplace_back(std::make_pair(killer::doctor::joint_ringbrt_01, killer::doctor::joint_ringcrt_01));
 
-			bone.emplace_back(std::make_pair(killer::doctor::joint_hand_rt_02_ik, killer::doctor::joint_pinkyart_01));
+			bone.emplace_back(std::make_pair(killer::doctor::joint_handrt_01, killer::doctor::joint_pinkyart_01));
 			bone.emplace_back(std::make_pair(killer::doctor::joint_pinkyart_01, killer::doctor::joint_pinkybrt_01));
 			bone.emplace_back(std::make_pair(killer::doctor::joint_pinkybrt_01, killer::doctor::joint_pinkycrt_01));
 
@@ -703,25 +703,25 @@ void bones::killer::initialize() {
 			// upper body
 			bone.emplace_back(std::make_pair(killer::clown::joint_necka_01, killer::clown::joint_shoulderlt_01));
 			bone.emplace_back(std::make_pair(killer::clown::joint_shoulderlt_01, killer::clown::joint_elbowlt_01));
-			bone.emplace_back(std::make_pair(killer::clown::joint_elbowlt_01, killer::clown::joint_hand_lt_02_ik));
+			bone.emplace_back(std::make_pair(killer::clown::joint_elbowlt_01, killer::clown::joint_handlt_01));
 
-			bone.emplace_back(std::make_pair(killer::clown::joint_hand_lt_02_ik, killer::clown::joint_thumbalt_01));
+			bone.emplace_back(std::make_pair(killer::clown::joint_handlt_01, killer::clown::joint_thumbalt_01));
 			bone.emplace_back(std::make_pair(killer::clown::joint_thumbalt_01, killer::clown::joint_thumbblt_01));
 			bone.emplace_back(std::make_pair(killer::clown::joint_thumbblt_01, killer::clown::joint_thumbclt_01));
 
-			bone.emplace_back(std::make_pair(killer::clown::joint_hand_lt_02_ik, killer::clown::joint_indexalt_01));
+			bone.emplace_back(std::make_pair(killer::clown::joint_handlt_01, killer::clown::joint_indexalt_01));
 			bone.emplace_back(std::make_pair(killer::clown::joint_indexalt_01, killer::clown::joint_indexblt_01));
 			bone.emplace_back(std::make_pair(killer::clown::joint_indexblt_01, killer::clown::joint_indexclt_01));
 
-			bone.emplace_back(std::make_pair(killer::clown::joint_hand_lt_02_ik, killer::clown::joint_fingeralt_01));
+			bone.emplace_back(std::make_pair(killer::clown::joint_handlt_01, killer::clown::joint_fingeralt_01));
 			bone.emplace_back(std::make_pair(killer::clown::joint_fingeralt_01, killer::clown::joint_fingerblt_01));
 			bone.emplace_back(std::make_pair(killer::clown::joint_fingerblt_01, killer::clown::joint_fingerclt_01));
 
-			bone.emplace_back(std::make_pair(killer::clown::joint_hand_lt_02_ik, killer::clown::joint_ringalt_01));
+			bone.emplace_back(std::make_pair(killer::clown::joint_handlt_01, killer::clown::joint_ringalt_01));
 			bone.emplace_back(std::make_pair(killer::clown::joint_ringalt_01, killer::clown::joint_ringblt_01));
 			bone.emplace_back(std::make_pair(killer::clown::joint_ringblt_01, killer::clown::joint_ringclt_01));
 
-			bone.emplace_back(std::make_pair(killer::clown::joint_hand_lt_02_ik, killer::clown::joint_pinkyalt_01));
+			bone.emplace_back(std::make_pair(killer::clown::joint_handlt_01, killer::clown::joint_pinkyalt_01));
 			bone.emplace_back(std::make_pair(killer::clown::joint_pinkyalt_01, killer::clown::joint_pinkyblt_01));
 			bone.emplace_back(std::make_pair(killer::clown::joint_pinkyblt_01, killer::clown::joint_pinkyclt_01));
 
@@ -736,25 +736,25 @@ void bones::killer::initialize() {
 			// upper body
 			bone.emplace_back(std::make_pair(killer::clown::joint_necka_01, killer::clown::joint_shoulderrt_01));
 			bone.emplace_back(std::make_pair(killer::clown::joint_shoulderrt_01, killer::clown::joint_elbowrt_01));
-			bone.emplace_back(std::make_pair(killer::clown::joint_elbowrt_01, killer::clown::joint_hand_rt_02_ik));
+			bone.emplace_back(std::make_pair(killer::clown::joint_elbowrt_01, killer::clown::joint_handrt_01));
 
-			bone.emplace_back(std::make_pair(killer::clown::joint_hand_rt_02_ik, killer::clown::joint_thumbart_01));
+			bone.emplace_back(std::make_pair(killer::clown::joint_handrt_01, killer::clown::joint_thumbart_01));
 			bone.emplace_back(std::make_pair(killer::clown::joint_thumbart_01, killer::clown::joint_thumbbrt_01));
 			bone.emplace_back(std::make_pair(killer::clown::joint_thumbbrt_01, killer::clown::joint_thumbcrt_01));
 
-			bone.emplace_back(std::make_pair(killer::clown::joint_hand_rt_02_ik, killer::clown::joint_indexart_01));
+			bone.emplace_back(std::make_pair(killer::clown::joint_handrt_01, killer::clown::joint_indexart_01));
 			bone.emplace_back(std::make_pair(killer::clown::joint_indexart_01, killer::clown::joint_indexbrt_01));
 			bone.emplace_back(std::make_pair(killer::clown::joint_indexbrt_01, killer::clown::joint_indexcrt_01));
 
-			bone.emplace_back(std::make_pair(killer::clown::joint_hand_rt_02_ik, killer::clown::joint_fingerart_01));
+			bone.emplace_back(std::make_pair(killer::clown::joint_handrt_01, killer::clown::joint_fingerart_01));
 			bone.emplace_back(std::make_pair(killer::clown::joint_fingerart_01, killer::clown::joint_fingerbrt_01));
 			bone.emplace_back(std::make_pair(killer::clown::joint_fingerbrt_01, killer::clown::joint_fingercrt_01));
 
-			bone.emplace_back(std::make_pair(killer::clown::joint_hand_rt_02_ik, killer::clown::joint_ringart_01));
+			bone.emplace_back(std::make_pair(killer::clown::joint_handrt_01, killer::clown::joint_ringart_01));
 			bone.emplace_back(std::make_pair(killer::clown::joint_ringart_01, killer::clown::joint_ringbrt_01));
 			bone.emplace_back(std::make_pair(killer::clown::joint_ringbrt_01, killer::clown::joint_ringcrt_01));
 
-			bone.emplace_back(std::make_pair(killer::clown::joint_hand_rt_02_ik, killer::clown::joint_pinkyart_01));
+			bone.emplace_back(std::make_pair(killer::clown::joint_handrt_01, killer::clown::joint_pinkyart_01));
 			bone.emplace_back(std::make_pair(killer::clown::joint_pinkyart_01, killer::clown::joint_pinkybrt_01));
 			bone.emplace_back(std::make_pair(killer::clown::joint_pinkybrt_01, killer::clown::joint_pinkycrt_01));
 
