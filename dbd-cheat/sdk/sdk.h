@@ -31,6 +31,8 @@ namespace sdk {
 	inline u_object* get_actor_rotation;
 	inline u_object* get_actor_bounds;
 	inline u_object* get_distance_to;
+	inline u_object* enable_input;
+	inline u_object* disable_input;
 
 	// pawn
 	inline u_object* launch_character;
@@ -46,6 +48,9 @@ namespace sdk {
 	// camper_player
 	inline u_object* trap_immunity;
 	inline u_object* is_carried;
+
+	// gameplay_statics
+	inline u_object* get_delta_time;
 
 	bool initialize();
 	void process_event(void* object, void* u_function, void* params);

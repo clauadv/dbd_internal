@@ -21,24 +21,32 @@ void visuals::entities::run(const sdk::u_world* world, sdk::a_pawn* my_player, s
 			const auto my_camper = reinterpret_cast<sdk::a_camper_player*>(my_player);
 			if (!my_camper) continue;
 
-			// if the distance (in meters) between local and the entity is higher or equal to 30 don't render it
-			if (my_player->get_distance_to(actor) * 0.01f >= 30) continue;
+			if (my_player->get_distance_to(actor) * 0.01f >= variables::entities::max_distance) continue;
 
-			generator::name(actor, distance, location, player_controller);
-			pallet::name(actor, distance, location, player_controller);
-			escape_door::name(actor, distance, location, player_controller);
-			chest::name(actor, distance, location, player_controller);
+			generator::name(actor, distance, location, player_controller, my_camper);
+			pallet::name(actor, distance, location, player_controller, my_camper);
+			door::name(actor, distance, location, player_controller, my_camper);
+			chest::name(actor, distance, location, player_controller, my_camper);
 			window::name(actor, distance, location, player_controller, my_camper);
-			totem::name(actor, distance, location, player_controller);
-			hatch::name(actor, distance, location, player_controller);
-			bear_trap::name(actor, distance, location, player_controller);
+			totem::name(actor, distance, location, player_controller, my_camper);
+			hatch::name(actor, distance, location, player_controller, my_camper);
+			trap::name(actor, distance, location, player_controller, my_camper);
 		}
 	}
 }
 
-void visuals::entities::generator::name(sdk::a_actor* actor, const std::wstring& distance, const sdk::vector location, sdk::a_player_controller* player_controller) {
+void visuals::entities::generator::name(sdk::a_actor* actor, const std::wstring& distance, const sdk::vector location, sdk::a_player_controller* player_controller, sdk::a_camper_player* my_player) {
+	if (!variables::entities::generator) return;
+
 	const auto generator = reinterpret_cast<sdk::a_generator*>(actor);
 	if (!generator) return;
+
+	const auto color = sdk::color{
+		variables::entities::generator_color[0],
+		variables::entities::generator_color[1],
+		variables::entities::generator_color[2],
+		variables::entities::generator_color[3]
+	};
 
 	if (generator->is_generator()) {
 		std::wstring name;
@@ -54,14 +62,23 @@ void visuals::entities::generator::name(sdk::a_actor* actor, const std::wstring&
 
 		sdk::vector_2d position{};
 		if (player_controller->world_to_screen(location, position)) {
-			render::text(position.x, position.y, name.c_str(), { 52, 134, 235, 255 });
+			render::text(position.x, position.y, name.c_str(), color);
 		}
 	}
 }
 
-void visuals::entities::pallet::name(sdk::a_actor* actor, const std::wstring& distance, const sdk::vector location, sdk::a_player_controller* player_controller) {
+void visuals::entities::pallet::name(sdk::a_actor* actor, const std::wstring& distance, const sdk::vector location, sdk::a_player_controller* player_controller, sdk::a_camper_player* my_player) {
+	if (!variables::entities::pallet) return;
+
 	const auto pallet = reinterpret_cast<sdk::a_pallet*>(actor);
 	if (!pallet) return;
+
+	const auto color = sdk::color{
+		variables::entities::pallet_color[0],
+		variables::entities::pallet_color[1],
+		variables::entities::pallet_color[2],
+		variables::entities::pallet_color[3]
+	};
 
 	if (pallet->is_pallet()) {
 		std::wstring name;
@@ -79,14 +96,23 @@ void visuals::entities::pallet::name(sdk::a_actor* actor, const std::wstring& di
 
 		sdk::vector_2d position{};
 		if (player_controller->world_to_screen(location, position)) {
-			render::text(position.x, position.y, name.c_str(), { 52, 134, 235, 255 });
+			render::text(position.x, position.y, name.c_str(), color);
 		}
 	}
 }
 
-void visuals::entities::chest::name(sdk::a_actor* actor, const std::wstring& distance, const sdk::vector location, sdk::a_player_controller* player_controller) {
+void visuals::entities::chest::name(sdk::a_actor* actor, const std::wstring& distance, const sdk::vector location, sdk::a_player_controller* player_controller, sdk::a_camper_player* my_player) {
+	if (!variables::entities::chest) return;
+
 	const auto chest = reinterpret_cast<sdk::a_chest*>(actor);
 	if (!chest) return;
+
+	const auto color = sdk::color{
+		variables::entities::chest_color[0],
+		variables::entities::chest_color[1],
+		variables::entities::chest_color[2],
+		variables::entities::chest_color[3]
+	};
 
 	if (chest->is_chest()) {
 		std::wstring name;
@@ -98,14 +124,23 @@ void visuals::entities::chest::name(sdk::a_actor* actor, const std::wstring& dis
 
 		sdk::vector_2d position{};
 		if (player_controller->world_to_screen(location, position)) {
-			render::text(position.x, position.y, name.c_str(), { 52, 134, 235, 255 });
+			render::text(position.x, position.y, name.c_str(), color);
 		}
 	}
 }
 
-void visuals::entities::escape_door::name(sdk::a_actor* actor, const std::wstring& distance, const sdk::vector location, sdk::a_player_controller* player_controller) {
+void visuals::entities::door::name(sdk::a_actor* actor, const std::wstring& distance, const sdk::vector location, sdk::a_player_controller* player_controller, sdk::a_camper_player* my_player) {
+	if (!variables::entities::door) return;
+
 	const auto door = reinterpret_cast<sdk::a_escape_door*>(actor);
 	if (!door) return;
+
+	const auto color = sdk::color{
+		variables::entities::door_color[0],
+		variables::entities::door_color[1],
+		variables::entities::door_color[2],
+		variables::entities::door_color[3]
+	};
 
 	if (door->is_escape_door()) {
 		std::wstring name;
@@ -114,14 +149,23 @@ void visuals::entities::escape_door::name(sdk::a_actor* actor, const std::wstrin
 
 		sdk::vector_2d position{};
 		if (player_controller->world_to_screen(location, position)) {
-			render::text(position.x, position.y, name.c_str(), { 52, 134, 235, 255 });
+			render::text(position.x, position.y, name.c_str(), color);
 		}
 	}
 }
 
 void visuals::entities::window::name(sdk::a_actor* actor, const std::wstring& distance, const sdk::vector location, sdk::a_player_controller* player_controller, sdk::a_camper_player* my_player) {
+	if (!variables::entities::window) return;
+
 	const auto window = reinterpret_cast<sdk::a_window*>(actor);
 	if (!window) return;
+
+	const auto color = sdk::color{
+		variables::entities::window_color[0],
+		variables::entities::window_color[1],
+		variables::entities::window_color[2],
+		variables::entities::window_color[3]
+	};
 
 	if (window->is_window()) {
 		std::wstring name;
@@ -134,14 +178,23 @@ void visuals::entities::window::name(sdk::a_actor* actor, const std::wstring& di
 
 		sdk::vector_2d position{};
 		if (player_controller->world_to_screen(location, position)) {
-			render::text(position.x, position.y, name.c_str(), { 52, 134, 235, 255 });
+			render::text(position.x, position.y, name.c_str(), color);
 		}
 	}
 }
 
-void visuals::entities::totem::name(sdk::a_actor* actor, const std::wstring& distance, const sdk::vector location, sdk::a_player_controller* player_controller) {
+void visuals::entities::totem::name(sdk::a_actor* actor, const std::wstring& distance, const sdk::vector location, sdk::a_player_controller* player_controller, sdk::a_camper_player* my_player) {
+	if (!variables::entities::totem) return;
+
 	const auto totem = reinterpret_cast<sdk::a_totem*>(actor);
 	if (!totem) return;
+
+	const auto color = sdk::color{
+		variables::entities::totem_color[0],
+		variables::entities::totem_color[1],
+		variables::entities::totem_color[2],
+		variables::entities::totem_color[3]
+	};
 
 	if (totem->is_totem()) {
 		std::wstring name;
@@ -159,14 +212,23 @@ void visuals::entities::totem::name(sdk::a_actor* actor, const std::wstring& dis
 
 		sdk::vector_2d position{};
 		if (player_controller->world_to_screen(location, position)) {
-			render::text(position.x, position.y, name.c_str(), { 52, 134, 235, 255 });
+			render::text(position.x, position.y, name.c_str(), color);
 		}
 	}
 }
 
-void visuals::entities::hatch::name(sdk::a_actor* actor, const std::wstring& distance, const sdk::vector location, sdk::a_player_controller* player_controller) {
+void visuals::entities::hatch::name(sdk::a_actor* actor, const std::wstring& distance, const sdk::vector location, sdk::a_player_controller* player_controller, sdk::a_camper_player* my_player) {
+	if (!variables::entities::hatch) return;
+
 	const auto hatch = reinterpret_cast<sdk::a_hatch*>(actor);
 	if (!hatch) return;
+
+	const auto color = sdk::color{
+		variables::entities::hatch_color[0],
+		variables::entities::hatch_color[1],
+		variables::entities::hatch_color[2],
+		variables::entities::hatch_color[3]
+	};
 
 	if (hatch->is_hatch()) {
 		std::wstring name;
@@ -181,23 +243,32 @@ void visuals::entities::hatch::name(sdk::a_actor* actor, const std::wstring& dis
 
 		sdk::vector_2d position{};
 		if (player_controller->world_to_screen(location, position)) {
-			render::text(position.x, position.y, name.c_str(), { 52, 134, 235, 255 });
+			render::text(position.x, position.y, name.c_str(), color);
 		}
 	}
 }
 
-void visuals::entities::bear_trap::name(sdk::a_actor* actor, const std::wstring& distance, const sdk::vector location, sdk::a_player_controller* player_controller) {
+void visuals::entities::trap::name(sdk::a_actor* actor, const std::wstring& distance, const sdk::vector location, sdk::a_player_controller* player_controller, sdk::a_camper_player* my_player) {
+	if (!variables::entities::trap) return;
+
 	const auto bear_trap = reinterpret_cast<sdk::a_bear_trap*>(actor);
 	if (!bear_trap) return;
+
+	const auto color = sdk::color{
+		variables::entities::trap_color[0],
+		variables::entities::trap_color[1],
+		variables::entities::trap_color[2],
+		variables::entities::trap_color[3]
+	};
 
 	if (bear_trap->is_bear_trap()) {
 		std::wstring name;
 
-		name.append(L"bear_trap").append(L" [").append(distance).append(L"]");
+		name.append(L"trap").append(L" [").append(distance).append(L"]");
 
 		sdk::vector_2d position{};
 		if (player_controller->world_to_screen(location, position)) {
-			render::text(position.x, position.y, name.c_str(), { 52, 134, 235, 255 });
+			render::text(position.x, position.y, name.c_str(), color);
 		}
 	}
 }

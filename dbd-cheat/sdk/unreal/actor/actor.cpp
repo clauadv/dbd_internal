@@ -55,6 +55,34 @@ float sdk::a_actor::get_distance_to(sdk::a_actor* actor) {
 	return params.return_value;
 }
 
+void sdk::a_actor::enable_input(sdk::a_player_controller* player_controller) {
+	struct {
+		sdk::a_player_controller* player_controller;
+	} params{};
+
+	params.player_controller = player_controller;
+
+	const auto flags = sdk::enable_input->flags;
+	sdk::enable_input->flags |= 0x00000400;
+
+	sdk::process_event(this, sdk::enable_input, &params);
+	sdk::enable_input->flags = flags;
+}
+
+void sdk::a_actor::disable_input(sdk::a_player_controller* player_controller) {
+	struct {
+		sdk::a_player_controller* player_controller;
+	} params{};
+
+	params.player_controller = player_controller;
+
+	const auto flags = sdk::disable_input->flags;
+	sdk::disable_input->flags |= 0x00000400;
+
+	sdk::process_event(this, sdk::disable_input, &params);
+	sdk::disable_input->flags = flags;
+}
+
 std::wstring sdk::a_actor::get_distance_to_string(sdk::a_actor* actor) {
 	const auto distance = this->get_distance_to(actor);
 	const auto meters = distance * 0.01f;

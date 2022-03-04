@@ -9,6 +9,7 @@ namespace sdk {
 	struct rotator;
 	struct u_string;
 	struct color;
+	struct a_player_controller;
 
 	struct a_actor : sdk::u_object {
 		char pad_0001[0xf8]; // 0x30(0xf8)
@@ -20,6 +21,8 @@ namespace sdk {
 		sdk::rotator get_rotation();
 		void get_bounds(bool only_colliding_components, sdk::vector* origin, sdk::vector* extent);
 		float get_distance_to(sdk::a_actor* actor);
+		void enable_input(sdk::a_player_controller* player_controller);
+		void disable_input(sdk::a_player_controller* player_controller);
 		std::wstring get_distance_to_string(sdk::a_actor* actor);
 	};
 }

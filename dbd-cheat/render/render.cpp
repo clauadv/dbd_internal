@@ -3,7 +3,7 @@
 
 void render::text(const float x, const float y, const sdk::u_string text, const sdk::color color) {
 	if (canvas) {
-		canvas->draw_text(text, { x, y }, { 1.f, 1.f }, { color.r / 255.f, color.g / 255.f, color.b / 255.f, color.a / 255.f }, 1.f, sdk::color(), sdk::vector_2d(), true, false, true, { 0, 0, 0, 1.f });
+		canvas->draw_text(text, { x, y }, { 1.f, 1.f }, color, 1.f, sdk::color(), sdk::vector_2d(), true, false, true, { 0.f, 0.f, 0.f, 1.f });
 	}
 }
 
@@ -22,13 +22,13 @@ void render::circle(const float x, const float y, const float radius, const sdk:
 
 void render::filled_circle(const float x, const float y, const float radius, const sdk::color color) {
 	if (canvas) {
-		canvas->draw_polygon(nullptr, { x, y }, { radius, radius }, 32, { color.r / 255.f, color.g / 255.f, color.b / 255.f, color.a / 255.f });
+		canvas->draw_polygon(nullptr, { x, y }, { radius, radius }, 32, color);
 	}
 }
 
 void render::line(const float x1, const float y1, const float x2, const float y2, const float thickness, const sdk::color color) {
 	if (canvas) {
-		canvas->draw_line({ x1, y1 }, { x2, y2 }, thickness, { color.r / 255.f, color.g / 255.f, color.b / 255.f, color.a / 255.f });
+		canvas->draw_line({ x1, y1 }, { x2, y2 }, thickness, color);
 	}
 }
 

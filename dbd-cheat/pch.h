@@ -17,6 +17,11 @@
 #include "utils/libraries/xor.h"
 #include "utils/libraries/lazy_importer.h"
 
+#include "utils/libraries/imgui/imgui.h"
+#include "utils/libraries/imgui/imgui_impl_dx11.h"
+#include "utils/libraries/imgui/imgui_impl_win32.h"
+#include "utils/libraries/imgui/imgui_internal.h"
+
 #include "sdk/sdk.h"
 #include "sdk/misc/survivor_bones.h"
 #include "sdk/misc/killer_bones.h"
@@ -58,3 +63,4 @@
 #include "sdk/unreal/bear_trap/bear_trap.h"
 #include "sdk/unreal/skillcheck/skillcheck.h"
 #include "sdk/unreal/player_interaction/player_interaction.h"
+#include "sdk/unreal/gameplay_statics/gameplay_statics.h"

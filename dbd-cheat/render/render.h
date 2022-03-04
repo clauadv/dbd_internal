@@ -9,6 +9,7 @@ namespace sdk {
 
 namespace render {
 	inline sdk::u_canvas* canvas;
+	inline sdk::vector_2d screen{ 0.f, 0.f };
 
 	void text(float x, float y, sdk::u_string text, sdk::color color);
 	void circle(float x, float y, float radius, sdk::color color);

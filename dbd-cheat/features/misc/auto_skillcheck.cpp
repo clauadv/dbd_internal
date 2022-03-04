@@ -2,9 +2,8 @@
 #include "../features.h"
 
 void misc::auto_skillcheck::run(sdk::a_camper_player* my_camper) {
-	if (my_camper->is_carried()) {
-		return;
-	}
+	if (!variables::misc::auto_skillcheck) return;
+	if (my_camper->is_carried()) return;
 
 	const auto player_interaction = my_camper->get_player_interaction();
 	if (!player_interaction) return;

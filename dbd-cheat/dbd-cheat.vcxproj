@@ -97,8 +97,9 @@
       <RuntimeTypeInfo>false</RuntimeTypeInfo>
       <MultiProcessorCompilation>false</MultiProcessorCompilation>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <Optimization>MaxSpeed</Optimization>
+      <Optimization>MinSpace</Optimization>
       <WholeProgramOptimization>true</WholeProgramOptimization>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -106,17 +107,23 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>d3d11.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="features\misc\auto_skillcheck.cpp" />
     <ClCompile Include="features\misc\fly.cpp" />
+    <ClCompile Include="features\misc\fov_changer.cpp" />
     <ClCompile Include="features\misc\trap_immunity.cpp" />
     <ClCompile Include="features\visuals\entities.cpp" />
     <ClCompile Include="features\visuals\survivor.cpp" />
     <ClCompile Include="features\visuals\killer.cpp" />
+    <ClCompile Include="features\visuals\watermark.cpp" />
     <ClCompile Include="hooks\hooks.cpp" />
+    <ClCompile Include="menu\d3d11\d3d11.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="menu\menu.cpp" />
     <ClCompile Include="render\render.cpp" />
     <ClCompile Include="sdk\misc\killer_bones.cpp" />
     <ClCompile Include="sdk\misc\survivor_bones.cpp" />
@@ -126,6 +133,7 @@
     <ClCompile Include="sdk\unreal\canvas\canvas.cpp" />
     <ClCompile Include="sdk\unreal\chest\chest.cpp" />
     <ClCompile Include="sdk\unreal\escape_door\escape_door.cpp" />
+    <ClCompile Include="sdk\unreal\gameplay_statics\gameplay_statics.cpp" />
     <ClCompile Include="sdk\unreal\generator\generator.cpp" />
     <ClCompile Include="sdk\unreal\hatch\hatch.cpp" />
     <ClCompile Include="sdk\unreal\name_pool\name_pool.cpp" />
@@ -139,6 +147,21 @@
     <ClCompile Include="sdk\unreal\slasher_player\slasher_player.cpp" />
     <ClCompile Include="sdk\unreal\totem\totem.cpp" />
     <ClCompile Include="sdk\unreal\window\window.cpp" />
+    <ClCompile Include="utils\libraries\imgui\imgui.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="utils\libraries\imgui\imgui_draw.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="utils\libraries\imgui\imgui_impl_dx11.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="utils\libraries\imgui\imgui_impl_win32.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="utils\libraries\imgui\imgui_widgets.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="utils\libraries\min_hook\buffer.c">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
@@ -161,6 +184,9 @@
   <ItemGroup>
     <ClInclude Include="features\features.h" />
     <ClInclude Include="hooks\hooks.h" />
+    <ClInclude Include="menu\d3d11\d3d11.h" />
+    <ClInclude Include="menu\menu.h" />
+    <ClInclude Include="menu\variables.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="render\render.h" />
     <ClInclude Include="sdk\misc\killer_bones.h" />
@@ -181,6 +207,7 @@
     <ClInclude Include="sdk\unreal\engine\engine.h" />
     <ClInclude Include="sdk\unreal\escape_door\escape_door.h" />
     <ClInclude Include="sdk\unreal\field\field.h" />
+    <ClInclude Include="sdk\unreal\gameplay_statics\gameplay_statics.h" />
     <ClInclude Include="sdk\unreal\game_instance\game_instance.h" />
     <ClInclude Include="sdk\unreal\game_state_base\game_state_base.h" />
     <ClInclude Include="sdk\unreal\generator\generator.h" />
@@ -202,6 +229,15 @@
     <ClInclude Include="sdk\unreal\totem\totem.h" />
     <ClInclude Include="sdk\unreal\window\window.h" />
     <ClInclude Include="sdk\unreal\world\world.h" />
+    <ClInclude Include="utils\libraries\imgui\imconfig.h" />
+    <ClInclude Include="utils\libraries\imgui\imgui.h" />
+    <ClInclude Include="utils\libraries\imgui\imgui_impl_dx11.h" />
+    <ClInclude Include="utils\libraries\imgui\imgui_impl_win32.h" />
+    <ClInclude Include="utils\libraries\imgui\imgui_internal.h" />
+    <ClInclude Include="utils\libraries\imgui\imstb_rectpack.h" />
+    <ClInclude Include="utils\libraries\imgui\imstb_textedit.h" />
+    <ClInclude Include="utils\libraries\imgui\imstb_truetype.h" />
+    <ClInclude Include="utils\libraries\imgui\shaders.h" />
     <ClInclude Include="utils\libraries\lazy_importer.h" />
     <ClInclude Include="utils\libraries\min_hook.h" />
     <ClInclude Include="utils\libraries\min_hook\buffer.h" />

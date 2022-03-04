@@ -112,6 +112,36 @@
     <ClCompile Include="features\misc\auto_skillcheck.cpp">
       <Filter>files\features\misc</Filter>
     </ClCompile>
+    <ClCompile Include="menu\menu.cpp">
+      <Filter>files\menu</Filter>
+    </ClCompile>
+    <ClCompile Include="menu\d3d11\d3d11.cpp">
+      <Filter>files\menu\d3d11</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\libraries\imgui\imgui.cpp">
+      <Filter>files\utils\libraries\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\libraries\imgui\imgui_draw.cpp">
+      <Filter>files\utils\libraries\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\libraries\imgui\imgui_impl_dx11.cpp">
+      <Filter>files\utils\libraries\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\libraries\imgui\imgui_impl_win32.cpp">
+      <Filter>files\utils\libraries\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\libraries\imgui\imgui_widgets.cpp">
+      <Filter>files\utils\libraries\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="features\misc\fov_changer.cpp">
+      <Filter>files\features\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="sdk\unreal\gameplay_statics\gameplay_statics.cpp">
+      <Filter>files\sdk\unreal\gameplay_statics</Filter>
+    </ClCompile>
+    <ClCompile Include="features\visuals\watermark.cpp">
+      <Filter>files\features\visuals</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="sdk\sdk.h">
@@ -276,6 +306,45 @@
     <ClInclude Include="sdk\unreal\player_interaction\player_interaction.h">
       <Filter>files\sdk\unreal\player_interaction</Filter>
     </ClInclude>
+    <ClInclude Include="menu\menu.h">
+      <Filter>files\menu</Filter>
+    </ClInclude>
+    <ClInclude Include="menu\variables.h">
+      <Filter>files\menu</Filter>
+    </ClInclude>
+    <ClInclude Include="menu\d3d11\d3d11.h">
+      <Filter>files\menu\d3d11</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\libraries\imgui\imconfig.h">
+      <Filter>files\utils\libraries\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\libraries\imgui\imgui.h">
+      <Filter>files\utils\libraries\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\libraries\imgui\imgui_impl_dx11.h">
+      <Filter>files\utils\libraries\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\libraries\imgui\imgui_impl_win32.h">
+      <Filter>files\utils\libraries\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\libraries\imgui\imgui_internal.h">
+      <Filter>files\utils\libraries\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\libraries\imgui\imstb_rectpack.h">
+      <Filter>files\utils\libraries\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\libraries\imgui\imstb_textedit.h">
+      <Filter>files\utils\libraries\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\libraries\imgui\imstb_truetype.h">
+      <Filter>files\utils\libraries\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\libraries\imgui\shaders.h">
+      <Filter>files\utils\libraries\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\unreal\gameplay_statics\gameplay_statics.h">
+      <Filter>files\sdk\unreal\gameplay_statics</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="files">
@@ -412,6 +481,18 @@
     </Filter>
     <Filter Include="files\sdk\unreal\player_interaction">
       <UniqueIdentifier>{7903cf95-ff7f-4c38-84bc-cefa9c13d092}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="files\menu">
+      <UniqueIdentifier>{35c61d35-b848-4a5c-ad6f-5ba9f0d5be43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="files\menu\d3d11">
+      <UniqueIdentifier>{b0f1734b-c5fc-4737-8713-3136163b12ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="files\utils\libraries\imgui">
+      <UniqueIdentifier>{e34eb80d-6dca-4188-9ae9-9d3f91adb06a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="files\sdk\unreal\gameplay_statics">
+      <UniqueIdentifier>{483b5841-b708-4292-9a3e-8a846a39e845}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

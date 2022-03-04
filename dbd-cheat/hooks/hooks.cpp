@@ -1,6 +1,7 @@
 #include <pch.h>
 #include "hooks.h"
 #include "../features/features.h"
+#include "../menu/menu.h"
 
 bool hooks::initialize() {
 	const auto world = *reinterpret_cast<decltype(sdk::world)*>(sdk::world);
@@ -11,9 +12,6 @@ bool hooks::initialize() {
 
 	const auto local_player = game_instance->local_players[0];
 	if (!local_player) return false;
-
-	// fov changer
-	local_player->aspect_ratio_axis = sdk::e_aspect_ratio_axis::maintain_y_fov;
 
 	const auto viewport_client = local_player->viewport_client;
 	if (!viewport_client) return false;
@@ -29,6 +27,12 @@ bool hooks::initialize() {
 		throw std::runtime_error(_("failed to initialize post render."));
 	}
 
+	if (d3d11::initialize()) {
+		if (MH_CreateHook(reinterpret_cast<void*>(d3d11::get_present()), &present::hook, reinterpret_cast<void**>(&present::original)) != MH_OK) {
+			throw std::runtime_error(_("failed to initialize present."));
+		}
+	}
+
 	if (MH_EnableHook(nullptr) != MH_OK) {
 		throw std::runtime_error(_("failed to initialize hooks."));
 	}
@@ -38,24 +42,6 @@ bool hooks::initialize() {
 
 void __stdcall hooks::post_render::hook(sdk::u_object* viewport_client, sdk::u_canvas* canvas) {
 	render::canvas = canvas;
-
-	render::text(50.f, 50.f, _(L"dbd-cheat"), [=]() {
-		static std::uint32_t cnt = 0;
-		constexpr float freq = .01f;
-
-		const auto color = sdk::color(
-			std::sin(freq * cnt + 0) * 127 + 128,
-			std::sin(freq * cnt + 2) * 127 + 128,
-			std::sin(freq * cnt + 4) * 127 + 128,
-			255
-		);
-
-		if (cnt++ >= static_cast<std::uint32_t>(-1)) {
-			cnt = 0;
-		}
-
-		return color;
-	}());
 
 	const auto world = *reinterpret_cast<sdk::u_world**>(sdk::world);
 	if (!world) return;
@@ -69,12 +55,71 @@ void __stdcall hooks::post_render::hook(sdk::u_object* viewport_client, sdk::u_c
 	const auto player_controller = local_player->player_controller;
 	if (!player_controller) return;
 
+	hooks::delta_time = reinterpret_cast<sdk::u_gameplay_statics*>(viewport_client)->get_delta_time();
+
 	const auto my_player = player_controller->acknowledged_pawn;
 	if (!my_player) return;
+
+	misc::fov_changer::run(local_player);
+	menu::handle_input(my_player, player_controller);
 
 	visuals::killer::run(world, my_player, player_controller);
 	visuals::survivor::run(world, my_player, player_controller);
 	visuals::entities::run(world, my_player, player_controller);
 
 	post_render::original(viewport_client, canvas);
+}
+
+long __stdcall hooks::present::hook(IDXGISwapChain* swap_chain, const unsigned int sync_interval, const unsigned int flags) {
+	std::call_once(flag, [&]() {
+		if (SUCCEEDED(swap_chain->GetDevice(__uuidof(ID3D11Device), reinterpret_cast<void**>(&d3d11::device)))) {
+			d3d11::device->GetImmediateContext(&d3d11::context);
+
+			DXGI_SWAP_CHAIN_DESC swap_chain_desc;
+			swap_chain->GetDesc(&swap_chain_desc);
+			hooks::window = swap_chain_desc.OutputWindow;
+
+			ID3D11Texture2D* back_buffer{};
+			swap_chain->GetBuffer(0, __uuidof(ID3D11Texture2D), reinterpret_cast<void**>(&back_buffer));
+
+			if (back_buffer != nullptr) {
+				d3d11::device->CreateRenderTargetView(back_buffer, nullptr, &d3d11::render_target_view);
+			}
+
+			back_buffer->Release();
+
+			wndproc::original = reinterpret_cast<WNDPROC>(SetWindowLongPtrA(hooks::window, GWLP_WNDPROC, reinterpret_cast<long long>(wndproc::hook)));
+
+			menu::initialize();
+		}
+	});
+
+	ImGui_ImplDX11_NewFrame();
+	ImGui_ImplWin32_NewFrame();
+	ImGui::NewFrame();
+
+	menu::render();
+	visuals::watermark::draw();
+
+	ImGui::EndFrame();
+	ImGui::Render();
+
+	const auto& io = ImGui::GetIO();
+	render::screen = { io.DisplaySize.x, io.DisplaySize.y };
+
+	d3d11::context->OMSetRenderTargets(1, &d3d11::render_target_view, nullptr);
+	ImGui_ImplDX11_RenderDrawData(ImGui::GetDrawData());
+
+	return present::original(swap_chain, sync_interval, flags);
+}
+
+LRESULT __stdcall hooks::wndproc::hook(const HWND hwnd, const unsigned int message, const WPARAM wparam, const LPARAM lparam) {
+	if (message == WM_KEYDOWN && wparam == VK_INSERT) {
+		variables::menu::opened = !variables::menu::opened;
+	}
+
+	LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
+	ImGui_ImplWin32_WndProcHandler(window, message, wparam, lparam);
+
+	return CallWindowProcA(wndproc::original, hwnd, message, wparam, lparam);
 }

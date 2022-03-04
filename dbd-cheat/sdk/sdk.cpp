@@ -19,7 +19,7 @@ namespace sdk {
 		sdk::get_bone_matrix = utils::pattern_scan(main, _("48 8B C4 48 89 58 ? 48 89 70 ? 55 57 41 54 41 56 41 57 48 8D 68 ? 48 81 EC ? ? ? ? 0F 29 78"));
 		if (!sdk::get_bone_matrix) return false;
 
-		sdk::unlock_all = utils::pattern_scan(main, "48 8B 05 ? ? ? ? 83 38 00 75 31", true);
+		sdk::unlock_all = utils::pattern_scan(main, _("48 8B 05 ? ? ? ? 83 38 00 75 31"), true);
 		if (!sdk::unlock_all) return false;
 
 		*reinterpret_cast<short*>(sdk::unlock_all) = 1;
@@ -48,6 +48,8 @@ namespace sdk {
 		sdk::get_actor_rotation = sdk::object_array->find_object(_("Function Engine.Actor.K2_GetActorRotation"));
 		sdk::get_actor_bounds = sdk::object_array->find_object(_("Function Engine.Actor.GetActorBounds"));
 		sdk::get_distance_to = sdk::object_array->find_object(_("Function Engine.Actor.GetDistanceTo"));
+		sdk::enable_input = sdk::object_array->find_object(_("Function Engine.Actor.EnableInput"));
+		sdk::disable_input = sdk::object_array->find_object(_("Function Engine.Actor.DisableInput"));
 
 		// pawn
 		sdk::launch_character = sdk::object_array->find_object(_("Function Engine.Character.LaunchCharacter"));
@@ -63,6 +65,9 @@ namespace sdk {
 		// camper_player
 		sdk::trap_immunity = sdk::object_array->find_object(_("Function DeadByDaylight.DBDPlayer.TriggerTrapImmunity"));
 		sdk::is_carried = sdk::object_array->find_object(_("Function DeadByDaylight.CamperPlayer.IsBeingCarried"));
+
+		// gameplay_statics
+		sdk::get_delta_time = sdk::object_array->find_object(_("Function Engine.GameplayStatics.GetWorldDeltaSeconds"));
 
 		hooks::initialize();
 

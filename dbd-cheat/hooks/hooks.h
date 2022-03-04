@@ -1,14 +1,29 @@
 #pragma once
 #include "../render/render.h"
+#include "menu/d3d11/d3d11.h"
 
 namespace hooks {
-	inline std::once_flag flag;
+	inline HWND window;
+	inline float delta_time;
 	bool initialize();
 
 	namespace post_render {
 		static constexpr auto index = 0x63;
 		using fn = void(__thiscall*)(sdk::u_object*, sdk::u_canvas*);
 		inline fn original;
-		static void __stdcall hook(sdk::u_object* viewport_client, sdk::u_canvas* canvas);
+		void __stdcall hook(sdk::u_object* viewport_client, sdk::u_canvas* canvas);
+	}
+
+	namespace present {
+		inline std::once_flag flag;
+		using fn = long(__stdcall*)(IDXGISwapChain*, unsigned int, unsigned int);
+		inline fn original;
+		long __stdcall hook(IDXGISwapChain* swap_chain, unsigned int sync_interval, unsigned int flags);
+	}
+
+	namespace wndproc {
+		using fn = LRESULT(__stdcall*)(HWND, UINT, WPARAM, LPARAM);
+		inline fn original;
+		LRESULT __stdcall hook(HWND hwnd, unsigned int message, WPARAM wparam, LPARAM lparam);
 	}
 }
