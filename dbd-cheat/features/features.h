@@ -91,3 +91,7 @@ namespace misc::immobilize {
 namespace misc::escape {
 	void run(sdk::a_player_state* state);
 }
+
+namespace misc::player_role {
+	void run(sdk::a_player_state* state);
+}

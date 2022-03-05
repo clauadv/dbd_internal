@@ -71,6 +71,12 @@ void menu::render() {
 		"caged"
 	};
 
+	static constexpr const char* role_type[]{
+		"none",
+		"killer",
+		"survivor"
+	};
+
 	for (std::size_t i = 0; i < IM_ARRAYSIZE(tabs); ++i) {
 		if (ImGui::Selectable(tabs[i], selected_tab == i)) {
 			selected_tab = i;
@@ -176,6 +182,11 @@ void menu::render() {
 			ImGui::Checkbox("force escape", &variables::misc::escape);
 			ImGui::SameLine();
 			ImGui::Hotkey("##escape_key", &variables::misc::escape_key, { 80.f, 20.f });
+			ImGui::Checkbox("player role", &variables::misc::role);
+			ImGui::SameLine();
+			ImGui::Hotkey("##role_key", &variables::misc::role_key, { 80.f, 20.f });
+			ImGui::Text("type");
+			ImGui::Combo("##role_type", &variables::misc::role_type, role_type, IM_ARRAYSIZE(role_type));
 			break;
 		default:
 			break;

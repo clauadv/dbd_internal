@@ -64,4 +64,7 @@ namespace variables::misc {
 	inline int immobilize_key = 0;
 	inline bool escape = false;
 	inline int escape_key = 0;
+	inline bool role = false;
+	inline int role_type = 0;
+	inline int role_key = 0;
 }

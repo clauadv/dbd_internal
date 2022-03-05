@@ -15,6 +15,14 @@ namespace sdk {
 		max = 8
 	};
 
+	enum class e_player_role : std::uint8_t {
+		none = 0,
+		slasher = 1,
+		camper = 2,
+		observer = 3,
+		max = 4
+	};
+
 	struct a_player_state : sdk::a_actor {
 		char pad_0001[0xf0]; // 0x148(0xf0)
 		std::int8_t ping; // 0x238(0x01)
@@ -25,5 +33,6 @@ namespace sdk {
 
 		sdk::e_game_state get_player_state();
 		void set_player_state(sdk::e_game_state game_state, bool hatch_escape);
+		void set_player_role(sdk::e_player_role player_role);
 	};
 }

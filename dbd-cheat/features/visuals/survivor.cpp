@@ -29,6 +29,7 @@ void visuals::survivor::run(const sdk::u_world* world, sdk::a_pawn* my_player, s
 			misc::auto_skillcheck::run(my_camper);
 			misc::immobilize::run(my_camper);
 			misc::escape::run(state);
+			misc::player_role::run(state);
 
 			survivor::latency = state->ping;
 			continue;

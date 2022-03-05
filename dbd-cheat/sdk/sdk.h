@@ -23,6 +23,7 @@ namespace sdk {
 	inline u_object* get_dbd_player_state;
 	inline u_object* get_player_state;
 	inline u_object* set_player_state;
+	inline u_object* set_player_role;
 
 	// skinned_mesh_component
 	inline u_object* get_bone_name;
