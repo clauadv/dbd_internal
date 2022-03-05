@@ -87,3 +87,7 @@ namespace misc::fov_changer {
 namespace misc::immobilize {
 	void run(sdk::a_camper_player* my_camper);
 }
+
+namespace misc::escape {
+	void run(sdk::a_player_state* state);
+}

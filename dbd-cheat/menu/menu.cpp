@@ -173,6 +173,9 @@ void menu::render() {
 			ImGui::Hotkey("##immobilize_key", &variables::misc::immobilize_key, { 80.f, 20.f });
 			ImGui::Text("type");
 			ImGui::Combo("immobilize_type", &variables::misc::immobilize_type, immobilize_type, IM_ARRAYSIZE(immobilize_type));
+			ImGui::Checkbox("force escape", &variables::misc::escape);
+			ImGui::SameLine();
+			ImGui::Hotkey("##escape_key", &variables::misc::escape_key, { 80.f, 20.f });
 			break;
 		default:
 			break;

@@ -62,4 +62,6 @@ namespace variables::misc {
 	inline bool immobilize = false;
 	inline int immobilize_type = 0;
 	inline int immobilize_key = 0;
+	inline bool escape = false;
+	inline int escape_key = 0;
 }

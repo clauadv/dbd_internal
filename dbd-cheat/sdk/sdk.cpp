@@ -39,6 +39,7 @@ namespace sdk {
 		// player_state
 		sdk::get_dbd_player_state = sdk::object_array->find_object(_("Function DeadByDaylight.DBDPlayer.GetDBDPlayerState"));
 		sdk::get_player_state = sdk::object_array->find_object(_("Function DeadByDaylight.DBDPlayerState.GetPlayerGameState"));
+		sdk::set_player_state = sdk::object_array->find_object(_("Function DeadByDaylight.DBDPlayerState.Server_SetPlayerGameState"));
 
 		// skinned_mesh_component
 		sdk::get_bone_name = sdk::object_array->find_object(_("Function Engine.SkinnedMeshComponent.GetBoneName"));

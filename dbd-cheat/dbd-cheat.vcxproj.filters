@@ -145,6 +145,9 @@
     <ClCompile Include="features\misc\immobilize.cpp">
       <Filter>files\features\misc</Filter>
     </ClCompile>
+    <ClCompile Include="features\misc\escape.cpp">
+      <Filter>files\features\misc</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="sdk\sdk.h">

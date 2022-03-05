@@ -112,6 +112,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="features\misc\auto_skillcheck.cpp" />
+    <ClCompile Include="features\misc\escape.cpp" />
     <ClCompile Include="features\misc\fly.cpp" />
     <ClCompile Include="features\misc\fov_changer.cpp" />
     <ClCompile Include="features\misc\immobilize.cpp" />

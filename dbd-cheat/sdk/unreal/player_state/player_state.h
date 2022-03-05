@@ -24,5 +24,6 @@ namespace sdk {
 		sdk::u_string player_name_private; // 0x318(0x10)
 
 		sdk::e_game_state get_player_state();
+		void set_player_state(sdk::e_game_state game_state, bool hatch_escape);
 	};
 }
