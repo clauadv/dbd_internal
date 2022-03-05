@@ -160,7 +160,7 @@ void menu::render() {
 
 			ImGui::Spacing();
 			ImGui::Text("max distance");
-			ImGui::SliderFloat("##max_distance", &variables::entities::max_distance, 0.f, 200.f, "%.3gm", 1.f);
+			ImGui::SliderFloat("##max_distance", &variables::entities::max_distance, 0.f, 100.f, "%.3gm", 1.f);
 			break;
 		case 3:
 			ImGui::Text("misc");
@@ -169,24 +169,30 @@ void menu::render() {
 			ImGui::Checkbox("fov changer", &variables::misc::fov_changer);
 			ImGui::Checkbox("auto skillcheck", &variables::misc::auto_skillcheck);
 			ImGui::Checkbox("trap immunity", &variables::misc::trap_immunity);
-			ImGui::Checkbox("fly", &variables::misc::fly);
-			ImGui::SameLine();
-			ImGui::Hotkey("##fly_key", &variables::misc::fly_key, { 80.f, 20.f });
-			ImGui::Text("speed");
-			ImGui::SliderFloat("##fly_speed", &variables::misc::fly_speed, 0.f, 100.f, "%.3g", 1.f);
-			ImGui::Checkbox("immobilize", &variables::misc::immobilize);
+			ImGui::Checkbox("fly", &variables::misc::fly, true);
+			if (variables::misc::fly) {
+				ImGui::SameLine();
+				ImGui::Hotkey("##fly_key", &variables::misc::fly_key, { 80.f, 20.f });
+				ImGui::Text("speed");
+				ImGui::SliderFloat("##fly_speed", &variables::misc::fly_speed, 0.f, 100.f, "%.3g", 1.f);
+			}
+			ImGui::Checkbox("immobilize", &variables::misc::immobilize, true);
 			ImGui::SameLine();
 			ImGui::Hotkey("##immobilize_key", &variables::misc::immobilize_key, { 80.f, 20.f });
-			ImGui::Text("type");
-			ImGui::Combo("immobilize_type", &variables::misc::immobilize_type, immobilize_type, IM_ARRAYSIZE(immobilize_type));
-			ImGui::Checkbox("force escape", &variables::misc::escape);
+			if (variables::misc::immobilize) {
+				ImGui::Text("type");
+				ImGui::Combo("immobilize_type", &variables::misc::immobilize_type, immobilize_type, IM_ARRAYSIZE(immobilize_type));
+			}
+			ImGui::Checkbox("force escape", &variables::misc::escape, true);
 			ImGui::SameLine();
 			ImGui::Hotkey("##escape_key", &variables::misc::escape_key, { 80.f, 20.f });
-			ImGui::Checkbox("player role", &variables::misc::role);
+			ImGui::Checkbox("player role", &variables::misc::role, true);
 			ImGui::SameLine();
 			ImGui::Hotkey("##role_key", &variables::misc::role_key, { 80.f, 20.f });
-			ImGui::Text("type");
-			ImGui::Combo("##role_type", &variables::misc::role_type, role_type, IM_ARRAYSIZE(role_type));
+			if (variables::misc::role) {
+				ImGui::Text("type");
+				ImGui::Combo("##role_type", &variables::misc::role_type, role_type, IM_ARRAYSIZE(role_type));
+			};
 			break;
 		default:
 			break;

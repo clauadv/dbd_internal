@@ -68,7 +68,7 @@ bool d3d11::initialize() {
 	ID3D11Device* device;
 	ID3D11DeviceContext* context;
 
-	if (reinterpret_cast<long(__stdcall*)(IDXGIAdapter*, D3D_DRIVER_TYPE, HMODULE, unsigned int, const D3D_FEATURE_LEVEL*, unsigned int, unsigned int, const DXGI_SWAP_CHAIN_DESC*, IDXGISwapChain**, ID3D11Device**, D3D_FEATURE_LEVEL*, ID3D11DeviceContext**)>(D3D11CreateDeviceAndSwapChain)(nullptr, D3D_DRIVER_TYPE_HARDWARE, nullptr, 0, feature_levels, 2, D3D11_SDK_VERSION, &swap_chain_desc, &swap_chain, &device, &feature_level, &context) < 0) {
+	if (LI_FN(D3D11CreateDeviceAndSwapChain).get()(nullptr, D3D_DRIVER_TYPE_HARDWARE, nullptr, 0, feature_levels, 2, D3D11_SDK_VERSION, &swap_chain_desc, &swap_chain, &device, &feature_level, &context) < 0) {
 		LI_FN(DestroyWindow)(window);
 		LI_FN(UnregisterClassA)(window_class.lpszClassName, window_class.hInstance);
 		return false;

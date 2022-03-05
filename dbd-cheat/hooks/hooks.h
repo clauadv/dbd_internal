@@ -22,8 +22,8 @@ namespace hooks {
 	}
 
 	namespace wndproc {
-		using fn = LRESULT(__stdcall*)(HWND, UINT, WPARAM, LPARAM);
+		using fn = std::int64_t(__stdcall*)(HWND, UINT, WPARAM, LPARAM);
 		inline fn original;
-		LRESULT __stdcall hook(HWND hwnd, unsigned int message, WPARAM wparam, LPARAM lparam);
+		std::int64_t __stdcall hook(HWND hwnd, unsigned int message, WPARAM wparam, LPARAM lparam);
 	}
 }
