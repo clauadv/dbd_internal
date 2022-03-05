@@ -114,6 +114,7 @@
     <ClCompile Include="features\misc\auto_skillcheck.cpp" />
     <ClCompile Include="features\misc\fly.cpp" />
     <ClCompile Include="features\misc\fov_changer.cpp" />
+    <ClCompile Include="features\misc\immobilize.cpp" />
     <ClCompile Include="features\misc\trap_immunity.cpp" />
     <ClCompile Include="features\visuals\entities.cpp" />
     <ClCompile Include="features\visuals\survivor.cpp" />

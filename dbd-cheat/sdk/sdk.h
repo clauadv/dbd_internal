@@ -48,6 +48,7 @@ namespace sdk {
 	// camper_player
 	inline u_object* trap_immunity;
 	inline u_object* is_carried;
+	inline u_object* set_immobilized;
 
 	// gameplay_statics
 	inline u_object* get_delta_time;

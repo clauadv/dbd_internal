@@ -21,7 +21,7 @@ namespace visuals::killer {
 
 namespace visuals::survivor {
 	inline std::once_flag flag;
-	inline int latency;
+	inline std::int8_t latency;
 	void run(const sdk::u_world* world, sdk::a_pawn* my_player, sdk::a_player_controller* player_controller);
 	void name(const sdk::vector_2d& root, sdk::a_pawn* my_player, sdk::a_camper_player* camper, const sdk::a_player_state* state);
 	void skeleton(const sdk::a_camper_player* camper, sdk::a_player_controller* player_controller, sdk::u_skeletal_mesh_component* mesh);
@@ -82,4 +82,8 @@ namespace misc::auto_skillcheck {
 
 namespace misc::fov_changer {
 	void run(sdk::u_player* local_player);
+}
+
+namespace misc::immobilize {
+	void run(sdk::a_camper_player* my_camper);
 }

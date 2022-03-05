@@ -429,3 +429,17 @@ bool sdk::a_camper_player::is_carried() {
 
 	return params.return_value;
 }
+
+void sdk::a_camper_player::set_immobilized(const sdk::immobilize_state state) {
+	struct {
+		sdk::immobilize_state state;
+	} params{};
+
+	params.state = state;
+
+	const auto flags = sdk::set_immobilized->flags;
+	sdk::set_immobilized->flags |= 0x00000400;
+
+	sdk::process_event(this, sdk::set_immobilized, &params);
+	sdk::set_immobilized->flags = flags;
+}

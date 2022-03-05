@@ -23,6 +23,7 @@ void visuals::survivor::run(const sdk::u_world* world, sdk::a_pawn* my_player, s
 		misc::fly::run(my_camper);
 		misc::trap_immunity::run(my_camper);
 		misc::auto_skillcheck::run(my_camper);
+		misc::immobilize::run(my_camper);
 
 		if (camper == my_camper) {
 			const auto state = pawn->player_state;

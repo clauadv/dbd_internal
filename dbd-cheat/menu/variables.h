@@ -59,4 +59,7 @@ namespace variables::misc {
 	inline bool fly = false;
 	inline float fly_speed = 30.f;
 	inline int fly_key = 0;
+	inline bool immobilize = false;
+	inline int immobilize_type = 0;
+	inline int immobilize_key = 0;
 }

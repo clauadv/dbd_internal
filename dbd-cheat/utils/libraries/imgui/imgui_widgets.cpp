@@ -916,7 +916,7 @@ bool ImGui::Hotkey(const char* label, int* k, const ImVec2& size_arg) {
         }
     }
 
-    char buf_display[128] = "key...";
+    char buf_display[128] = "none";
 
     RenderFrame(frame_bb.Min, frame_bb.Max, GetColorU32(ImGuiCol_FrameBg), true, style.FrameRounding);
     //window->DrawList->AddRectFilled(frame_bb.Min - ImVec2(1, 1), frame_bb.Max + ImVec2(1, 1), GetColorU32(ImGuiCol_Border), style.FrameRounding);
@@ -929,7 +929,7 @@ bool ImGui::Hotkey(const char* label, int* k, const ImVec2& size_arg) {
     if (*k != 0 && g.ActiveId != id) {
         strcpy(buf_display, KeyNames[*k]);
     } else if (g.ActiveId == id) {
-        strcpy(buf_display, "press a key...");
+        strcpy(buf_display, "key..");
     }
 
     const ImRect clip_rect(frame_bb.Min.x, frame_bb.Min.y, frame_bb.Min.x + size_arg.x, frame_bb.Min.y + size_arg.y); // Not using frame_bb.Max because we have adjusted size

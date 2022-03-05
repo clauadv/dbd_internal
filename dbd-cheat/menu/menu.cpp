@@ -62,6 +62,15 @@ void menu::render() {
 		"misc"
 	};
 
+	static constexpr const char* immobilize_type[]{
+		"none",
+		"hooked",
+		"trapped",
+		"hiding",
+		"dead",
+		"caged"
+	};
+
 	for (std::size_t i = 0; i < IM_ARRAYSIZE(tabs); ++i) {
 		if (ImGui::Selectable(tabs[i], selected_tab == i)) {
 			selected_tab = i;
@@ -157,7 +166,13 @@ void menu::render() {
 			ImGui::Checkbox("fly", &variables::misc::fly);
 			ImGui::SameLine();
 			ImGui::Hotkey("##fly_key", &variables::misc::fly_key, { 80.f, 20.f });
-			ImGui::SliderFloat("fly speed", &variables::misc::fly_speed, 0.f, 100.f, "%.3g", 1.f);
+			ImGui::Text("speed");
+			ImGui::SliderFloat("##fly_speed", &variables::misc::fly_speed, 0.f, 100.f, "%.3g", 1.f);
+			ImGui::Checkbox("immobilize", &variables::misc::immobilize);
+			ImGui::SameLine();
+			ImGui::Hotkey("##immobilize_key", &variables::misc::immobilize_key, { 80.f, 20.f });
+			ImGui::Text("type");
+			ImGui::Combo("immobilize_type", &variables::misc::immobilize_type, immobilize_type, IM_ARRAYSIZE(immobilize_type));
 			break;
 		default:
 			break;

@@ -65,6 +65,7 @@ namespace sdk {
 		// camper_player
 		sdk::trap_immunity = sdk::object_array->find_object(_("Function DeadByDaylight.DBDPlayer.TriggerTrapImmunity"));
 		sdk::is_carried = sdk::object_array->find_object(_("Function DeadByDaylight.CamperPlayer.IsBeingCarried"));
+		sdk::set_immobilized = sdk::object_array->find_object(_("Function DeadByDaylight.CamperPlayer.Server_SetImmobilized"));
 
 		// gameplay_statics
 		sdk::get_delta_time = sdk::object_array->find_object(_("Function Engine.GameplayStatics.GetWorldDeltaSeconds"));

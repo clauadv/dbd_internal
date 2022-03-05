@@ -1,6 +1,16 @@
 #pragma once
 
 namespace sdk {
+	enum class immobilize_state : std::uint8_t {
+		none = 0,
+		hooked = 1,
+		trapped = 2,
+		hiding = 3,
+		dead = 4,
+		caged = 5,
+		max = 6
+	};
+
 	struct a_camper_player : sdk::a_pawn {
 		std::pair<sdk::u_string, sdk::color> get_character_name() const;
 		bool is_survivor() const;
@@ -35,5 +45,6 @@ namespace sdk {
 		sdk::a_player_state* get_dbd_player_state();
 		void trap_immunity();
 		bool is_carried();
+		void set_immobilized(sdk::immobilize_state state);
 	};
 }
