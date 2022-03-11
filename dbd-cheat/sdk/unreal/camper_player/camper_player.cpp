@@ -387,6 +387,16 @@ bool sdk::a_camper_player::is_nancy() const {
 	return false;
 }
 
+bool sdk::a_camper_player::is_steve() const {
+	const auto name = this->get_name();
+
+	if (name.contains("BP_CamperMale11")) {
+		return true;
+	}
+
+	return false;
+}
+
 sdk::a_player_state* sdk::a_camper_player::get_dbd_player_state()
 {
 	struct {

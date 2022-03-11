@@ -1,6 +1,6 @@
 #include <pch.h>
 
-std::array<std::vector < std::pair < int, int > >, 25> killer_bone;
+std::array<std::vector < std::pair < int, int > >, 26> killer_bone;
 
 void bones::killer::initialize() {
 	{
@@ -1800,7 +1800,182 @@ void bones::killer::initialize() {
 			bone.emplace_back(std::make_pair(killer::wraith::joint_kneert_01, killer::wraith::joint_footrt_01));
 		}
 	}
+
+	{
+		// nurse bones
+		auto& bone = killer_bone[24];
+
+		bone.emplace_back(std::make_pair(killer::nurse::joint_head_01, killer::nurse::joint_necka_01));
+		bone.emplace_back(std::make_pair(killer::nurse::joint_necka_01, killer::nurse::joint_pelvis_01));
+
+		// left
+		{
+			// upper body
+			bone.emplace_back(std::make_pair(killer::nurse::joint_necka_01, killer::nurse::joint_shoulderlt_01));
+			bone.emplace_back(std::make_pair(killer::nurse::joint_shoulderlt_01, killer::nurse::joint_elbowlt_01));
+			bone.emplace_back(std::make_pair(killer::nurse::joint_elbowlt_01, killer::nurse::joint_handlt_01));
+
+			bone.emplace_back(std::make_pair(killer::nurse::joint_handlt_01, killer::nurse::joint_thumbalt_01));
+			bone.emplace_back(std::make_pair(killer::nurse::joint_thumbalt_01, killer::nurse::joint_thumbblt_01));
+			bone.emplace_back(std::make_pair(killer::nurse::joint_thumbblt_01, killer::nurse::joint_thumbclt_01));
+
+			bone.emplace_back(std::make_pair(killer::nurse::joint_handlt_01, killer::nurse::joint_indexalt_01));
+			bone.emplace_back(std::make_pair(killer::nurse::joint_indexalt_01, killer::nurse::joint_indexblt_01));
+			bone.emplace_back(std::make_pair(killer::nurse::joint_indexblt_01, killer::nurse::joint_indexclt_01));
+
+			bone.emplace_back(std::make_pair(killer::nurse::joint_handlt_01, killer::nurse::joint_fingeralt_01));
+			bone.emplace_back(std::make_pair(killer::nurse::joint_fingeralt_01, killer::nurse::joint_fingerblt_01));
+			bone.emplace_back(std::make_pair(killer::nurse::joint_fingerblt_01, killer::nurse::joint_fingerclt_01));
+
+			bone.emplace_back(std::make_pair(killer::nurse::joint_handlt_01, killer::nurse::joint_ringalt_01));
+			bone.emplace_back(std::make_pair(killer::nurse::joint_ringalt_01, killer::nurse::joint_ringblt_01));
+			bone.emplace_back(std::make_pair(killer::nurse::joint_ringblt_01, killer::nurse::joint_ringclt_01));
+
+			bone.emplace_back(std::make_pair(killer::nurse::joint_handlt_01, killer::nurse::joint_pinkyalt_01));
+			bone.emplace_back(std::make_pair(killer::nurse::joint_pinkyalt_01, killer::nurse::joint_pinkyblt_01));
+			bone.emplace_back(std::make_pair(killer::nurse::joint_pinkyblt_01, killer::nurse::joint_pinkyclt_01));
+
+			// lower body
+			bone.emplace_back(std::make_pair(killer::nurse::joint_pelvis_01, killer::nurse::joint_hiplt_01));
+			bone.emplace_back(std::make_pair(killer::nurse::joint_hiplt_01, killer::nurse::joint_kneelt_01));
+			bone.emplace_back(std::make_pair(killer::nurse::joint_kneelt_01, killer::nurse::joint_footlt_01));
+		}
+
+		// right
+		{
+			// upper body
+			bone.emplace_back(std::make_pair(killer::nurse::joint_necka_01, killer::nurse::joint_shoulderrt_01));
+			bone.emplace_back(std::make_pair(killer::nurse::joint_shoulderrt_01, killer::nurse::joint_elbowrt_01));
+			bone.emplace_back(std::make_pair(killer::nurse::joint_elbowrt_01, killer::nurse::joint_handrt_01));
+
+			bone.emplace_back(std::make_pair(killer::nurse::joint_handrt_01, killer::nurse::joint_thumbart_01));
+			bone.emplace_back(std::make_pair(killer::nurse::joint_thumbart_01, killer::nurse::joint_thumbbrt_01));
+			bone.emplace_back(std::make_pair(killer::nurse::joint_thumbbrt_01, killer::nurse::joint_thumbcrt_01));
+
+			bone.emplace_back(std::make_pair(killer::nurse::joint_handrt_01, killer::nurse::joint_indexart_01));
+			bone.emplace_back(std::make_pair(killer::nurse::joint_indexart_01, killer::nurse::joint_indexbrt_01));
+			bone.emplace_back(std::make_pair(killer::nurse::joint_indexbrt_01, killer::nurse::joint_indexcrt_01));
+
+			bone.emplace_back(std::make_pair(killer::nurse::joint_handrt_01, killer::nurse::joint_fingerart_01));
+			bone.emplace_back(std::make_pair(killer::nurse::joint_fingerart_01, killer::nurse::joint_fingerbrt_01));
+			bone.emplace_back(std::make_pair(killer::nurse::joint_fingerbrt_01, killer::nurse::joint_fingercrt_01));
+
+			bone.emplace_back(std::make_pair(killer::nurse::joint_handrt_01, killer::nurse::joint_ringart_01));
+			bone.emplace_back(std::make_pair(killer::nurse::joint_ringart_01, killer::nurse::joint_ringbrt_01));
+			bone.emplace_back(std::make_pair(killer::nurse::joint_ringbrt_01, killer::nurse::joint_ringcrt_01));
+
+			bone.emplace_back(std::make_pair(killer::nurse::joint_handrt_01, killer::nurse::joint_pinkyart_01));
+			bone.emplace_back(std::make_pair(killer::nurse::joint_pinkyart_01, killer::nurse::joint_pinkybrt_01));
+			bone.emplace_back(std::make_pair(killer::nurse::joint_pinkybrt_01, killer::nurse::joint_pinkycrt_01));
+
+			// lower body
+			bone.emplace_back(std::make_pair(killer::nurse::joint_pelvis_01, killer::nurse::joint_hiprt_01));
+			bone.emplace_back(std::make_pair(killer::nurse::joint_hiprt_01, killer::nurse::joint_kneert_01));
+			bone.emplace_back(std::make_pair(killer::nurse::joint_kneert_01, killer::nurse::joint_footrt_01));
+		}
+	}
+
+	{
+		// demogorgon bones
+		auto& bone = killer_bone[25];
+
+		bone.emplace_back(std::make_pair(killer::demogorgon::joint_head_01, killer::demogorgon::joint_necka_01));
+		bone.emplace_back(std::make_pair(killer::demogorgon::joint_necka_01, killer::demogorgon::joint_pelvis_01));
+
+		// left
+		{
+			// upper body
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_necka_01, killer::demogorgon::joint_shoulderlt_01));
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_shoulderlt_01, killer::demogorgon::joint_elbowlt_01));
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_elbowlt_01, killer::demogorgon::joint_handlt_01));
+
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_handlt_01, killer::demogorgon::joint_thumbalt_01));
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_thumbalt_01, killer::demogorgon::joint_thumbblt_01));
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_thumbblt_01, killer::demogorgon::joint_thumbclt_01));
+
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_handlt_01, killer::demogorgon::joint_indexalt_01));
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_indexalt_01, killer::demogorgon::joint_indexblt_01));
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_indexblt_01, killer::demogorgon::joint_indexclt_01));
+
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_handlt_01, killer::demogorgon::joint_fingeralt_01));
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_fingeralt_01, killer::demogorgon::joint_fingerblt_01));
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_fingerblt_01, killer::demogorgon::joint_fingerclt_01));
+
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_handlt_01, killer::demogorgon::joint_ringalt_01));
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_ringalt_01, killer::demogorgon::joint_ringblt_01));
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_ringblt_01, killer::demogorgon::joint_ringclt_01));
+
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_handlt_01, killer::demogorgon::joint_pinkyalt_01));
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_pinkyalt_01, killer::demogorgon::joint_pinkyblt_01));
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_pinkyblt_01, killer::demogorgon::joint_pinkyclt_01));
+
+			// lower body
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_pelvis_01, killer::demogorgon::joint_hiplt_01));
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_hiplt_01, killer::demogorgon::joint_kneelt_01));
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_kneelt_01, killer::demogorgon::joint_foot_lt_01_ik));
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_foot_lt_01_ik, killer::demogorgon::joint_footlt_01));
+
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_footlt_01, killer::demogorgon::joint_toe_index_alt_01));
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_toe_index_alt_01, killer::demogorgon::joint_toe_index_blt_01));
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_toe_index_blt_01, killer::demogorgon::joint_toe_index_clt_01));
+
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_footlt_01, killer::demogorgon::joint_toe_middle_alt_01));
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_toe_middle_alt_01, killer::demogorgon::joint_toe_middle_blt_01));
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_toe_middle_blt_01, killer::demogorgon::joint_toe_middle_clt_01));
+
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_footlt_01, killer::demogorgon::joint_toe_pinky_alt_01));
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_toe_pinky_alt_01, killer::demogorgon::joint_toe_pinky_blt_01));
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_toe_pinky_blt_01, killer::demogorgon::joint_toe_pinky_clt_01));
+		}
+
+		// right
+		{
+			// upper body
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_necka_01, killer::demogorgon::joint_shoulderrt_01));
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_shoulderrt_01, killer::demogorgon::joint_elbowrt_01));
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_elbowrt_01, killer::demogorgon::joint_handrt_01));
+
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_handrt_01, killer::demogorgon::joint_thumbart_01));
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_thumbart_01, killer::demogorgon::joint_thumbbrt_01));
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_thumbbrt_01, killer::demogorgon::joint_thumbcrt_01));
+
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_handrt_01, killer::demogorgon::joint_indexart_01));
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_indexart_01, killer::demogorgon::joint_indexbrt_01));
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_indexbrt_01, killer::demogorgon::joint_indexcrt_01));
+
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_handrt_01, killer::demogorgon::joint_fingerart_01));
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_fingerart_01, killer::demogorgon::joint_fingerbrt_01));
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_fingerbrt_01, killer::demogorgon::joint_fingercrt_01));
+
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_handrt_01, killer::demogorgon::joint_ringart_01));
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_ringart_01, killer::demogorgon::joint_ringbrt_01));
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_ringbrt_01, killer::demogorgon::joint_ringcrt_01));
+
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_handrt_01, killer::demogorgon::joint_pinkyart_01));
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_pinkyart_01, killer::demogorgon::joint_pinkybrt_01));
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_pinkybrt_01, killer::demogorgon::joint_pinkycrt_01));
+
+			// lower body
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_pelvis_01, killer::demogorgon::joint_hiprt_01));
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_hiprt_01, killer::demogorgon::joint_kneert_01));
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_kneert_01, killer::demogorgon::joint_foot_rt_01_ik));
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_foot_rt_01_ik, killer::demogorgon::joint_footrt_01));
+
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_footrt_01, killer::demogorgon::joint_toe_index_art_01));
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_toe_index_art_01, killer::demogorgon::joint_toe_index_brt_01));
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_toe_index_brt_01, killer::demogorgon::joint_toe_index_crt_01));
+
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_footrt_01, killer::demogorgon::joint_toe_middle_art_01));
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_toe_middle_art_01, killer::demogorgon::joint_toe_middle_brt_01));
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_toe_middle_brt_01, killer::demogorgon::joint_toe_middle_crt_01));
+
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_footrt_01, killer::demogorgon::joint_toe_pinky_art_01));
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_toe_pinky_art_01, killer::demogorgon::joint_toe_pinky_brt_01));
+			bone.emplace_back(std::make_pair(killer::demogorgon::joint_toe_pinky_brt_01, killer::demogorgon::joint_toe_pinky_crt_01));
+		}
+	}
 }
+
 
 std::vector < std::pair < int, int > >& bones::killer::get_bone_array(const sdk::a_slasher_player* slasher) {
 	if (slasher->is_trapper()) {
@@ -1899,8 +2074,14 @@ std::vector < std::pair < int, int > >& bones::killer::get_bone_array(const sdk:
 		return killer_bone[23];
 	}
 
+	if (slasher->is_nurse()) {
+		return killer_bone[24];
+	}
+
+	if (slasher->is_demogorgon()) {
+		return killer_bone[25];
+	}
+
 	// to add:
-	//  - nurse
-	//  - demogorgon
 	//  - victor
 }

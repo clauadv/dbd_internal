@@ -13,6 +13,7 @@
 #include <cstdint>
 #include <future>
 
+#include "utils/utils.h"
 #include "utils/libraries/min_hook.h"
 #include "utils/libraries/xor.h"
 #include "utils/libraries/lazy_importer.h"

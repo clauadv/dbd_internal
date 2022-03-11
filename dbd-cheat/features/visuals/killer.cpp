@@ -60,7 +60,7 @@ void visuals::killer::name(const sdk::vector_2d& root, sdk::a_pawn* my_player, s
 
 void visuals::killer::skeleton(const sdk::a_slasher_player* slasher, sdk::a_player_controller* player_controller, sdk::u_skeletal_mesh_component* mesh) {
 	if (!variables::killer::skeleton) return;
-	if (slasher->is_nurse() || slasher->is_demogorgon() || slasher->is_victor()) return;
+	if (slasher->is_victor()) return;
 
 	const auto color = sdk::color{
 		variables::killer::skeleton_color[0] * 255,

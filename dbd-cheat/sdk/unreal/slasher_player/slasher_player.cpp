@@ -368,6 +368,10 @@ bool sdk::a_slasher_player::is_demogorgon() const {
 bool sdk::a_slasher_player::is_victor() const {
 	const auto name = this->get_name();
 
+	// todo
+	// BP_ConjoinedTwin_C_2147478302
+	// BP_ConjoinedTwinInteractable_C_2147478286
+
 	if (name.contains("twin")) {
 		return true;
 	}
