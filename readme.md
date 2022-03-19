@@ -60,6 +60,9 @@ misc
 - auto skillcheck
 - trap immunity
 - fly
+- force escape
+- set immobilize (none/hooked/trapped/hiding/dead/caged)
+- set player role (camper/slasher/observer)
 - unlock all cosmetic items
 
 ## gameplay video

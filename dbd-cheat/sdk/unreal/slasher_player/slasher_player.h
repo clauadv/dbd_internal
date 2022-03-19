@@ -31,5 +31,6 @@ namespace sdk {
 		bool is_nurse() const;
 		bool is_demogorgon() const;
 		bool is_victor() const;
+		bool is_sadako() const;
 	};
 }

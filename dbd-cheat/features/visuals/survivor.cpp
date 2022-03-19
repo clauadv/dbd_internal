@@ -85,7 +85,6 @@ void visuals::survivor::name(const sdk::vector_2d& root, sdk::a_pawn* my_player,
 
 void visuals::survivor::skeleton(const sdk::a_camper_player* camper, sdk::a_player_controller* player_controller, sdk::u_skeletal_mesh_component* mesh) {
 	if (!variables::survivor::skeleton) return;
-	if (camper->is_nancy()) return;
 
 	const auto color = sdk::color{
 		variables::survivor::skeleton_color[0] * 255,

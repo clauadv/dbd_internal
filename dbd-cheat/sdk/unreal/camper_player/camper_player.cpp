@@ -3,89 +3,125 @@
 std::pair<sdk::u_string, sdk::color> sdk::a_camper_player::get_character_name() const {
 	const auto color = sdk::color{ 255, 255, 255, 255 };
 
-	if (this->is_dwight())
+	if (this->is_dwight()) {
 		return { L"dwight", color };
+	}
 
-	if (this->is_meg())
+	if (this->is_meg()) {
 		return { L"meg", color };
+	}
 
-	if (this->is_claudette())
+	if (this->is_claudette()) {
 		return { L"claudette", color };
+	}
 
-	if (this->is_jake())
+	if (this->is_jake()) {
 		return { L"jake", color };
+	}
 
-	if (this->is_nea())
+	if (this->is_nea()) {
 		return { L"nea", color };
+	}
 
-	if (this->is_bill())
+	if (this->is_bill()) {
 		return { L"bill", color };
+	}
 
-	if (this->is_laurie())
+	if (this->is_laurie()) {
 		return { L"laurie", color };
+	}
 
-	if (this->is_ace())
+	if (this->is_ace()) {
 		return { L"ace", color };
+	}
 
-	if (this->is_feng())
+	if (this->is_feng()) {
 		return { L"feng", color };
+	}
 
-	if (this->is_quentin())
+	if (this->is_quentin()) {
 		return { L"quentin", color };
+	}
 
-	if (this->is_tapp())
+	if (this->is_tapp()) {
 		return { L"tapp", color };
+	}
 
-	if (this->is_kate())
+	if (this->is_kate()) {
 		return { L"kate", color };
+	}
 
-	if (this->is_adam())
+	if (this->is_adam()) {
 		return { L"adam", color };
+	}
 
-	if (this->is_jeff())
+	if (this->is_jeff()) {
 		return { L"jeff", color };
+	}
 
-	if (this->is_jane())
+	if (this->is_jane()) {
 		return { L"jane", color };
+	}
 
-	if (this->is_ashley())
+	if (this->is_ashley()) {
 		return { L"ashley", color };
+	}
 
-	if (this->is_yui())
+	if (this->is_yui()) {
 		return { L"yui", color };
+	}
 
-	if (this->is_zarina())
+	if (this->is_zarina()) {
 		return { L"zarina", color };
+	}
 
-	if (this->is_cheryl())
+	if (this->is_cheryl()) {
 		return { L"cheryl", color };
+	}
 
-	if (this->is_felix())
+	if (this->is_felix()) {
 		return { L"felix", color };
+	}
 
-	if (this->is_elodie())
+	if (this->is_elodie()) {
 		return { L"elodie", color };
+	}
 
-	if (this->is_yun())
+	if (this->is_yun()) {
 		return { L"yun", color };
+	}
 
-	if (this->is_jill())
+	if (this->is_jill()) {
 		return { L"jill", color };
+	}
 
-	if (this->is_leon())
+	if (this->is_leon()) {
 		return { L"leon", color };
+	}
 
-	if (this->is_mikaela())
+	if (this->is_mikaela()) {
 		return { L"mikaela", color };
+	}
 
-	if (this->is_jonah())
+	if (this->is_jonah()) {
 		return { L"jonah", color };
+	}
 
-	if (this->is_david())
+	if (this->is_david()) {
 		return { L"david", color };
+	}
 
-	if (this->is_nancy())
+	if (this->is_nancy()) {
 		return { L"nancy", color };
+	}
+
+	if (this->is_steve()) {
+		return { L"steve", color };
+	}
+
+	if (this->is_yoichi()) {
+		return { L"yoichi", color };
+	}
 
 	return { L"", { 0, 0, 0, 0 } };
 }
@@ -99,7 +135,7 @@ bool sdk::a_camper_player::is_survivor() const {
 		this->is_ashley() || this->is_yui() || this->is_zarina() || this->is_cheryl() ||
 		this->is_elodie() || this->is_yun() || this->is_jill() || this->is_leon() ||
 		this->is_felix() || this->is_mikaela() || this->is_jonah() || this->is_david() ||
-		this->is_nancy()) {
+		this->is_nancy() || this->is_steve() || this->is_yoichi()) {
 
 		return true;
 	}
@@ -391,6 +427,16 @@ bool sdk::a_camper_player::is_steve() const {
 	const auto name = this->get_name();
 
 	if (name.contains("BP_CamperMale11")) {
+		return true;
+	}
+
+	return false;
+}
+
+bool sdk::a_camper_player::is_yoichi() const {
+	const auto name = this->get_name();
+
+	if (name.contains("BP_CamperMale15")) {
 		return true;
 	}
 

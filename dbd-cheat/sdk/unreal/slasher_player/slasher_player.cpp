@@ -3,86 +3,116 @@
 std::pair<sdk::u_string, sdk::color> sdk::a_slasher_player::get_character_name() const {
 	const auto color = sdk::color{ 255, 0, 0, 255 };
 
-	if (this->is_trapper())
+	if (this->is_trapper()) {
 		return { L"trapper", color };
+	}
 
-	if (this->is_hillbilly())
+	if (this->is_hillbilly()) {
 		return { L"hilbilly", color };
-
-	if (this->is_huntress())
+	}
+	if (this->is_huntress()) {
 		return { L"huntress", color };
+	}
 
-	if (this->is_myers())
+	if (this->is_myers()) {
 		return { L"myers", color };
+	}
 
-	if (this->is_hag())
+	if (this->is_hag()) {
 		return { L"hag", color };
+	}
 
-	if (this->is_doctor())
+	if (this->is_doctor()) {
 		return { L"doctor", color };
+	}
 
-	if (this->is_leatherface())
+	if (this->is_leatherface()) {
 		return { L"leatherface", color };
+	}
 
-	if (this->is_freddy())
+	if (this->is_freddy()) {
 		return { L"freddy", color };
+	}
 
-	if (this->is_pig())
+	if (this->is_pig()) {
 		return { L"pig", color };
+	}
 
-	if (this->is_clown())
+	if (this->is_clown()) {
 		return { L"clown", color };
+	}
 
-	if (this->is_spirit())
+	if (this->is_spirit()) {
 		return { L"spirit", color };
+	}
 
-	if (this->is_legion())
+	if (this->is_legion()) {
 		return { L"legion", color };
+	}
 
-	if (this->is_plague())
+	if (this->is_plague()) {
 		return { L"plague", color };
+	}
 
-	if (this->is_ghostface())
+	if (this->is_ghostface()) {
 		return { L"ghostface", color };
+	}
 
-	if (this->is_oni())
+	if (this->is_oni()) {
 		return { L"oni", color };
+	}
 
-	if (this->is_deathslinger())
+	if (this->is_deathslinger()) {
 		return { L"deathslinger", color };
+	}
 
-	if (this->is_executioner())
+	if (this->is_executioner()) {
 		return { L"executioner", color };
+	}
 
-	if (this->is_blight())
+	if (this->is_blight()) {
 		return { L"blight", color };
+	}
 
-	if (this->is_twins())
+	if (this->is_twins()) {
 		return { L"twins", color };
+	}
 
-	if (this->is_trickster())
+	if (this->is_trickster()) {
 		return { L"trickster", color };
+	}
 
-	if (this->is_nemesis())
+	if (this->is_nemesis()) {
 		return { L"nemesis", color };
+	}
 
-	if (this->is_pinhead())
+	if (this->is_pinhead()) {
 		return { L"pinhead", color };
+	}
 
-	if (this->is_artist())
+	if (this->is_artist()) {
 		return { L"artist", color };
+	}
 
-	if (this->is_wraith())
+	if (this->is_wraith()) {
 		return { L"wraith", color };
+	}
 
-	if (this->is_nurse())
+	if (this->is_nurse()) {
 		return { L"nurse", color };
+	}
 
-	if (this->is_demogorgon())
+	if (this->is_demogorgon()) {
 		return { L"demogorgon", color };
+	}
 
-	if (this->is_victor())
+	if (this->is_victor()) {
 		return { L"victor", color };
+	}
+
+	if (this->is_sadako()) {
+		return { L"sadako", color };
+	}
 
 	return { L"", { 0, 0, 0, 0 } };
 }
@@ -94,10 +124,7 @@ bool sdk::a_slasher_player::is_killer() const {
 		this->is_plague() || this->is_ghostface() || this->is_oni() || this->is_deathslinger() ||
 		this->is_executioner() || this->is_blight() || this->is_twins() || this->is_trickster() ||
 		this->is_nemesis() || this->is_pinhead() || this->is_artist() || this->is_wraith() ||
-		this->is_nurse() || this->is_demogorgon() || this->is_victor()) {
-
-		// to add:
-		//  - onryo
+		this->is_nurse() || this->is_demogorgon() || this->is_victor() || this->is_sadako()) {
 
 		return true;
 	}
@@ -373,6 +400,16 @@ bool sdk::a_slasher_player::is_victor() const {
 	// BP_ConjoinedTwinInteractable_C_2147478286
 
 	if (name.contains("twin")) {
+		return true;
+	}
+
+	return false;
+}
+
+bool sdk::a_slasher_player::is_sadako() const {
+	const auto name = this->get_name();
+
+	if (name.contains("BP_Slasher_Character_27")) {
 		return true;
 	}
 

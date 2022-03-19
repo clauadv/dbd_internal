@@ -43,6 +43,7 @@ namespace sdk {
 		bool is_david() const;
 		bool is_nancy() const;
 		bool is_steve() const;
+		bool is_yoichi() const;
 		sdk::a_player_state* get_dbd_player_state();
 		void trap_immunity();
 		bool is_carried();

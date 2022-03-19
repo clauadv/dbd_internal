@@ -1,6 +1,6 @@
 #include <pch.h>
 
-std::array<std::vector < std::pair < int, int > >, 29> survivor_bone;
+std::array<std::vector < std::pair < int, int > >, 30> survivor_bone;
 
 void bones::survivor::initialize() {
 	{
@@ -2150,6 +2150,80 @@ void bones::survivor::initialize() {
 			bone.emplace_back(std::make_pair(survivor::steve::joint_kneert_01, survivor::steve::joint_footrt_01));
 		}
 	}
+
+	{
+		// yoichi bones
+		auto& bone = survivor_bone[29];
+
+		bone.emplace_back(std::make_pair(survivor::yoichi::joint_head_01, survivor::yoichi::joint_necka_01));
+		bone.emplace_back(std::make_pair(survivor::yoichi::joint_necka_01, survivor::yoichi::joint_pelvis_01));
+
+		// left
+		{
+			// upper body
+			bone.emplace_back(std::make_pair(survivor::yoichi::joint_necka_01, survivor::yoichi::joint_shoulderlt_01));
+			bone.emplace_back(std::make_pair(survivor::yoichi::joint_shoulderlt_01, survivor::yoichi::joint_elbowlt_01));
+			bone.emplace_back(std::make_pair(survivor::yoichi::joint_elbowlt_01, survivor::yoichi::joint_handlt_01));
+
+			bone.emplace_back(std::make_pair(survivor::yoichi::joint_handlt_01, survivor::yoichi::joint_thumbalt_01));
+			bone.emplace_back(std::make_pair(survivor::yoichi::joint_thumbalt_01, survivor::yoichi::joint_thumbblt_01));
+			bone.emplace_back(std::make_pair(survivor::yoichi::joint_thumbblt_01, survivor::yoichi::joint_thumbclt_01));
+
+			bone.emplace_back(std::make_pair(survivor::yoichi::joint_handlt_01, survivor::yoichi::joint_indexalt_01));
+			bone.emplace_back(std::make_pair(survivor::yoichi::joint_indexalt_01, survivor::yoichi::joint_indexblt_01));
+			bone.emplace_back(std::make_pair(survivor::yoichi::joint_indexblt_01, survivor::yoichi::joint_indexclt_01));
+
+			bone.emplace_back(std::make_pair(survivor::yoichi::joint_handlt_01, survivor::yoichi::joint_fingeralt_01));
+			bone.emplace_back(std::make_pair(survivor::yoichi::joint_fingeralt_01, survivor::yoichi::joint_fingerblt_01));
+			bone.emplace_back(std::make_pair(survivor::yoichi::joint_fingerblt_01, survivor::yoichi::joint_fingerclt_01));
+
+			bone.emplace_back(std::make_pair(survivor::yoichi::joint_handlt_01, survivor::yoichi::joint_ringalt_01));
+			bone.emplace_back(std::make_pair(survivor::yoichi::joint_ringalt_01, survivor::yoichi::joint_ringblt_01));
+			bone.emplace_back(std::make_pair(survivor::yoichi::joint_ringblt_01, survivor::yoichi::joint_ringclt_01));
+
+			bone.emplace_back(std::make_pair(survivor::yoichi::joint_handlt_01, survivor::yoichi::joint_pinkyalt_01));
+			bone.emplace_back(std::make_pair(survivor::yoichi::joint_pinkyalt_01, survivor::yoichi::joint_pinkyblt_01));
+			bone.emplace_back(std::make_pair(survivor::yoichi::joint_pinkyblt_01, survivor::yoichi::joint_pinkyclt_01));
+
+			// lower body
+			bone.emplace_back(std::make_pair(survivor::yoichi::joint_pelvis_01, survivor::yoichi::joint_hiplt_01));
+			bone.emplace_back(std::make_pair(survivor::yoichi::joint_hiplt_01, survivor::yoichi::joint_kneelt_01));
+			bone.emplace_back(std::make_pair(survivor::yoichi::joint_kneelt_01, survivor::yoichi::joint_footlt_01));
+		}
+
+		// right
+		{
+			// upper body
+			bone.emplace_back(std::make_pair(survivor::yoichi::joint_necka_01, survivor::yoichi::joint_shoulderrt_01));
+			bone.emplace_back(std::make_pair(survivor::yoichi::joint_shoulderrt_01, survivor::yoichi::joint_elbowrt_01));
+			bone.emplace_back(std::make_pair(survivor::yoichi::joint_elbowrt_01, survivor::yoichi::joint_handrt_01));
+
+			bone.emplace_back(std::make_pair(survivor::yoichi::joint_handrt_01, survivor::yoichi::joint_thumbart_01));
+			bone.emplace_back(std::make_pair(survivor::yoichi::joint_thumbart_01, survivor::yoichi::joint_thumbbrt_01));
+			bone.emplace_back(std::make_pair(survivor::yoichi::joint_thumbbrt_01, survivor::yoichi::joint_thumbcrt_01));
+
+			bone.emplace_back(std::make_pair(survivor::yoichi::joint_handrt_01, survivor::yoichi::joint_indexart_01));
+			bone.emplace_back(std::make_pair(survivor::yoichi::joint_indexart_01, survivor::yoichi::joint_indexbrt_01));
+			bone.emplace_back(std::make_pair(survivor::yoichi::joint_indexbrt_01, survivor::yoichi::joint_indexcrt_01));
+
+			bone.emplace_back(std::make_pair(survivor::yoichi::joint_handrt_01, survivor::yoichi::joint_fingerart_01));
+			bone.emplace_back(std::make_pair(survivor::yoichi::joint_fingerart_01, survivor::yoichi::joint_fingerbrt_01));
+			bone.emplace_back(std::make_pair(survivor::yoichi::joint_fingerbrt_01, survivor::yoichi::joint_fingercrt_01));
+
+			bone.emplace_back(std::make_pair(survivor::yoichi::joint_handrt_01, survivor::yoichi::joint_ringart_01));
+			bone.emplace_back(std::make_pair(survivor::yoichi::joint_ringart_01, survivor::yoichi::joint_ringbrt_01));
+			bone.emplace_back(std::make_pair(survivor::yoichi::joint_ringbrt_01, survivor::yoichi::joint_ringcrt_01));
+
+			bone.emplace_back(std::make_pair(survivor::yoichi::joint_handrt_01, survivor::yoichi::joint_pinkyart_01));
+			bone.emplace_back(std::make_pair(survivor::yoichi::joint_pinkyart_01, survivor::yoichi::joint_pinkybrt_01));
+			bone.emplace_back(std::make_pair(survivor::yoichi::joint_pinkybrt_01, survivor::yoichi::joint_pinkycrt_01));
+
+			// lower body
+			bone.emplace_back(std::make_pair(survivor::yoichi::joint_pelvis_01, survivor::yoichi::joint_hiprt_01));
+			bone.emplace_back(std::make_pair(survivor::yoichi::joint_hiprt_01, survivor::yoichi::joint_kneert_01));
+			bone.emplace_back(std::make_pair(survivor::yoichi::joint_kneert_01, survivor::yoichi::joint_footrt_01));
+		}
+	}
 }
 
 std::vector < std::pair < int, int > >& bones::survivor::get_bone_array(const sdk::a_camper_player* camper) {
@@ -2271,5 +2345,9 @@ std::vector < std::pair < int, int > >& bones::survivor::get_bone_array(const sd
 
 	if (camper->is_steve()) {
 		return survivor_bone[28];
+	}
+
+	if (camper->is_yoichi()) {
+		return survivor_bone[29];
 	}
 }

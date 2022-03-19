@@ -1,6 +1,6 @@
 #include <pch.h>
 
-std::array<std::vector < std::pair < int, int > >, 26> killer_bone;
+std::array<std::vector < std::pair < int, int > >, 27> killer_bone;
 
 void bones::killer::initialize() {
 	{
@@ -1974,6 +1974,80 @@ void bones::killer::initialize() {
 			bone.emplace_back(std::make_pair(killer::demogorgon::joint_toe_pinky_brt_01, killer::demogorgon::joint_toe_pinky_crt_01));
 		}
 	}
+
+	{
+		// sadako bones
+		auto& bone = killer_bone[26];
+
+		bone.emplace_back(std::make_pair(killer::sadako::joint_head_01, killer::sadako::joint_necka_01));
+		bone.emplace_back(std::make_pair(killer::sadako::joint_necka_01, killer::sadako::joint_pelvis_01));
+
+		// left
+		{
+			// upper body
+			bone.emplace_back(std::make_pair(killer::sadako::joint_necka_01, killer::sadako::joint_shoulderlt_01));
+			bone.emplace_back(std::make_pair(killer::sadako::joint_shoulderlt_01, killer::sadako::joint_elbowlt_01));
+			bone.emplace_back(std::make_pair(killer::sadako::joint_elbowlt_01, killer::sadako::joint_handlt_01));
+
+			bone.emplace_back(std::make_pair(killer::sadako::joint_handlt_01, killer::sadako::joint_thumbalt_01));
+			bone.emplace_back(std::make_pair(killer::sadako::joint_thumbalt_01, killer::sadako::joint_thumbblt_01));
+			bone.emplace_back(std::make_pair(killer::sadako::joint_thumbblt_01, killer::sadako::joint_thumbclt_01));
+
+			bone.emplace_back(std::make_pair(killer::sadako::joint_handlt_01, killer::sadako::joint_indexalt_01));
+			bone.emplace_back(std::make_pair(killer::sadako::joint_indexalt_01, killer::sadako::joint_indexblt_01));
+			bone.emplace_back(std::make_pair(killer::sadako::joint_indexblt_01, killer::sadako::joint_indexclt_01));
+
+			bone.emplace_back(std::make_pair(killer::sadako::joint_handlt_01, killer::sadako::joint_fingeralt_01));
+			bone.emplace_back(std::make_pair(killer::sadako::joint_fingeralt_01, killer::sadako::joint_fingerblt_01));
+			bone.emplace_back(std::make_pair(killer::sadako::joint_fingerblt_01, killer::sadako::joint_fingerclt_01));
+
+			bone.emplace_back(std::make_pair(killer::sadako::joint_handlt_01, killer::sadako::joint_ringalt_01));
+			bone.emplace_back(std::make_pair(killer::sadako::joint_ringalt_01, killer::sadako::joint_ringblt_01));
+			bone.emplace_back(std::make_pair(killer::sadako::joint_ringblt_01, killer::sadako::joint_ringclt_01));
+
+			bone.emplace_back(std::make_pair(killer::sadako::joint_handlt_01, killer::sadako::joint_pinkyalt_01));
+			bone.emplace_back(std::make_pair(killer::sadako::joint_pinkyalt_01, killer::sadako::joint_pinkyblt_01));
+			bone.emplace_back(std::make_pair(killer::sadako::joint_pinkyblt_01, killer::sadako::joint_pinkyclt_01));
+
+			// lower body
+			bone.emplace_back(std::make_pair(killer::sadako::joint_pelvis_01, killer::sadako::joint_hiplt_01));
+			bone.emplace_back(std::make_pair(killer::sadako::joint_hiplt_01, killer::sadako::joint_kneelt_01));
+			bone.emplace_back(std::make_pair(killer::sadako::joint_kneelt_01, killer::sadako::joint_footlt_01));
+		}
+
+		// right
+		{
+			// upper body
+			bone.emplace_back(std::make_pair(killer::sadako::joint_necka_01, killer::sadako::joint_shoulderrt_01));
+			bone.emplace_back(std::make_pair(killer::sadako::joint_shoulderrt_01, killer::sadako::joint_elbowrt_01));
+			bone.emplace_back(std::make_pair(killer::sadako::joint_elbowrt_01, killer::sadako::joint_handrt_01));
+
+			bone.emplace_back(std::make_pair(killer::sadako::joint_handrt_01, killer::sadako::joint_thumbart_01));
+			bone.emplace_back(std::make_pair(killer::sadako::joint_thumbart_01, killer::sadako::joint_thumbbrt_01));
+			bone.emplace_back(std::make_pair(killer::sadako::joint_thumbbrt_01, killer::sadako::joint_thumbcrt_01));
+
+			bone.emplace_back(std::make_pair(killer::sadako::joint_handrt_01, killer::sadako::joint_indexart_01));
+			bone.emplace_back(std::make_pair(killer::sadako::joint_indexart_01, killer::sadako::joint_indexbrt_01));
+			bone.emplace_back(std::make_pair(killer::sadako::joint_indexbrt_01, killer::sadako::joint_indexcrt_01));
+
+			bone.emplace_back(std::make_pair(killer::sadako::joint_handrt_01, killer::sadako::joint_fingerart_01));
+			bone.emplace_back(std::make_pair(killer::sadako::joint_fingerart_01, killer::sadako::joint_fingerbrt_01));
+			bone.emplace_back(std::make_pair(killer::sadako::joint_fingerbrt_01, killer::sadako::joint_fingercrt_01));
+
+			bone.emplace_back(std::make_pair(killer::sadako::joint_handrt_01, killer::sadako::joint_ringart_01));
+			bone.emplace_back(std::make_pair(killer::sadako::joint_ringart_01, killer::sadako::joint_ringbrt_01));
+			bone.emplace_back(std::make_pair(killer::sadako::joint_ringbrt_01, killer::sadako::joint_ringcrt_01));
+
+			bone.emplace_back(std::make_pair(killer::sadako::joint_handrt_01, killer::sadako::joint_pinkyart_01));
+			bone.emplace_back(std::make_pair(killer::sadako::joint_pinkyart_01, killer::sadako::joint_pinkybrt_01));
+			bone.emplace_back(std::make_pair(killer::sadako::joint_pinkybrt_01, killer::sadako::joint_pinkycrt_01));
+
+			// lower body
+			bone.emplace_back(std::make_pair(killer::sadako::joint_pelvis_01, killer::sadako::joint_hiprt_01));
+			bone.emplace_back(std::make_pair(killer::sadako::joint_hiprt_01, killer::sadako::joint_kneert_01));
+			bone.emplace_back(std::make_pair(killer::sadako::joint_kneert_01, killer::sadako::joint_footrt_01));
+		}
+	}
 }
 
 
@@ -2082,6 +2156,7 @@ std::vector < std::pair < int, int > >& bones::killer::get_bone_array(const sdk:
 		return killer_bone[25];
 	}
 
-	// to add:
-	//  - victor
+	if (slasher->is_sadako()) {
+		return killer_bone[26];
+	}
 }
