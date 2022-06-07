@@ -16,7 +16,7 @@ namespace sdk {
 		sdk::world = reinterpret_cast<decltype(sdk::world)>(utils::pattern_scan(main, _("48 8B 1D ? ? ? ? 48 85 DB 74 3B 41 B0 01 33 D2 48 8B CB E8"), true));
 		if (!sdk::world) return false;
 
-		sdk::get_bone_matrix = utils::pattern_scan(main, _("48 8B C4 48 89 58 ? 48 89 70 ? 55 57 41 54 41 56 41 57 48 8D 68 ? 48 81 EC ? ? ? ? 0F 29 78"));
+		sdk::get_bone_matrix = utils::pattern_scan(main, _("48 8B C4 48 89 58 ? 48 89 70 ? 55 57 41 54 41 56 41 57 48 8D 68 ? 48 81 EC ? ? ? ? 0F 29 78 ? 33 F6"));
 		if (!sdk::get_bone_matrix) return false;
 
 		sdk::unlock_all = utils::pattern_scan(main, _("48 8B 05 ? ? ? ? 83 38 00 75 31"), true);

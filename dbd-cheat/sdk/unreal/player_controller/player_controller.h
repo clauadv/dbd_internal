@@ -8,7 +8,7 @@ namespace sdk {
 	struct a_controller;
 
 	struct a_player_controller : sdk::a_controller {
-		char pad_0001[0x80]; // 0x230(0x80)
+		char pad_0001[0x70]; // 0x240(0x80)
 		sdk::u_player* player; // 0x2b0(0x08)
 		sdk::a_pawn* acknowledged_pawn; // 0x2b8(0x08)
 

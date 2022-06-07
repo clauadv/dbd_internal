@@ -10,8 +10,8 @@ namespace sdk {
 	};
 
 	struct a_totem : sdk::a_actor {
-		char pad_0001[0x220]; // 0x148(0x220)
-		sdk::e_totem_state state; // 0x368(0x01)
+		char pad_0001[0x230]; // 0x148(0x230)
+		sdk::e_totem_state state; // 0x378(0x01)
 
 		bool is_totem() const;
 	};

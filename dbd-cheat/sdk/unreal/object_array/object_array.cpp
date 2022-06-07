@@ -37,19 +37,19 @@ sdk::u_object* sdk::u_object_array::find_object(const char* name) const {
 
 sdk::u_object* sdk::u_object_array::get_object_ptr(const std::uint32_t id) const {
 	if (id >= num_elements) return nullptr;
-	const std::uint64_t chunkIndex = id / 65536;
-	if (chunkIndex >= num_chunks) return nullptr;
+	const std::uint64_t chunk_index = id / 65536;
+	if (chunk_index >= num_chunks) return nullptr;
 
-	const auto chunk = objects[chunkIndex];
+	const auto chunk = objects[chunk_index];
 	if (!chunk) return nullptr;
 
-	const std::uint32_t withinChunkIndex = id % 65536 * 24;
-	const auto item = *reinterpret_cast<u_object**>(chunk + withinChunkIndex);
+	const std::uint32_t within_chunk_index = id % 65536 * 24;
+	const auto item = *reinterpret_cast<u_object**>(chunk + within_chunk_index);
 
 	return item;
 }
 
 void sdk::process_event(void* object, void* u_function, void* params) {
 	const auto vtable = *static_cast<void***>(object);
-	reinterpret_cast<void(*)(void*, void*, void*)>(vtable[0x42])(object, u_function, params);
+	reinterpret_cast<void(*)(void*, void*, void*)>(vtable[0x44])(object, u_function, params);
 }
