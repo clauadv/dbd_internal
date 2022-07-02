@@ -35,68 +35,6 @@ bool hooks::initialize() {
 	return true;
 }
 
-long __stdcall hooks::present::hook(IDXGISwapChain* swap_chain, const unsigned int sync_interval, const unsigned int flags) {
-	std::call_once(flag, [&]() {
-		if (SUCCEEDED(swap_chain->GetDevice(__uuidof(ID3D11Device), reinterpret_cast<void**>(&d3d11::device)))) {
-			d3d11::device->GetImmediateContext(&d3d11::context);
-
-			DXGI_SWAP_CHAIN_DESC swap_chain_desc;
-			swap_chain->GetDesc(&swap_chain_desc);
-			hooks::window = swap_chain_desc.OutputWindow;
-
-			ID3D11Texture2D* back_buffer{};
-			swap_chain->GetBuffer(0, __uuidof(ID3D11Texture2D), reinterpret_cast<void**>(&back_buffer));
-
-			if (back_buffer != nullptr) {
-				d3d11::device->CreateRenderTargetView(back_buffer, nullptr, &d3d11::render_target_view);
-			}
-
-			back_buffer->Release();
-
-			wndproc::original = reinterpret_cast<WNDPROC>(SetWindowLongPtrA(hooks::window, GWLP_WNDPROC, reinterpret_cast<long long>(wndproc::hook)));
-
-			menu::initialize();
-		}
-	});
-
-	ImGui_ImplDX11_NewFrame();
-	ImGui_ImplWin32_NewFrame();
-	ImGui::NewFrame();
-
-	menu::render();
-	features::misc::watermark::draw();
-
-	ImGui::EndFrame();
-	ImGui::Render();
-
-	const auto& io = ImGui::GetIO();
-	render::screen = { io.DisplaySize.x, io.DisplaySize.y };
-
-	d3d11::context->OMSetRenderTargets(1, &d3d11::render_target_view, nullptr);
-	ImGui_ImplDX11_RenderDrawData(ImGui::GetDrawData());
-
-	return present::original(swap_chain, sync_interval, flags);
-}
-
-std::int64_t __stdcall hooks::wndproc::hook(const HWND hwnd, const unsigned int message, const WPARAM wparam, const LPARAM lparam) {
-	if (message == WM_KEYDOWN && wparam == VK_INSERT) {
-		variables::menu::opened = !variables::menu::opened;
-	}
-
-	std::int64_t ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
-	ImGui_ImplWin32_WndProcHandler(window, message, wparam, lparam);
-
-	return CallWindowProcA(wndproc::original, hwnd, message, wparam, lparam);
-}
-
-std::int64_t __fastcall hooks::set_fov::hook(float* rcx) {
-	if (variables::misc::fov_changer) {
-		rcx[0x94] = variables::misc::fov_value;
-	}
-
-	return hooks::set_fov::original(rcx);
-}
-
 bool hooks::release() {
 	MH_Uninitialize();
 

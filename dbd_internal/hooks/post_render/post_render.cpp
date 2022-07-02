@@ -1,8 +1,6 @@
 #include <includes.h>
 #include "../hooks.h"
 
-std::once_flag flag;
-
 void __stdcall hooks::post_render::hook(ue4::core_object::u_object* viewport_client, ue4::engine::u_canvas* canvas) {
 	render::canvas = canvas;
 
