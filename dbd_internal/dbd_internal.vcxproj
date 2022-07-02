@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dbd\bones\bones.cpp" />
+    <ClCompile Include="dbd\dbd_player\dbd_player.cpp" />
+    <ClCompile Include="dbd\dbd_player_state\dbd_player_state.cpp" />
+    <ClCompile Include="dbd\escape_door\escape_door.cpp" />
+    <ClCompile Include="dbd\gameplay_statics\gameplay_statics.cpp" />
+    <ClCompile Include="dbd\generator\generator.cpp" />
+    <ClCompile Include="dbd\skillcheck\skillcheck.cpp" />
+    <ClCompile Include="dbd\totem\totem.cpp" />
+    <ClCompile Include="dbd\window\window.cpp" />
+    <ClCompile Include="features\esp\esp.cpp" />
+    <ClCompile Include="features\features.cpp" />
+    <ClCompile Include="features\misc\misc.cpp" />
+    <ClCompile Include="features\misc\watermark.cpp" />
+    <ClCompile Include="hooks\hooks.cpp" />
+    <ClCompile Include="hooks\post_render\post_render.cpp" />
+    <ClCompile Include="menu\d3d11\d3d11.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="menu\menu.cpp" />
+    <ClCompile Include="render\render.cpp" />
+    <ClCompile Include="ue4\components\skeletal_mesh_component\skeletal_mesh_component.cpp" />
+    <ClCompile Include="ue4\core_object\name\name.cpp" />
+    <ClCompile Include="ue4\core_object\object\object.cpp" />
+    <ClCompile Include="ue4\engine\canvas\canvas.cpp" />
+    <ClCompile Include="ue4\game_framework\actor\actor.cpp" />
+    <ClCompile Include="ue4\game_framework\pawn\pawn.cpp" />
+    <ClCompile Include="ue4\game_framework\player_camera_manager\player_camera_manager.cpp" />
+    <ClCompile Include="ue4\game_framework\player_controller\player_controller.cpp" />
+    <ClCompile Include="ue4\sdk.cpp" />
+    <ClCompile Include="dbd.cpp" />
+    <ClCompile Include="utils\libraries\imgui\imgui.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="utils\libraries\imgui\imgui_draw.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="utils\libraries\imgui\imgui_impl_dx11.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="utils\libraries\imgui\imgui_impl_win32.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="utils\libraries\imgui\imgui_widgets.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="utils\libraries\minhook\src\buffer.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="utils\libraries\minhook\src\hde\hde32.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="utils\libraries\minhook\src\hde\hde64.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="utils\libraries\minhook\src\hook.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="utils\libraries\minhook\src\trampoline.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="utils\utils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="dbd\bones\bones.h" />
+    <ClInclude Include="dbd\dbd_player\dbd_player.h" />
+    <ClInclude Include="dbd\dbd_player_state\dbd_player_state.h" />
+    <ClInclude Include="dbd\gameplay_statics\gameplay_statics.h" />
+    <ClInclude Include="dbd\player_interaction\player_interaction.h" />
+    <ClInclude Include="dbd\escape_door\escape_door.h" />
+    <ClInclude Include="dbd\generator\generator.h" />
+    <ClInclude Include="dbd\hatch\hatch.h" />
+    <ClInclude Include="dbd\locker\locker.h" />
+    <ClInclude Include="dbd\pallet\pallet.h" />
+    <ClInclude Include="dbd\searchable\searchable.h" />
+    <ClInclude Include="dbd\skillcheck\skillcheck.h" />
+    <ClInclude Include="dbd\totem\totem.h" />
+    <ClInclude Include="dbd\window\window.h" />
+    <ClInclude Include="features\features.h" />
+    <ClInclude Include="hooks\hooks.h" />
+    <ClInclude Include="includes.h" />
+    <ClInclude Include="menu\d3d11\d3d11.h" />
+    <ClInclude Include="menu\menu.h" />
+    <ClInclude Include="menu\variables.h" />
+    <ClInclude Include="render\render.h" />
+    <ClInclude Include="ue4\components\scene_component\scene_component.h" />
+    <ClInclude Include="ue4\components\skeletal_mesh_component\skeletal_mesh_component.h" />
+    <ClInclude Include="ue4\containers\array.h" />
+    <ClInclude Include="ue4\containers\enum_as_byte.h" />
+    <ClInclude Include="ue4\containers\string.h" />
+    <ClInclude Include="ue4\core_object\class\class.h" />
+    <ClInclude Include="ue4\core_object\field\field.h" />
+    <ClInclude Include="ue4\core_object\name\name.h" />
+    <ClInclude Include="ue4\core_object\object\object.h" />
+    <ClInclude Include="ue4\core_object\struct\struct.h" />
+    <ClInclude Include="ue4\engine\canvas\canvas.h" />
+    <ClInclude Include="ue4\engine\game_instance\game_instance.h" />
+    <ClInclude Include="ue4\engine\level\level.h" />
+    <ClInclude Include="ue4\engine\player\player.h" />
+    <ClInclude Include="ue4\engine\world\world.h" />
+    <ClInclude Include="ue4\game_framework\actor\actor.h" />
+    <ClInclude Include="ue4\game_framework\controller\controller.h" />
+    <ClInclude Include="ue4\game_framework\game_state_base\game_state_base.h" />
+    <ClInclude Include="ue4\game_framework\pawn\pawn.h" />
+    <ClInclude Include="ue4\game_framework\player_camera_manager\player_camera_manager.h" />
+    <ClInclude Include="ue4\game_framework\player_controller\player_controller.h" />
+    <ClInclude Include="ue4\game_framework\player_state\player_state.h" />
+    <ClInclude Include="ue4\math\color.h" />
+    <ClInclude Include="ue4\math\matrix.h" />
+    <ClInclude Include="ue4\math\rotator.h" />
+    <ClInclude Include="ue4\math\vector.h" />
+    <ClInclude Include="ue4\math\vector_2d.h" />
+    <ClInclude Include="ue4\sdk.h" />
+    <ClInclude Include="utils\libraries\fnv.h" />
+    <ClInclude Include="utils\libraries\imgui\imconfig.h" />
+    <ClInclude Include="utils\libraries\imgui\imgui.h" />
+    <ClInclude Include="utils\libraries\imgui\imgui_impl_dx11.h" />
+    <ClInclude Include="utils\libraries\imgui\imgui_impl_win32.h" />
+    <ClInclude Include="utils\libraries\imgui\imgui_internal.h" />
+    <ClInclude Include="utils\libraries\imgui\imstb_rectpack.h" />
+    <ClInclude Include="utils\libraries\imgui\imstb_textedit.h" />
+    <ClInclude Include="utils\libraries\imgui\imstb_truetype.h" />
+    <ClInclude Include="utils\libraries\imgui\shaders.h" />
+    <ClInclude Include="utils\libraries\lazy_importer.h" />
+    <ClInclude Include="utils\libraries\minhook\include\MinHook.h" />
+    <ClInclude Include="utils\libraries\minhook\src\buffer.h" />
+    <ClInclude Include="utils\libraries\minhook\src\hde\hde32.h" />
+    <ClInclude Include="utils\libraries\minhook\src\hde\hde64.h" />
+    <ClInclude Include="utils\libraries\minhook\src\hde\pstdint.h" />
+    <ClInclude Include="utils\libraries\minhook\src\hde\table32.h" />
+    <ClInclude Include="utils\libraries\minhook\src\hde\table64.h" />
+    <ClInclude Include="utils\libraries\minhook\src\trampoline.h" />
+    <ClInclude Include="utils\libraries\min_hook\buffer.h" />
+    <ClInclude Include="utils\libraries\min_hook\hde\hde32.h" />
+    <ClInclude Include="utils\libraries\min_hook\hde\hde64.h" />
+    <ClInclude Include="utils\libraries\min_hook\hde\pstdint.h" />
+    <ClInclude Include="utils\libraries\min_hook\hde\table32.h" />
+    <ClInclude Include="utils\libraries\min_hook\hde\table64.h" />
+    <ClInclude Include="utils\libraries\min_hook\trampoline.h" />
+    <ClInclude Include="utils\libraries\xor.h" />
+    <ClInclude Include="utils\utils.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{b479c0f2-2a5a-400a-90be-d2a1f8e9341b}</ProjectGuid>
+    <RootNamespace>ue4_base</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>dbd_internal</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)bin\</OutDir>
+    <IntDir>$(SolutionDir)bin\intermediates\</IntDir>
+    <IncludePath>$(SolutionDir)$(ProjectName)\;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MinSpace</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <ControlFlowGuard>false</ControlFlowGuard>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <PrecompiledHeaderFile>includes.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
