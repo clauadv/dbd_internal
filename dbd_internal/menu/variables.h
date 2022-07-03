@@ -52,7 +52,8 @@ namespace variables::misc {
 
 	inline bool speed_hack{ false };
 	inline float speed{ 30.f };
-	inline int speed_key = 0;
+	inline int speed_key{ 0 };
+	inline bool speed_state{ false };
 
 	inline bool state{ false };
 	inline int state_type{ 0 };

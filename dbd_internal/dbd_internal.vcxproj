@@ -26,6 +26,9 @@
     <ClCompile Include="features\misc\watermark.cpp" />
     <ClCompile Include="hooks\hooks.cpp" />
     <ClCompile Include="hooks\post_render\post_render.cpp" />
+    <ClCompile Include="hooks\present\present.cpp" />
+    <ClCompile Include="hooks\set_fov\set_fov.cpp" />
+    <ClCompile Include="hooks\wndproc\wndproc.cpp" />
     <ClCompile Include="menu\d3d11\d3d11.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>

@@ -40,6 +40,9 @@
     <ClCompile Include="utils\libraries\imgui\imgui_widgets.cpp" />
     <ClCompile Include="features\misc\watermark.cpp" />
     <ClCompile Include="dbd\gameplay_statics\gameplay_statics.cpp" />
+    <ClCompile Include="hooks\wndproc\wndproc.cpp" />
+    <ClCompile Include="hooks\set_fov\set_fov.cpp" />
+    <ClCompile Include="hooks\present\present.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="includes.h" />

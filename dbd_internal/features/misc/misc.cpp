@@ -22,7 +22,12 @@ void features::misc::auto_skillcheck::run(ue4::game_framework::a_pawn* my_player
 
 void features::misc::speed_hack::run(ue4::game_framework::a_pawn* my_player, ue4::game_framework::a_player_controller* player_controller) {
 	if (!variables::misc::speed_hack) return;
-	if (!GetAsyncKeyState(variables::misc::speed_key)) return;
+
+	if (LI_FN(GetAsyncKeyState)(variables::misc::speed_key)) {
+		variables::misc::speed_state = !variables::misc::speed_state;
+	}
+
+	if (!variables::misc::speed_state) return;
 
 	const auto player_camera = player_controller->player_camera_manager;
 	if (!player_camera) return;
@@ -33,10 +38,10 @@ void features::misc::speed_hack::run(ue4::game_framework::a_pawn* my_player, ue4
 	ue4::math::vector position{};
 	ue4::math::vector rotation{};
 
-	if (GetAsyncKeyState('W')) {
+	if (LI_FN(GetAsyncKeyState)('W')) {
 		position += camera_rotation.forward() * speed;
 
-	} else if (GetAsyncKeyState('S')) {
+	} else if (LI_FN(GetAsyncKeyState)('S')) {
 		rotation = {
 			-camera_rotation.x,
 			camera_rotation.y + 180.f,
@@ -46,7 +51,7 @@ void features::misc::speed_hack::run(ue4::game_framework::a_pawn* my_player, ue4
 		position += rotation.forward() * speed;
 	}
 
-	if (GetAsyncKeyState('D')) {
+	if (LI_FN(GetAsyncKeyState)('D')) {
 		rotation = {
 			0.f,
 			camera_rotation.y + 90.f,
@@ -55,7 +60,7 @@ void features::misc::speed_hack::run(ue4::game_framework::a_pawn* my_player, ue4
 
 		position += rotation.forward() * speed;
 
-	} else if (GetAsyncKeyState('A')) {
+	} else if (LI_FN(GetAsyncKeyState)('A')) {
 		rotation = {
 			0.f,
 			camera_rotation.y + 270.f,
@@ -65,10 +70,10 @@ void features::misc::speed_hack::run(ue4::game_framework::a_pawn* my_player, ue4
 		position += rotation.forward() * speed;
 	}
 
-	if (GetAsyncKeyState(VK_LCONTROL)) {
+	if (LI_FN(GetAsyncKeyState)(VK_LCONTROL)) {
 		position.z -= speed / 2.f;
 
-	} else if (GetAsyncKeyState(VK_SPACE)) {
+	} else if (LI_FN(GetAsyncKeyState)(VK_SPACE)) {
 		position.z += speed / 2.f;
 	}
 
@@ -77,7 +82,7 @@ void features::misc::speed_hack::run(ue4::game_framework::a_pawn* my_player, ue4
 
 void features::misc::set_state::run(ue4::game_framework::a_pawn* my_player) {
 	if (!variables::misc::state) return;
-	if (!GetAsyncKeyState(variables::misc::state_key) & 0x01) return;
+	if (!LI_FN(GetAsyncKeyState)(variables::misc::state_key) & 0x01) return;
 
 	reinterpret_cast<dbd::dbd_player::a_dbd_player*>(my_player)->set_state(static_cast<dbd::dbd_player::state_type>(variables::misc::state_type));
 }
