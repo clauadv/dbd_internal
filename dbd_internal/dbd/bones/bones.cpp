@@ -13,7 +13,7 @@ int dbd::bones::get(std::string bone, ue4::components::u_skeletal_mesh_component
 		}
 	}
 
-	for (auto i = 0; i < 200; i++) {
+	for (auto i = 0; i < mesh->get_bones_num(); i++) {
 		auto bone_name = mesh->get_bone_name(i).get_name();
 		std::ranges::transform(bone_name.begin(), bone_name.end(), bone_name.begin(), ::tolower);
 

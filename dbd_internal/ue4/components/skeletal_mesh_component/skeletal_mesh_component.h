@@ -6,6 +6,7 @@ namespace ue4::components {
 		ue4::core_object::u_name get_bone_name(int index);
 		ue4::math::vector get_bone_matrix(int index);
 		ue4::math::vector_2d get_bone(int index, ue4::game_framework::a_player_controller* player_controller);
+		std::int32_t get_bones_num();
 		void dump_bones();
 	};
 }

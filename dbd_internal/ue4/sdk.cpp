@@ -52,6 +52,7 @@ bool ue4::sdk::initialize() {
 
 	// u_skeletal_mesh_component
 	ue4::sdk::get_bone_name = ue4::core_object::objects->find(_("Function Engine.SkinnedMeshComponent.GetBoneName"));
+	ue4::sdk::get_bones_num = ue4::core_object::objects->find(_("Function Engine.SkinnedMeshComponent.GetNumBones"));
 
 	// a_dbd_player
 	ue4::sdk::get_dbd_player_state = ue4::core_object::objects->find(_("Function DeadByDaylight.DBDPlayer.GetDBDPlayerState"));

@@ -36,6 +36,7 @@ namespace ue4::sdk {
 	// u_skeletal_mesh_component
 	inline std::uintptr_t bone_matrix;
 	inline ue4::core_object::u_object* get_bone_name;
+	inline ue4::core_object::u_object* get_bones_num;
 
 	// a_dbd_player
 	inline ue4::core_object::u_object* get_dbd_player_state;

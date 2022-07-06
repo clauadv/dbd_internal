@@ -33,8 +33,18 @@ ue4::math::vector_2d ue4::components::u_skeletal_mesh_component::get_bone(const 
 	return { 0.f, 0.f };
 }
 
+std::int32_t ue4::components::u_skeletal_mesh_component::get_bones_num() {
+	struct {
+		std::int32_t return_value;
+	} params{};
+
+	ue4::sdk::process_event(this, ue4::sdk::get_bones_num, &params);
+
+	return params.return_value;
+}
+
 void ue4::components::u_skeletal_mesh_component::dump_bones() {
-	for (auto i = 0; i < 200; i++) {
+	for (auto i = 0; i < this->get_bones_num(); i++) {
 		std::string bone_name = this->get_bone_name(i).get_name();
 		if (bone_name.find("None") != std::string::npos) break;
 
